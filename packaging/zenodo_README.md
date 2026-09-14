@@ -6,6 +6,28 @@ GitHub repository contains all theory, source code, tests and independent
 readers.
 Neither delivery requires access to the private development repository.
 
+Dataset DOI: [10.5281/zenodo.22740399](https://doi.org/10.5281/zenodo.22740399).
+
+## Authorship and AI assistance
+
+Developed by Adam Wills with substantial assistance from ChatGPT (OpenAI) in
+implementation, testing and computational analysis. Adam Wills directed the
+research and takes responsibility for the released results.
+
+Adam Wills is the citation author of this dataset; ChatGPT is acknowledged
+here as an AI development assistant. The companion
+[GitHub repository](https://github.com/AWillsQuantum/generalised_triorthogonal_classification)
+provides the software and its `CITATION.cff`.
+
+## Licence
+
+The original data and documentation are licensed under
+[Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
+See [LICENSE_DATA.md](LICENSE_DATA.md). This includes the contents of both
+data archives and the identical data and documentation in the companion
+GitHub delivery. Software and third-party components are excluded from this
+licence grant and retain their own terms.
+
 ## Contents
 
 - `pareto_frontier.json`: the complete, directly readable 74-point protocol
@@ -14,6 +36,7 @@ Neither delivery requires access to the private development repository.
 - `classification_evidence.zip`: finite mathematical censuses, contraction
   data, output profiles, seeds and all original certificates.
 - `DATA_FORMAT.md`: definitions, encodings, example expansion and audit scope.
+- `LICENSE_DATA.md`: the CC BY 4.0 data and documentation licence notice.
 - `ORIGINAL_MANIFEST.json`: every original release file's size and SHA-256.
 - `delivery_layout.json`: maps original files to this dataset and GitHub.
 - `MANIFEST.json`: checksums of this delivery's own files (excluding itself).

@@ -6,3 +6,11 @@ authors:
   - given-names: "Adam"
     family-names: "Wills"
 repository-code: "https://github.com/AWillsQuantum/generalised_triorthogonal_classification"
+references:
+  - type: data
+    title: "Generalised triorthogonal protocols through length 54: classification data and evidence"
+    authors:
+      - given-names: "Adam"
+        family-names: "Wills"
+    doi: "10.5281/zenodo.22740399"
+    url: "https://doi.org/10.5281/zenodo.22740399"

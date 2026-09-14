@@ -162,6 +162,15 @@ class DeliveryTests(unittest.TestCase):
         builder.build(self.original, destination, ROOT)
         self.assertEqual((destination / "github/CITATION.cff").read_bytes(),
                          (ROOT / "CITATION.cff").read_bytes())
+        self.assertEqual((destination / "zenodo/README.md").read_bytes(),
+                         (ROOT / "packaging/zenodo_README.md").read_bytes())
+        self.assertIn("Adam Wills is the citation author",
+                      (destination / "zenodo/README.md").read_text(encoding="utf-8"))
+        self.assertIn("ChatGPT (OpenAI)",
+                      (destination / "zenodo/README.md").read_text(encoding="utf-8"))
+        for delivery_name in ("github", "zenodo"):
+            self.assertEqual((destination / delivery_name / "LICENSE_DATA.md").read_bytes(),
+                             (ROOT / "LICENSE_DATA.md").read_bytes())
         for path in destination.rglob("*"):
             self.assertNotIn(path.name, ("PUBLISHING.md", "LICENSING.md"))
             if path.name.endswith("README.md"):

@@ -3018,12 +3018,12 @@
     }
   },
   "classification_enumeration_rerun": false,
-  "new_licence_selected": false,
+  "new_licence_selected": true,
   "uploaded": false,
   "packaging_sources_sha256": {
     "code/delivery.py": "f6c5e0b7d69d505717469626d155063b4ebe95c74a7bc7f2421b17f5eb6b0ec6",
-    "delivery_tests/test_delivery.py": "64ffd9e67b5f0bb76615674f695f6003d86727caad6a710bc44bb6ba3cecf942",
-    "packaging/build_deliveries.py": "e2ea8945c4bde57d28dd378a26df4c76721360f37e2bf1fa81c4ec6facbb026e"
+    "delivery_tests/test_delivery.py": "9f1313e044fd59911c74279b2d5c467615e6209be86a696d2c2b4ade0ea5e533",
+    "packaging/build_deliveries.py": "839d699c652e7630db834783bd0ff304c45cc4b579c925eb4e4ec311e763f40d"
   },
   "archives": {
     "classification_evidence.zip": {
@@ -3039,7 +3039,18 @@
     "status": "pass",
     "schema_url": "https://raw.githubusercontent.com/citation-file-format/citation-file-format/1.2.0/schema.json",
     "schema_sha256": "0b8d22140da702d766df318dcff3a91af2f39521298dcf36d76315fd99cc169b",
-    "citation_sha256": "3432710e899382a18e1e2cd9b2e0ca8db91d72cc142752dde40a9b487d1500df",
-    "sole_citation_author": "Adam Wills"
+    "citation_sha256": "c1fefd03171226089aed4d964e9865dde3d791fbac514266cb1980c0543bfd68",
+    "sole_citation_author": "Adam Wills",
+    "related_dataset_doi": "10.5281/zenodo.22740399"
+  },
+  "publication_metadata": {
+    "updated_on": "2026-09-13",
+    "dataset_doi": "10.5281/zenodo.22740399",
+    "doi_status_at_packaging": "reserved; publication not verified",
+    "repository_url": "https://github.com/AWillsQuantum/generalised_triorthogonal_classification",
+    "data_and_documentation_licence": "CC-BY-4.0",
+    "licence_notice_sha256": "7fbdb6e5729dc16f9bf8eeb2998d9e864cccef5e95d5f9b86efb339da50eb155",
+    "software_licence_assigned": false,
+    "third_party_terms_unchanged": true
   }
 }

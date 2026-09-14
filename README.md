@@ -1,7 +1,8 @@
 # Generalised triorthogonal protocols through length 54
 
 This is the **code and theory delivery** of the classification. The companion
-Zenodo dataset supplies the compressed space catalogues, finite censuses and
+[Zenodo dataset (DOI: 10.5281/zenodo.22740399)](https://doi.org/10.5281/zenodo.22740399)
+supplies the compressed space catalogues, finite censuses and
 certificates. Neither delivery needs the original development repository.
 
 ## Authorship and AI assistance
@@ -12,6 +13,15 @@ research and takes responsibility for the released results.
 
 Please use [CITATION.cff](CITATION.cff) to cite the software. Adam Wills is the
 citation author; ChatGPT is acknowledged here as an AI development assistant.
+
+## Licence
+
+The original data and documentation in both deliveries are licensed under
+[Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
+See [LICENSE_DATA.md](LICENSE_DATA.md) for scope, including the data inside
+the Zenodo archives and this repository's copy of the protocol catalogue.
+This does not assign a licence to the project's software or change any
+third-party terms.
 
 ## Mathematical scope
 
@@ -107,8 +117,9 @@ Start the theory with `theory/support_correspondence.md` and
 `theory/space_classification.md`. The native build requires a POSIX environment,
 `g++` with C++20/OpenMP, `ar`, and GMP development files. Python algorithms use
 NumPy and `zstandard`. Bundled Bliss source retains its own notices; see
-`THIRD_PARTY_NOTICES.md`. No project-wide distribution licence has yet been
-assigned; the third-party notices retain their own terms.
+`THIRD_PARTY_NOTICES.md`. A distribution licence for the project's original
+software has not yet been assigned; data and documentation are covered by
+`LICENSE_DATA.md`, and third-party components retain their own terms.
 
 ## Rebuild the delivery layout
 

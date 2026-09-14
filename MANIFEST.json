@@ -4,8 +4,8 @@
   "excluded_files": [
     "MANIFEST.json"
   ],
-  "file_count": 314,
-  "payload_bytes": 6240292,
+  "file_count": 315,
+  "payload_bytes": 6245454,
   "files": [
     {
       "path": ".gitattributes",
@@ -29,8 +29,8 @@
     },
     {
       "path": "CITATION.cff",
-      "bytes": 359,
-      "sha256": "3432710e899382a18e1e2cd9b2e0ca8db91d72cc142752dde40a9b487d1500df"
+      "bytes": 644,
+      "sha256": "c1fefd03171226089aed4d964e9865dde3d791fbac514266cb1980c0543bfd68"
     },
     {
       "path": "code/affine_codeword_graph.py",
@@ -1169,8 +1169,8 @@
     },
     {
       "path": "DELIVERY_AUDIT.json",
-      "bytes": 382869,
-      "sha256": "bb3269dd67f1c0a09b5725738dcccd5bd21fee7507cf9ab4768f455166e3a910"
+      "bytes": 383440,
+      "sha256": "ce16ef74e483aa9a9867cd8b3a1f9f2e91381b70f0fcf8b858c3db6d20642a00"
     },
     {
       "path": "delivery_layout.json",
@@ -1179,13 +1179,18 @@
     },
     {
       "path": "delivery_tests/test_delivery.py",
-      "bytes": 8225,
-      "sha256": "64ffd9e67b5f0bb76615674f695f6003d86727caad6a710bc44bb6ba3cecf942"
+      "bytes": 8863,
+      "sha256": "9f1313e044fd59911c74279b2d5c467615e6209be86a696d2c2b4ade0ea5e533"
+    },
+    {
+      "path": "LICENSE_DATA.md",
+      "bytes": 1869,
+      "sha256": "7fbdb6e5729dc16f9bf8eeb2998d9e864cccef5e95d5f9b86efb339da50eb155"
     },
     {
       "path": "packaging/build_deliveries.py",
-      "bytes": 4544,
-      "sha256": "e2ea8945c4bde57d28dd378a26df4c76721360f37e2bf1fa81c4ec6facbb026e"
+      "bytes": 4636,
+      "sha256": "839d699c652e7630db834783bd0ff304c45cc4b579c925eb4e4ec311e763f40d"
     },
     {
       "path": "packaging/zenodo_DATA_FORMAT.md",
@@ -1194,8 +1199,8 @@
     },
     {
       "path": "packaging/zenodo_README.md",
-      "bytes": 4349,
-      "sha256": "44732165304910e4658f4eb2798d3c3e3a52bf3c79fc39f5580f4516fe200505"
+      "bytes": 5461,
+      "sha256": "6f8795cef52dd774e230593185f140802a11159f8b558c178991707762a4f6be"
     },
     {
       "path": "provenance/ORIGINAL_MANIFEST.json",
@@ -1209,8 +1214,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 6295,
-      "sha256": "d54b96cfe327390be9d793e45fa5ee398ec062074338cc04dc2c7e84abcbc438"
+      "bytes": 6890,
+      "sha256": "632559de9f489848fa29f8e8e3c1bea17b0d8cdad42e7ea90ea375bce02ad3dc"
     },
     {
       "path": "requirements.txt",

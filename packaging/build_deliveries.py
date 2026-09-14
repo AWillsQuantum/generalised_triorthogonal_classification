@@ -10,7 +10,7 @@ import sys
 import zipfile
 
 
-EXTRAS = ("README.md", "CITATION.cff", ".gitignore", ".gitattributes",
+EXTRAS = ("README.md", "CITATION.cff", "LICENSE_DATA.md", ".gitignore", ".gitattributes",
           "code/delivery.py", "delivery_tests/test_delivery.py",
           "packaging/zenodo_README.md", "packaging/zenodo_DATA_FORMAT.md")
 
@@ -74,6 +74,7 @@ def build(source, destination, templates):
     copy_file(Path(__file__), github / "packaging/build_deliveries.py")
     for name in ("README", "DATA_FORMAT"):
         copy_file(templates / f"packaging/zenodo_{name}.md", zenodo / f"{name}.md")
+    copy_file(templates / "LICENSE_DATA.md", zenodo / "LICENSE_DATA.md")
     for root in (github, zenodo):
         create(root)
     return baseline
