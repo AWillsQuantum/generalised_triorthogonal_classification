@@ -3039,19 +3039,20 @@
     "status": "pass",
     "schema_url": "https://raw.githubusercontent.com/citation-file-format/citation-file-format/1.2.0/schema.json",
     "schema_sha256": "0b8d22140da702d766df318dcff3a91af2f39521298dcf36d76315fd99cc169b",
-    "citation_sha256": "ec196da029d6dceb0233e7de0b0e890811658358989e5fde5e7031991b0e4850",
+    "citation_sha256": "30980ffd2479d5659da7686f2d6f96bb76408e3bb2f96b00de79d4cd0d417d89",
     "sole_citation_author": "Adam Wills",
-    "related_dataset_doi": null
+    "related_dataset_doi": "10.6084/m9.figshare.33717319"
   },
   "publication_metadata": {
     "updated_on": "2026-09-14",
-    "dataset_doi": null,
-    "doi_status_at_packaging": "pending reservation",
+    "dataset_doi": "10.6084/m9.figshare.33717319",
+    "doi_status_at_packaging": "reserved; publication not verified",
     "repository_url": "https://github.com/AWillsQuantum/generalised_triorthogonal_classification",
     "data_and_documentation_licence": "CC-BY-4.0",
-    "licence_notice_sha256": "40c697b6715d34a3284d480686d40819b8d5ab63c0b8ed0b82045356339bc97a",
+    "licence_notice_sha256": "4410765b22e250b007d6a7f24de2253cdc1c311ea2b4c150778ff962fe2bb15f",
     "software_licence_assigned": false,
     "third_party_terms_unchanged": true,
-    "data_repository": "Figshare"
+    "data_repository": "Figshare",
+    "dataset_url": "https://doi.org/10.6084/m9.figshare.33717319"
   }
 }

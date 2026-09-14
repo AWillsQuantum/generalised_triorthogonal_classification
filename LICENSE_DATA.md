@@ -29,7 +29,7 @@ Attribution information:
 - Creator: Adam Wills.
 - Dataset: *Generalised triorthogonal protocols through length 54:
   classification data and evidence*.
-- Dataset DOI: pending reservation on Figshare.
+- Dataset DOI: [10.6084/m9.figshare.33717319](https://doi.org/10.6084/m9.figshare.33717319).
 - Companion repository:
   [generalised_triorthogonal_classification](https://github.com/AWillsQuantum/generalised_triorthogonal_classification).
 

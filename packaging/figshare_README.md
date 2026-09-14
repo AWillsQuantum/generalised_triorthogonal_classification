@@ -6,7 +6,7 @@ GitHub repository contains all theory, source code, tests and independent
 readers.
 Neither delivery requires access to the private development repository.
 
-The data delivery is prepared for Figshare. Its dataset DOI is pending.
+Dataset DOI: [10.6084/m9.figshare.33717319](https://doi.org/10.6084/m9.figshare.33717319).
 
 ## Authorship and AI assistance
 

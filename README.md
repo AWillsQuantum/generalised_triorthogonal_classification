@@ -4,7 +4,8 @@ This is the **code and theory delivery** of the classification. The companion
 Figshare data delivery supplies the compressed space catalogues, finite censuses and
 certificates. Neither delivery needs the original development repository.
 
-The Figshare dataset DOI is pending and will be added once reserved.
+The companion [Figshare dataset](https://doi.org/10.6084/m9.figshare.33717319)
+has DOI `10.6084/m9.figshare.33717319`.
 
 ## Authorship and AI assistance
 
