@@ -9,12 +9,15 @@ has DOI `10.6084/m9.figshare.33717319`.
 
 ## Authorship and AI assistance
 
+Authors: **Adam Wills, Shubham P. Jain and Shraddha Singh**.
+
 Developed by Adam Wills with substantial assistance from ChatGPT (OpenAI) in
 implementation, testing and computational analysis. Adam Wills directed the
 research and takes responsibility for the released results.
 
-Please use [CITATION.cff](CITATION.cff) to cite the software. Adam Wills is the
-citation author; ChatGPT is acknowledged here as an AI development assistant.
+Please use [CITATION.cff](CITATION.cff) to cite the software. The citation
+authors are Adam Wills, Shubham P. Jain and Shraddha Singh, in that order;
+ChatGPT is acknowledged here as an AI development assistant.
 
 ## Licence
 

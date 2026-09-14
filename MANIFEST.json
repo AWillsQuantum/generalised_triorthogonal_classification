@@ -5,7 +5,7 @@
     "MANIFEST.json"
   ],
   "file_count": 315,
-  "payload_bytes": 6238673,
+  "payload_bytes": 6240798,
   "files": [
     {
       "path": ".gitattributes",
@@ -29,8 +29,8 @@
     },
     {
       "path": "CITATION.cff",
-      "bytes": 654,
-      "sha256": "30980ffd2479d5659da7686f2d6f96bb76408e3bb2f96b00de79d4cd0d417d89"
+      "bytes": 888,
+      "sha256": "375a0e723308805cb8eedcad807c2ef57e1419e55f739b7cf610f78cba1a5c6f"
     },
     {
       "path": "code/affine_codeword_graph.py",
@@ -1169,8 +1169,8 @@
     },
     {
       "path": "DELIVERY_AUDIT.json",
-      "bytes": 383554,
-      "sha256": "b0c29583959441c9abba4370864ad882bf0eee9165a35a9dd8ea8421118f6dc1"
+      "bytes": 384231,
+      "sha256": "2fed0c5ba9666dc4bd2284973e97004ab6ea9fc944240eeafac318bc39313083"
     },
     {
       "path": "delivery_layout.json",
@@ -1179,13 +1179,13 @@
     },
     {
       "path": "delivery_tests/test_delivery.py",
-      "bytes": 9470,
-      "sha256": "bb3b155a6ad305b16557b4e986eff73d7b115c3f79b80b6b7f3e56f63e85dd07"
+      "bytes": 10417,
+      "sha256": "8614e5123ee3753532a22071ae55ee9a2965363ac1c006f9a377a4a5b8d5c966"
     },
     {
       "path": "LICENSE_DATA.md",
-      "bytes": 1887,
-      "sha256": "4410765b22e250b007d6a7f24de2253cdc1c311ea2b4c150778ff962fe2bb15f"
+      "bytes": 1924,
+      "sha256": "ddfaf5a5a17fc596ee190f63a0acdfd24d48a81b57f24e402204358d0ddc3e64"
     },
     {
       "path": "packaging/build_deliveries.py",
@@ -1199,8 +1199,8 @@
     },
     {
       "path": "packaging/figshare_README.md",
-      "bytes": 5618,
-      "sha256": "1dce94c788445336baae86d07950898c07550ce390b4c7b9e752aab3285b5851"
+      "bytes": 5733,
+      "sha256": "2799b2e64a5127ff40904399cb8ff34f2c4f2bce56435bf579f19c81479af672"
     },
     {
       "path": "provenance/ORIGINAL_MANIFEST.json",
@@ -1214,8 +1214,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 6974,
-      "sha256": "36bd6ebbf9e6ee2f932fa873f753da49cebdba0b774b1c08342b73cb73af15e5"
+      "bytes": 7089,
+      "sha256": "17d2519a525694827f9d0239786378780cb6185c4d41c36574155ad2858dfa3f"
     },
     {
       "path": "requirements.txt",

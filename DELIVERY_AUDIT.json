@@ -3022,7 +3022,7 @@
   "uploaded": false,
   "packaging_sources_sha256": {
     "code/delivery.py": "a714734d104f5d55d8c6b4df8525c4f4c02770284e57c6c8766c3c076660ddb5",
-    "delivery_tests/test_delivery.py": "bb3b155a6ad305b16557b4e986eff73d7b115c3f79b80b6b7f3e56f63e85dd07",
+    "delivery_tests/test_delivery.py": "8614e5123ee3753532a22071ae55ee9a2965363ac1c006f9a377a4a5b8d5c966",
     "packaging/build_deliveries.py": "6ce56d6414f4675c5577ba758b6716e31256b3b7d4cc5e1525f41d25ae89b801"
   },
   "archives": {
@@ -3039,9 +3039,13 @@
     "status": "pass",
     "schema_url": "https://raw.githubusercontent.com/citation-file-format/citation-file-format/1.2.0/schema.json",
     "schema_sha256": "0b8d22140da702d766df318dcff3a91af2f39521298dcf36d76315fd99cc169b",
-    "citation_sha256": "30980ffd2479d5659da7686f2d6f96bb76408e3bb2f96b00de79d4cd0d417d89",
-    "sole_citation_author": "Adam Wills",
-    "related_dataset_doi": "10.6084/m9.figshare.33717319"
+    "citation_sha256": "375a0e723308805cb8eedcad807c2ef57e1419e55f739b7cf610f78cba1a5c6f",
+    "related_dataset_doi": "10.6084/m9.figshare.33717319",
+    "citation_authors": [
+      "Adam Wills",
+      "Shubham P. Jain",
+      "Shraddha Singh"
+    ]
   },
   "publication_metadata": {
     "updated_on": "2026-09-14",
@@ -3049,10 +3053,33 @@
     "doi_status_at_packaging": "reserved; publication not verified",
     "repository_url": "https://github.com/AWillsQuantum/generalised_triorthogonal_classification",
     "data_and_documentation_licence": "CC-BY-4.0",
-    "licence_notice_sha256": "4410765b22e250b007d6a7f24de2253cdc1c311ea2b4c150778ff962fe2bb15f",
+    "licence_notice_sha256": "ddfaf5a5a17fc596ee190f63a0acdfd24d48a81b57f24e402204358d0ddc3e64",
     "software_licence_assigned": false,
     "third_party_terms_unchanged": true,
     "data_repository": "Figshare",
-    "dataset_url": "https://doi.org/10.6084/m9.figshare.33717319"
+    "dataset_url": "https://doi.org/10.6084/m9.figshare.33717319",
+    "citation_authors": [
+      "Adam Wills",
+      "Shubham P. Jain",
+      "Shraddha Singh"
+    ]
+  },
+  "authorship_metadata_update": {
+    "date": "2026-09-14",
+    "citation_authors": [
+      "Adam Wills",
+      "Shubham P. Jain",
+      "Shraddha Singh"
+    ],
+    "manuscript_author_order_matched": true,
+    "ai_acknowledgement_unchanged": true,
+    "copyright_notice_and_licensing_terms_unchanged": true,
+    "scientific_files_and_archives_unchanged": true,
+    "delivery_tests": {
+      "tests": 15,
+      "failures": 0,
+      "errors": 0
+    },
+    "publication_performed": false
   }
 }

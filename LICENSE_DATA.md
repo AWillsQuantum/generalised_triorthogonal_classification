@@ -26,7 +26,7 @@ distributed in the GitHub delivery; see that delivery's
 
 Attribution information:
 
-- Creator: Adam Wills.
+- Creators: Adam Wills, Shubham P. Jain and Shraddha Singh.
 - Dataset: *Generalised triorthogonal protocols through length 54:
   classification data and evidence*.
 - Dataset DOI: [10.6084/m9.figshare.33717319](https://doi.org/10.6084/m9.figshare.33717319).

@@ -10,12 +10,15 @@ Dataset DOI: [10.6084/m9.figshare.33717319](https://doi.org/10.6084/m9.figshare.
 
 ## Authorship and AI assistance
 
+Authors: **Adam Wills, Shubham P. Jain and Shraddha Singh**.
+
 Developed by Adam Wills with substantial assistance from ChatGPT (OpenAI) in
 implementation, testing and computational analysis. Adam Wills directed the
 research and takes responsibility for the released results.
 
-Adam Wills is the citation author of this dataset; ChatGPT is acknowledged
-here as an AI development assistant. The companion
+The citation authors of this dataset are Adam Wills, Shubham P. Jain and
+Shraddha Singh, in that order; ChatGPT is acknowledged here as an AI
+development assistant. The companion
 [GitHub repository](https://github.com/AWillsQuantum/generalised_triorthogonal_classification)
 provides the software and its `CITATION.cff`.
 

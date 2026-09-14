@@ -2,6 +2,7 @@ import hashlib
 import importlib.util
 import json
 from pathlib import Path
+import re
 import sys
 import subprocess
 import tempfile
@@ -175,7 +176,7 @@ class DeliveryTests(unittest.TestCase):
                          (ROOT / "CITATION.cff").read_bytes())
         self.assertEqual((destination / "figshare/README.md").read_bytes(),
                          (ROOT / "packaging/figshare_README.md").read_bytes())
-        self.assertIn("Adam Wills is the citation author",
+        self.assertIn("Authors: **Adam Wills, Shubham P. Jain and Shraddha Singh**.",
                       (destination / "figshare/README.md").read_text(encoding="utf-8"))
         self.assertIn("ChatGPT (OpenAI)",
                       (destination / "figshare/README.md").read_text(encoding="utf-8"))
@@ -191,6 +192,20 @@ class DeliveryTests(unittest.TestCase):
                 self.assertNotIn("Upload all top-level files", text)
         self.assertTrue(Delivery(destination / "github", destination / "figshare")
                         .verify()["every_original_file_preserved"])
+
+    def test_authorship_and_ai_acknowledgement(self):
+        names = [("Adam", "Wills"), ("Shubham P.", "Jain"), ("Shraddha", "Singh")]
+        citation = (ROOT / "CITATION.cff").read_text(encoding="utf-8")
+        self.assertEqual(re.findall(r'given-names: "([^"]+)"\s+family-names: "([^"]+)"', citation),
+                         names + names)
+        acknowledgement = (
+            "Developed by Adam Wills with substantial assistance from ChatGPT (OpenAI) in\n"
+            "implementation, testing and computational analysis. Adam Wills directed the\n"
+            "research and takes responsibility for the released results.")
+        for name in ("README.md", "packaging/figshare_README.md"):
+            text = (ROOT / name).read_text(encoding="utf-8")
+            self.assertIn("Authors: **Adam Wills, Shubham P. Jain and Shraddha Singh**.", text)
+            self.assertIn(acknowledgement, text)
 
 
 if __name__ == "__main__":
