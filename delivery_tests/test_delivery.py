@@ -3,6 +3,7 @@ import importlib.util
 import json
 from pathlib import Path
 import sys
+import subprocess
 import tempfile
 import unittest
 import warnings
@@ -21,8 +22,8 @@ class DeliveryTests(unittest.TestCase):
         self.root = Path(self.temporary.name)
         self.original = self.root / "original"
         self.github = self.root / "github"
-        self.zenodo = self.root / "zenodo"
-        for path in (self.original, self.github, self.zenodo):
+        self.data = self.root / "data"
+        for path in (self.original, self.github, self.data):
             path.mkdir()
         self.put(self.original, "code/example.py", b"# Original source\n")
         self.put(self.original, "README.md", b"Original README\n")
@@ -40,9 +41,9 @@ class DeliveryTests(unittest.TestCase):
         for name in names:
             copies = []
             if name == "data/space.zst":
-                with zipfile.ZipFile(self.zenodo / "spaces.zip", "w") as archive:
+                with zipfile.ZipFile(self.data / "spaces.zip", "w") as archive:
                     archive.write(self.original / name, name)
-                copies.append(dict(delivery="zenodo", path="spaces.zip", member=name))
+                copies.append(dict(delivery="data", path="spaces.zip", member=name))
             else:
                 target = {"README.md": "provenance/ORIGINAL_README.md",
                           "MANIFEST.json": "provenance/ORIGINAL_MANIFEST.json"}.get(name, name)
@@ -50,10 +51,10 @@ class DeliveryTests(unittest.TestCase):
                 copies.append(dict(delivery="github", path=target))
             if name in ("MANIFEST.json", "data/protocols/pareto_frontier.json"):
                 target = "ORIGINAL_MANIFEST.json" if name == "MANIFEST.json" else "pareto_frontier.json"
-                self.put(self.zenodo, target, (self.original / name).read_bytes())
-                copies.append(dict(delivery="zenodo", path=target))
+                self.put(self.data, target, (self.original / name).read_bytes())
+                copies.append(dict(delivery="data", path=target))
             rows.append(dict(path=name, copies=copies))
-        self.layout = dict(schema="triorthogonal-two-delivery-layout-v1", files=rows,
+        self.layout = dict(schema="triorthogonal-two-delivery-layout-v2", files=rows,
                            original_manifest_sha256=hashlib.sha256(original_raw).hexdigest())
         self.write_layout()
 
@@ -65,15 +66,15 @@ class DeliveryTests(unittest.TestCase):
 
     def manifests(self):
         create(self.github)
-        create(self.zenodo)
+        create(self.data)
 
     def write_layout(self):
-        for root in (self.github, self.zenodo):
+        for root in (self.github, self.data):
             (root / "delivery_layout.json").write_text(json.dumps(self.layout), encoding="ascii")
         self.manifests()
 
     def delivery(self):
-        return Delivery(self.github, self.zenodo)
+        return Delivery(self.github, self.data)
 
     def test_preservation_and_exact_reassembly(self):
         result = self.delivery().verify()
@@ -91,13 +92,13 @@ class DeliveryTests(unittest.TestCase):
             self.delivery()
 
     def test_changed_catalogue_despite_new_package_hashes(self):
-        self.put(self.zenodo, "pareto_frontier.json", b"{}")
+        self.put(self.data, "pareto_frontier.json", b"{}")
         self.manifests()
         with self.assertRaisesRegex(ValueError, "not preserved"):
             self.delivery().verify()
 
     def test_changed_archive_despite_new_package_hashes(self):
-        with zipfile.ZipFile(self.zenodo / "spaces.zip", "w") as archive:
+        with zipfile.ZipFile(self.data / "spaces.zip", "w") as archive:
             archive.writestr("data/space.zst", b"different")
         self.manifests()
         with self.assertRaisesRegex(ValueError, "not preserved"):
@@ -109,7 +110,7 @@ class DeliveryTests(unittest.TestCase):
                 safe_name(name)
 
     def test_unexpected_archive_member(self):
-        with zipfile.ZipFile(self.zenodo / "spaces.zip", "a") as archive:
+        with zipfile.ZipFile(self.data / "spaces.zip", "a") as archive:
             archive.writestr("../outside", b"unsafe")
         self.manifests()
         with self.assertRaisesRegex(ValueError, "Unsafe relative path"):
@@ -118,14 +119,14 @@ class DeliveryTests(unittest.TestCase):
     def test_duplicate_archive_member(self):
         with warnings.catch_warnings():
             warnings.simplefilter("ignore", UserWarning)
-            with zipfile.ZipFile(self.zenodo / "spaces.zip", "a") as archive:
+            with zipfile.ZipFile(self.data / "spaces.zip", "a") as archive:
                 archive.writestr("data/space.zst", b"duplicate")
         self.manifests()
         with self.assertRaisesRegex(ValueError, "member set"):
             self.delivery().verify()
 
     def test_no_recompression_of_inner_data(self):
-        with zipfile.ZipFile(self.zenodo / "spaces.zip", "w", compression=zipfile.ZIP_DEFLATED) as archive:
+        with zipfile.ZipFile(self.data / "spaces.zip", "w", compression=zipfile.ZIP_DEFLATED) as archive:
             archive.write(self.original / "data/space.zst", "data/space.zst")
         self.manifests()
         with self.assertRaisesRegex(ValueError, "recompressed"):
@@ -140,15 +141,25 @@ class DeliveryTests(unittest.TestCase):
             self.delivery().assemble(self.original)
 
     def test_bad_scope_is_rejected(self):
-        raw = json.loads((self.zenodo / "pareto_frontier.json").read_bytes())
+        raw = json.loads((self.data / "pareto_frontier.json").read_bytes())
         raw["equivalence"] = "full Clifford"
         with self.assertRaisesRegex(ValueError, "scope or counts"):
             catalogue_summary(json.dumps(raw).encode())
 
     def test_mismatched_layouts(self):
-        (self.zenodo / "delivery_layout.json").write_text("{}")
+        (self.data / "delivery_layout.json").write_text("{}")
         with self.assertRaisesRegex(ValueError, "layouts differ"):
             self.delivery()
+
+    def test_data_cli_aliases(self):
+        for option in ("--data", "--figshare"):
+            with self.subTest(option=option):
+                result = subprocess.run(
+                    [sys.executable, "-B", str(ROOT / "code/delivery.py"), "verify",
+                     "--github", str(self.github), option, str(self.data)],
+                    capture_output=True, text=True)
+                self.assertEqual(result.returncode, 0, result.stderr)
+                self.assertTrue(json.loads(result.stdout)["every_original_file_preserved"])
 
     def test_builder_excludes_author_publication_instructions(self):
         self.put(self.original, "code/verify_release_integrity.py",
@@ -162,22 +173,23 @@ class DeliveryTests(unittest.TestCase):
         builder.build(self.original, destination, ROOT)
         self.assertEqual((destination / "github/CITATION.cff").read_bytes(),
                          (ROOT / "CITATION.cff").read_bytes())
-        self.assertEqual((destination / "zenodo/README.md").read_bytes(),
-                         (ROOT / "packaging/zenodo_README.md").read_bytes())
+        self.assertEqual((destination / "figshare/README.md").read_bytes(),
+                         (ROOT / "packaging/figshare_README.md").read_bytes())
         self.assertIn("Adam Wills is the citation author",
-                      (destination / "zenodo/README.md").read_text(encoding="utf-8"))
+                      (destination / "figshare/README.md").read_text(encoding="utf-8"))
         self.assertIn("ChatGPT (OpenAI)",
-                      (destination / "zenodo/README.md").read_text(encoding="utf-8"))
-        for delivery_name in ("github", "zenodo"):
+                      (destination / "figshare/README.md").read_text(encoding="utf-8"))
+        for delivery_name in ("github", "figshare"):
             self.assertEqual((destination / delivery_name / "LICENSE_DATA.md").read_bytes(),
                              (ROOT / "LICENSE_DATA.md").read_bytes())
         for path in destination.rglob("*"):
-            self.assertNotIn(path.name, ("PUBLISHING.md", "LICENSING.md"))
+            self.assertNotIn(path.name, ("PUBLISHING.md", "LICENSING.md",
+                                         "FIGSHARE_UPLOAD.md"))
             if path.name.endswith("README.md"):
                 text = path.read_text(encoding="utf-8")
                 self.assertNotIn("PUBLISHING.md", text)
                 self.assertNotIn("Upload all top-level files", text)
-        self.assertTrue(Delivery(destination / "github", destination / "zenodo")
+        self.assertTrue(Delivery(destination / "github", destination / "figshare")
                         .verify()["every_original_file_preserved"])
 
 

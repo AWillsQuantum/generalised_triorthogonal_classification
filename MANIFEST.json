@@ -5,7 +5,7 @@
     "MANIFEST.json"
   ],
   "file_count": 315,
-  "payload_bytes": 6245454,
+  "payload_bytes": 6238328,
   "files": [
     {
       "path": ".gitattributes",
@@ -29,8 +29,8 @@
     },
     {
       "path": "CITATION.cff",
-      "bytes": 644,
-      "sha256": "c1fefd03171226089aed4d964e9865dde3d791fbac514266cb1980c0543bfd68"
+      "bytes": 558,
+      "sha256": "ec196da029d6dceb0233e7de0b0e890811658358989e5fde5e7031991b0e4850"
     },
     {
       "path": "code/affine_codeword_graph.py",
@@ -49,8 +49,8 @@
     },
     {
       "path": "code/delivery.py",
-      "bytes": 11324,
-      "sha256": "f6c5e0b7d69d505717469626d155063b4ebe95c74a7bc7f2421b17f5eb6b0ec6"
+      "bytes": 11427,
+      "sha256": "a714734d104f5d55d8c6b4df8525c4f4c02770284e57c6c8766c3c076660ddb5"
     },
     {
       "path": "code/enumerate_c48_marked_spaces.py",
@@ -1169,38 +1169,38 @@
     },
     {
       "path": "DELIVERY_AUDIT.json",
-      "bytes": 383440,
-      "sha256": "ce16ef74e483aa9a9867cd8b3a1f9f2e91381b70f0fcf8b858c3db6d20642a00"
+      "bytes": 383419,
+      "sha256": "8d510db3476dda9831144f6dc4411565066cd526e4c231e2c6131cb6b5cad227"
     },
     {
       "path": "delivery_layout.json",
-      "bytes": 1181638,
-      "sha256": "121bb2072687329215991b8e0d5e708240a44bab36f7ce7cb98fa70ec3abe507"
+      "bytes": 1173776,
+      "sha256": "3357254fc66d8cafef76f1e15553c5998d02d9bd905fdad3c8220d0af7089b0c"
     },
     {
       "path": "delivery_tests/test_delivery.py",
-      "bytes": 8863,
-      "sha256": "9f1313e044fd59911c74279b2d5c467615e6209be86a696d2c2b4ade0ea5e533"
+      "bytes": 9470,
+      "sha256": "bb3b155a6ad305b16557b4e986eff73d7b115c3f79b80b6b7f3e56f63e85dd07"
     },
     {
       "path": "LICENSE_DATA.md",
-      "bytes": 1869,
-      "sha256": "7fbdb6e5729dc16f9bf8eeb2998d9e864cccef5e95d5f9b86efb339da50eb155"
+      "bytes": 1842,
+      "sha256": "40c697b6715d34a3284d480686d40819b8d5ab63c0b8ed0b82045356339bc97a"
     },
     {
       "path": "packaging/build_deliveries.py",
-      "bytes": 4636,
-      "sha256": "839d699c652e7630db834783bd0ff304c45cc4b579c925eb4e4ec311e763f40d"
+      "bytes": 4624,
+      "sha256": "6ce56d6414f4675c5577ba758b6716e31256b3b7d4cc5e1525f41d25ae89b801"
     },
     {
-      "path": "packaging/zenodo_DATA_FORMAT.md",
+      "path": "packaging/figshare_DATA_FORMAT.md",
       "bytes": 3977,
       "sha256": "08bbf8d3b03a7e302cbceb0dbf04be9bb01704e8ebca2e6a0967b363581307ab"
     },
     {
-      "path": "packaging/zenodo_README.md",
-      "bytes": 5461,
-      "sha256": "6f8795cef52dd774e230593185f140802a11159f8b558c178991707762a4f6be"
+      "path": "packaging/figshare_README.md",
+      "bytes": 5599,
+      "sha256": "62998b76335aeee4371663496a5ec5fdfb32546e084690698ec6f5693f334401"
     },
     {
       "path": "provenance/ORIGINAL_MANIFEST.json",
@@ -1214,8 +1214,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 6890,
-      "sha256": "632559de9f489848fa29f8e8e3c1bea17b0d8cdad42e7ea90ea375bce02ad3dc"
+      "bytes": 6924,
+      "sha256": "fcf668acbf25354565e4b05519c07cfdb838db9c073160393f810dd0156ae64a"
     },
     {
       "path": "requirements.txt",

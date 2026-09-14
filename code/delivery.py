@@ -18,7 +18,7 @@ from verify_release_integrity import verify as verify_manifest
 
 LAYOUT = "delivery_layout.json"
 ORIGINAL = "provenance/ORIGINAL_MANIFEST.json"
-SCHEMA = "triorthogonal-two-delivery-layout-v1"
+SCHEMA = "triorthogonal-two-delivery-layout-v2"
 
 
 def safe_name(name):
@@ -68,10 +68,10 @@ def catalogue_summary(raw):
 
 
 class Delivery:
-    def __init__(self, github, zenodo):
-        self.roots = {"github": Path(github).resolve(), "zenodo": Path(zenodo).resolve()}
+    def __init__(self, github, data):
+        self.roots = {"github": Path(github).resolve(), "data": Path(data).resolve()}
         raw = local_file(self.roots["github"], LAYOUT).read_bytes()
-        if raw != local_file(self.roots["zenodo"], LAYOUT).read_bytes():
+        if raw != local_file(self.roots["data"], LAYOUT).read_bytes():
             raise ValueError("Delivery layouts differ")
         self.layout = json.loads(raw)
         if self.layout.get("schema") != SCHEMA:
@@ -79,7 +79,7 @@ class Delivery:
         original = local_file(self.roots["github"], ORIGINAL).read_bytes()
         if hashlib.sha256(original).hexdigest() != self.layout["original_manifest_sha256"]:
             raise ValueError("Original manifest does not match the layout")
-        if original != local_file(self.roots["zenodo"], "ORIGINAL_MANIFEST.json").read_bytes():
+        if original != local_file(self.roots["data"], "ORIGINAL_MANIFEST.json").read_bytes():
             raise ValueError("Original manifests differ")
         manifest = json.loads(original)
         if (manifest.get("schema") != "triorthogonal-release-file-manifest-v1"
@@ -114,8 +114,8 @@ class Delivery:
                     raise ValueError("Unknown delivery")
                 safe_name(copy["path"])
                 if "member" in copy:
-                    if delivery != "zenodo":
-                        raise ValueError("Data archives must be in Zenodo")
+                    if delivery != "data":
+                        raise ValueError("Data archives must be in the data delivery")
                     member = safe_name(copy["member"])
                     members = self.archive_members.setdefault(copy["path"], set())
                     if member in members:
@@ -131,7 +131,7 @@ class Delivery:
     def open_archives(self, stack):
         archives = {}
         for name, expected in self.archive_members.items():
-            archive = stack.enter_context(zipfile.ZipFile(local_file(self.roots["zenodo"], name)))
+            archive = stack.enter_context(zipfile.ZipFile(local_file(self.roots["data"], name)))
             infos = archive.infolist()
             actual = [safe_name(info.filename) for info in infos]
             if len(actual) != len(set(actual)) or set(actual) != expected:
@@ -158,10 +158,10 @@ class Delivery:
         github_manifest = json.loads((self.roots["github"] / "MANIFEST.json").read_bytes())
         if max(row["bytes"] for row in github_manifest["files"]) >= 100 * 1024**2:
             raise ValueError("A GitHub file reaches the regular Git size limit")
-        zenodo_files = list(self.roots["zenodo"].iterdir())
-        if (len(zenodo_files) > 100 or any(not p.is_file() for p in zenodo_files)
-                or sum(p.stat().st_size for p in zenodo_files) > 50_000_000_000):
-            raise ValueError("Zenodo delivery exceeds the flat-upload limits")
+        data_files = list(self.roots["data"].iterdir())
+        if (len(data_files) > 500 or any(not p.is_file() for p in data_files)
+                or sum(p.stat().st_size for p in data_files) > 20_000_000_000):
+            raise ValueError("Data delivery exceeds the Figshare free-account upload limits")
         copies_checked = 0
         with ExitStack() as stack:
             archives = self.open_archives(stack)
@@ -173,7 +173,7 @@ class Delivery:
                         raise ValueError("Original bytes not preserved: " + name)
                     copies_checked += 1
         first = local_file(self.roots["github"], "data/protocols/pareto_frontier.json").read_bytes()
-        second = local_file(self.roots["zenodo"], "pareto_frontier.json").read_bytes()
+        second = local_file(self.roots["data"], "pareto_frontier.json").read_bytes()
         if first != second:
             raise ValueError("The protocol catalogues differ")
         return dict(schema="triorthogonal-delivery-verification-v1", status="pass",
@@ -209,16 +209,17 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("command", choices=("verify", "assemble"))
     parser.add_argument("--github", type=Path, default=Path(__file__).resolve().parents[1])
-    parser.add_argument("--zenodo", type=Path, required=True)
+    parser.add_argument("--data", "--figshare", dest="data", type=Path,
+                        required=True, help="Directory containing the downloaded data delivery")
     parser.add_argument("--destination", type=Path)
     parser.add_argument("--output", type=Path)
     args = parser.parse_args()
     if args.output and any(args.output.resolve().is_relative_to(p.resolve())
-                           for p in (args.github, args.zenodo)):
+                           for p in (args.github, args.data)):
         parser.error("Write audit output outside the two deliveries")
     if args.command == "assemble" and args.destination is None:
         parser.error("assemble requires --destination")
-    delivery = Delivery(args.github, args.zenodo)
+    delivery = Delivery(args.github, args.data)
     result = delivery.assemble(args.destination) if args.command == "assemble" else delivery.verify()
     rendered = json.dumps(result, indent=2) + "\n"
     if args.output:

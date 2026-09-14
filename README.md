@@ -1,9 +1,10 @@
 # Generalised triorthogonal protocols through length 54
 
 This is the **code and theory delivery** of the classification. The companion
-[Zenodo dataset (DOI: 10.5281/zenodo.22740399)](https://doi.org/10.5281/zenodo.22740399)
-supplies the compressed space catalogues, finite censuses and
+Figshare data delivery supplies the compressed space catalogues, finite censuses and
 certificates. Neither delivery needs the original development repository.
+
+The Figshare dataset DOI is pending and will be added once reserved.
 
 ## Authorship and AI assistance
 
@@ -19,7 +20,7 @@ citation author; ChatGPT is acknowledged here as an AI development assistant.
 The original data and documentation in both deliveries are licensed under
 [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
 See [LICENSE_DATA.md](LICENSE_DATA.md) for scope, including the data inside
-the Zenodo archives and this repository's copy of the protocol catalogue.
+the Figshare archives and this repository's copy of the protocol catalogue.
 This does not assign a licence to the project's software or change any
 third-party terms.
 
@@ -41,13 +42,13 @@ is 53. These are frontier counts, not counts of all protocol matrices.
 The complete catalogue is `data/protocols/pareto_frontier.json`. It contains
 matrices, exact distances, leading error coefficients, representative gates and
 output-basis certificates. Gate representatives are heuristically simplified,
-not certified minimal. The Zenodo file `pareto_frontier.json` is byte-identical.
+not certified minimal. The Figshare file `pareto_frontier.json` is byte-identical.
 
 The space data comprise 301,029,259 affine-equivalence classes through length
 54, including decomposable spaces; 293,172,583 have length 54. The small
 `data/spaces/index.json` describes the complete dataset, **not** files all present
 in this checkout. Only a length-16 example is included here. Obtain the other
-shards from Zenodo.
+shards from the Figshare data delivery.
 
 ## Use GitHub alone
 
@@ -73,13 +74,13 @@ python -B code/read_spaces.py data/spaces/c16/m04/spaces_000000000.utspace.zst -
 
 ## Full audit using both deliveries
 
-Download **all files** in the matching Zenodo record to an otherwise empty
-directory, here called `../zenodo-download`. Keep both ZIP files intact. From
+Download **all files** in the matching Figshare record to an otherwise empty
+directory, here called `../figshare-download`. Keep both ZIP files intact. From
 the GitHub checkout, run:
 
 ```sh
-python -B code/delivery.py verify --zenodo ../zenodo-download
-python -B code/delivery.py assemble --zenodo ../zenodo-download --destination ../classification-audit
+python -B code/delivery.py verify --data ../figshare-download
+python -B code/delivery.py assemble --data ../figshare-download --destination ../classification-audit
 cd ../classification-audit
 python -B code/verify_release_integrity.py
 python -B -m unittest discover -s tests -v
@@ -111,7 +112,7 @@ classification audit; `DELIVERY_AUDIT.json` describes this packaging check.
 - `resource_estimates/`: the conditional `10^8` core-hour length-56 forecast.
 - `provenance/`: original README and original file manifest, retained unchanged.
 - `delivery_layout.json`: every original path and its location in the deliveries.
-- `packaging/`: reproducible delivery builder and Zenodo documentation templates.
+- `packaging/`: reproducible delivery builder and Figshare documentation templates.
 
 Start the theory with `theory/support_correspondence.md` and
 `theory/space_classification.md`. The native build requires a POSIX environment,

@@ -11,7 +11,7 @@ Creative Commons Attribution 4.0 International licence (CC BY 4.0).
 - SPDX identifier: `CC-BY-4.0`
 
 This grant covers the original catalogues, computational evidence,
-certificates, metadata and mathematical documentation in the Zenodo dataset
+certificates, metadata and mathematical documentation in the Figshare data delivery
 and the companion GitHub repository, including the original data and
 documentation inside `space_catalogues.zip` and `classification_evidence.zip`.
 It applies to both copies of the protocol catalogue. Historical provenance
@@ -29,7 +29,7 @@ Attribution information:
 - Creator: Adam Wills.
 - Dataset: *Generalised triorthogonal protocols through length 54:
   classification data and evidence*.
-- Dataset DOI: [10.5281/zenodo.22740399](https://doi.org/10.5281/zenodo.22740399).
+- Dataset DOI: pending reservation on Figshare.
 - Companion repository:
   [generalised_triorthogonal_classification](https://github.com/AWillsQuantum/generalised_triorthogonal_classification).
 

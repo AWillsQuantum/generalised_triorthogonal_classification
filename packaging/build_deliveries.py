@@ -12,7 +12,7 @@ import zipfile
 
 EXTRAS = ("README.md", "CITATION.cff", "LICENSE_DATA.md", ".gitignore", ".gitattributes",
           "code/delivery.py", "delivery_tests/test_delivery.py",
-          "packaging/zenodo_README.md", "packaging/zenodo_DATA_FORMAT.md")
+          "packaging/figshare_README.md", "packaging/figshare_DATA_FORMAT.md")
 
 
 def copy_file(source, target):
@@ -31,12 +31,12 @@ def build(source, destination, templates):
     original = json.loads(raw)
     records = original["files"] + [dict(path="MANIFEST.json", bytes=len(raw),
                                        sha256=hashlib.sha256(raw).hexdigest())]
-    github, zenodo = destination / "github", destination / "zenodo"
+    github, data = destination / "github", destination / "figshare"
     github.mkdir(parents=True)
-    zenodo.mkdir()
+    data.mkdir()
     rows = []
     with ExitStack() as stack:
-        archives = {name: stack.enter_context(zipfile.ZipFile(zenodo / name, "w", allowZip64=True))
+        archives = {name: stack.enter_context(zipfile.ZipFile(data / name, "w", allowZip64=True))
                     for name in ("space_catalogues.zip", "classification_evidence.zip")}
         for record in records:
             name = record["path"]
@@ -53,7 +53,7 @@ def build(source, destination, templates):
                 info.compress_type = zipfile.ZIP_STORED if name.endswith((".zst", ".zip", ".gz")) else zipfile.ZIP_DEFLATED
                 with (source / name).open("rb") as src, archives[archive].open(info, "w", force_zip64=True) as dst:
                     shutil.copyfileobj(src, dst, 1024 * 1024)
-                copies.append(dict(delivery="zenodo", path=archive, member=name))
+                copies.append(dict(delivery="data", path=archive, member=name))
             if not archive or name in ("data/spaces/index.json", "data/spaces/c16/m04/spaces_000000000.utspace.zst"):
                 target = {"README.md": "provenance/ORIGINAL_README.md",
                           "MANIFEST.json": "provenance/ORIGINAL_MANIFEST.json"}.get(name, name)
@@ -61,21 +61,21 @@ def build(source, destination, templates):
                 copies.append(dict(delivery="github", path=target))
             if name in ("data/protocols/pareto_frontier.json", "MANIFEST.json"):
                 target = "pareto_frontier.json" if name.startswith("data/") else "ORIGINAL_MANIFEST.json"
-                copy_file(source / name, zenodo / target)
-                copies.append(dict(delivery="zenodo", path=target))
+                copy_file(source / name, data / target)
+                copies.append(dict(delivery="data", path=target))
             rows.append(dict(path=name, copies=copies))
-    layout = dict(schema="triorthogonal-two-delivery-layout-v1",
+    layout = dict(schema="triorthogonal-two-delivery-layout-v2",
                   original_manifest_sha256=baseline["manifest_sha256"], files=rows)
     layout_raw = (json.dumps(layout, indent=2) + "\n").encode("ascii")
-    for root in (github, zenodo):
+    for root in (github, data):
         (root / "delivery_layout.json").write_bytes(layout_raw)
     for name in EXTRAS:
         copy_file(templates / name, github / name)
     copy_file(Path(__file__), github / "packaging/build_deliveries.py")
     for name in ("README", "DATA_FORMAT"):
-        copy_file(templates / f"packaging/zenodo_{name}.md", zenodo / f"{name}.md")
-    copy_file(templates / "LICENSE_DATA.md", zenodo / "LICENSE_DATA.md")
-    for root in (github, zenodo):
+        copy_file(templates / f"packaging/figshare_{name}.md", data / f"{name}.md")
+    copy_file(templates / "LICENSE_DATA.md", data / "LICENSE_DATA.md")
+    for root in (github, data):
         create(root)
     return baseline
 

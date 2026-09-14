@@ -6,7 +6,7 @@ GitHub repository contains all theory, source code, tests and independent
 readers.
 Neither delivery requires access to the private development repository.
 
-Dataset DOI: [10.5281/zenodo.22740399](https://doi.org/10.5281/zenodo.22740399).
+The data delivery is prepared for Figshare. Its dataset DOI is pending.
 
 ## Authorship and AI assistance
 
@@ -79,8 +79,8 @@ all the files of this record in an otherwise empty directory, and run from
 the GitHub checkout:
 
 ```sh
-python -B code/delivery.py verify --zenodo /path/to/zenodo-download
-python -B code/delivery.py assemble --zenodo /path/to/zenodo-download --destination /path/to/new-classification-audit
+python -B code/delivery.py verify --data /path/to/figshare-download
+python -B code/delivery.py assemble --data /path/to/figshare-download --destination /path/to/new-classification-audit
 ```
 
 These two commands need only Python 3.11+ and no network access. Assembly
@@ -107,3 +107,6 @@ need substantial computation and temporary storage.
 
 This dataset contains no source code. Obtain it from the companion GitHub
 release; the layout's original manifest hash identifies the matching version.
+
+The `delivery_layout.json` identifies these files as the `data` delivery;
+verification is fully offline and does not depend on a hosting service.
