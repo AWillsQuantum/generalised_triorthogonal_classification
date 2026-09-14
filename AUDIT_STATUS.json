@@ -1,0 +1,22 @@
+{
+  "schema": "triorthogonal-public-release-audit-v1",
+  "release_complete": true,
+  "maximum_protocol_length": 54,
+  "minimum_exact_distance": 3,
+  "maximum_release_bytes": 50000000000,
+  "preferred_maximum_release_bytes": 25000000000,
+  "requirements": {
+    "scope_and_equivalence": "documented",
+    "complete_space_catalogues": "301029259_declared_records_present_4837638763_compressed_bytes_full_inductive_domain_composition_passes",
+    "space_validity_and_inequivalence": "all301029259_records_pass_complete_readback_all_finite_quotients_through48_independently_verified_larger_retained_exact_quotient_censuses_composed",
+    "space_completeness_evidence": "full_inductive_cover_through54_passes_all_predecessor_domains_closed_large_finite_census_premises_explicit",
+    "protocol_frontier_and_witnesses": "assembled_74_points_62_outputs",
+    "protocol_validity_and_output_equivalence": "verified_independently",
+    "protocol_completeness_evidence": "pass_global_space_and_protocol_domain_composition_with_explicit_retained_finite_census_premises",
+    "mathematical_theory": "documented_with_exact_distance_intrinsic_output_reduction_and_complete_finite_domain_composition",
+    "essential_classification_code": "82_standalone_space_units_compile_seven_configurations_compile_four_native_regressions_and_171_python_tests_pass",
+    "standalone_reproduction": "pass_complete_small_space_and_protocol_examples_and_full_protocol_composition_from_relocated_distribution",
+    "release_content_and_size_audit": "pass_all_distributed_files_bound_by_MANIFEST_json_below_25GB_target"
+  },
+  "evidence_scope": "Complete finite mathematical domains and regeneration code; aggregate censuses are not unconditional formal proofs or a claim of fresh full enumeration."
+}

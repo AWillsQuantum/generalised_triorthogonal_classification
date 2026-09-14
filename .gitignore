@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+.venv/
+build/
+audit-build/
+classification-audit/
+zenodo-download/
+*.tmp
+.DS_Store
+Thumbs.db
