@@ -4,6 +4,15 @@ This is the **code and theory delivery** of the classification. The companion
 Zenodo dataset supplies the compressed space catalogues, finite censuses and
 certificates. Neither delivery needs the original development repository.
 
+## Authorship and AI assistance
+
+Developed by Adam Wills with substantial assistance from ChatGPT (OpenAI) in
+implementation, testing and computational analysis. Adam Wills directed the
+research and takes responsibility for the released results.
+
+Please use [CITATION.cff](CITATION.cff) to cite the software. Adam Wills is the
+citation author; ChatGPT is acknowledged here as an AI development assistant.
+
 ## Mathematical scope
 
 The protocol matrices have full row rank and pairwise distinct complete columns;

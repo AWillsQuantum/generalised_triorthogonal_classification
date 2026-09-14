@@ -1,0 +1,8 @@
+cff-version: "1.2.0"
+message: "Please cite this repository when using the software. AI assistance is acknowledged in README.md."
+type: software
+title: "Generalised triorthogonal protocols through length 54"
+authors:
+  - given-names: "Adam"
+    family-names: "Wills"
+repository-code: "https://github.com/AWillsQuantum/generalised_triorthogonal_classification"

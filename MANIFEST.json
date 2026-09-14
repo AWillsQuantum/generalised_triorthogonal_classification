@@ -4,8 +4,8 @@
   "excluded_files": [
     "MANIFEST.json"
   ],
-  "file_count": 313,
-  "payload_bytes": 6238965,
+  "file_count": 314,
+  "payload_bytes": 6240292,
   "files": [
     {
       "path": ".gitattributes",
@@ -26,6 +26,11 @@
       "path": "AUDIT_STATUS.json",
       "bytes": 1791,
       "sha256": "1f708c56e3703e08842d64989e1198405a64701a23a3bf8fc7462fb728ba22d6"
+    },
+    {
+      "path": "CITATION.cff",
+      "bytes": 359,
+      "sha256": "3432710e899382a18e1e2cd9b2e0ca8db91d72cc142752dde40a9b487d1500df"
     },
     {
       "path": "code/affine_codeword_graph.py",
@@ -1164,8 +1169,8 @@
     },
     {
       "path": "DELIVERY_AUDIT.json",
-      "bytes": 382463,
-      "sha256": "e769cd40080142a30b4485dcca958026a2d9b686943e43ef516b094007b6fab2"
+      "bytes": 382869,
+      "sha256": "bb3269dd67f1c0a09b5725738dcccd5bd21fee7507cf9ab4768f455166e3a910"
     },
     {
       "path": "delivery_layout.json",
@@ -1174,13 +1179,13 @@
     },
     {
       "path": "delivery_tests/test_delivery.py",
-      "bytes": 8085,
-      "sha256": "572afddac0877ba94c9eb8dae80ff0f8c727b229f3d89e82e96fbd7fe6b9e325"
+      "bytes": 8225,
+      "sha256": "64ffd9e67b5f0bb76615674f695f6003d86727caad6a710bc44bb6ba3cecf942"
     },
     {
       "path": "packaging/build_deliveries.py",
-      "bytes": 4528,
-      "sha256": "4a14d5f61f1f2e644fbef5734cacc668c9b7cfc1134da745429af43b853cb0d6"
+      "bytes": 4544,
+      "sha256": "e2ea8945c4bde57d28dd378a26df4c76721360f37e2bf1fa81c4ec6facbb026e"
     },
     {
       "path": "packaging/zenodo_DATA_FORMAT.md",
@@ -1204,8 +1209,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 5889,
-      "sha256": "84a1041e583e555f80a458f8f36d836e71940785e886139873683780a3e03b49"
+      "bytes": 6295,
+      "sha256": "d54b96cfe327390be9d793e45fa5ee398ec062074338cc04dc2c7e84abcbc438"
     },
     {
       "path": "requirements.txt",

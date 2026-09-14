@@ -3022,8 +3022,8 @@
   "uploaded": false,
   "packaging_sources_sha256": {
     "code/delivery.py": "f6c5e0b7d69d505717469626d155063b4ebe95c74a7bc7f2421b17f5eb6b0ec6",
-    "delivery_tests/test_delivery.py": "572afddac0877ba94c9eb8dae80ff0f8c727b229f3d89e82e96fbd7fe6b9e325",
-    "packaging/build_deliveries.py": "4a14d5f61f1f2e644fbef5734cacc668c9b7cfc1134da745429af43b853cb0d6"
+    "delivery_tests/test_delivery.py": "64ffd9e67b5f0bb76615674f695f6003d86727caad6a710bc44bb6ba3cecf942",
+    "packaging/build_deliveries.py": "e2ea8945c4bde57d28dd378a26df4c76721360f37e2bf1fa81c4ec6facbb026e"
   },
   "archives": {
     "classification_evidence.zip": {
@@ -3034,5 +3034,12 @@
       "bytes": 4837947412,
       "sha256": "59bc4b1e5e1d5289d16a78571395e3e7f17a5880027790b88548603d6acafab0"
     }
+  },
+  "citation_metadata_validation": {
+    "status": "pass",
+    "schema_url": "https://raw.githubusercontent.com/citation-file-format/citation-file-format/1.2.0/schema.json",
+    "schema_sha256": "0b8d22140da702d766df318dcff3a91af2f39521298dcf36d76315fd99cc169b",
+    "citation_sha256": "3432710e899382a18e1e2cd9b2e0ca8db91d72cc142752dde40a9b487d1500df",
+    "sole_citation_author": "Adam Wills"
   }
 }

@@ -10,7 +10,7 @@ import sys
 import zipfile
 
 
-EXTRAS = ("README.md", ".gitignore", ".gitattributes",
+EXTRAS = ("README.md", "CITATION.cff", ".gitignore", ".gitattributes",
           "code/delivery.py", "delivery_tests/test_delivery.py",
           "packaging/zenodo_README.md", "packaging/zenodo_DATA_FORMAT.md")
 

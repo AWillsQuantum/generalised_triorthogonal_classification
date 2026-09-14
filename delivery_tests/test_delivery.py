@@ -160,6 +160,8 @@ class DeliveryTests(unittest.TestCase):
         spec.loader.exec_module(builder)
         destination = self.root / "rebuilt"
         builder.build(self.original, destination, ROOT)
+        self.assertEqual((destination / "github/CITATION.cff").read_bytes(),
+                         (ROOT / "CITATION.cff").read_bytes())
         for path in destination.rglob("*"):
             self.assertNotIn(path.name, ("PUBLISHING.md", "LICENSING.md"))
             if path.name.endswith("README.md"):
