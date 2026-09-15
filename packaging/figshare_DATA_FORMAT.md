@@ -11,6 +11,18 @@ each `output_id` to a representative gate and tensor/basis certificate.
 The identifier alone is not the human-readable gate. Gate simplification
 uses CNOT+S equivalence and does not certify a minimum number of factors.
 
+The preferred human-readable field is `factorised_representative_gate`, using
+`tensor` for independent factors and `^(tensor k)` for repeated factors.
+For example, `T^(tensor 6)` means six independent T outputs, not the sixth power
+of a single-qubit gate. `factorised_representative_latex` contains the equivalent
+LaTeX expression. `independent_factors` lists each component's dimension,
+established output ID and fixed short gate representative, in deterministic order.
+Indices inside these factors are local to their separate output registers.
+`representative_gate` expands all factors onto consecutive disjoint qubit blocks.
+`gate_basis_in_tensor_coordinates` certifies that expanded expression against the
+unchanged matrix tensor. `factorisation_certificate` gives the change from the
+previous displayed gate and its full-phase diagonal Clifford correction.
+
 The exact Z distance is the minimum Hamming weight of a vector `v` with
 `G_0 v = 0` but `G_1 v != 0`, over the binary field. The error coefficient
 counts such vectors at the minimum weight. `S` counts every matrix row.
@@ -68,7 +80,9 @@ algorithms, not another list of frontier protocols.
 
 `delivery_layout.json` maps **every** file in `ORIGINAL_MANIFEST.json` plus
 the manifest itself to at least one delivery location. It explicitly lists
-intentional copies, including the two frontier JSON files. The standard-library
+intentional copies of the original, pre-factorisation frontier. The current
+`pareto_frontier.json` is linked to that original by exact presentation-only
+verification, including every matrix, class ID and metric. The standard-library
 `code/delivery.py` in GitHub checks all copies, all ZIP members and the exact
 original byte hashes. It can reconstruct the original directory without
 the original development repository. Current delivery manifests separately

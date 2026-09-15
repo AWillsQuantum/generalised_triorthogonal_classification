@@ -26,26 +26,7 @@
       ],
       "gate_basis_in_tensor_coordinates": [
         1
-      ],
-      "independent_factors": [
-        {
-          "q": 1,
-          "output_id": "Q1_0000000000000001",
-          "representative_gate": "T1"
-        }
-      ],
-      "factorised_representative_gate": "T",
-      "factorised_representative_latex": "\\mathsf{T}",
-      "factorisation_certificate": {
-        "basis_in_previous_gate_coordinates": [
-          1
-        ],
-        "diagonal_clifford_correction": {
-          "S_powers": [],
-          "CZ_pairs": [],
-          "truth_table_points_checked": 2
-        }
-      }
+      ]
     },
     {
       "output_id": "Q2_0000000000000006",
@@ -57,32 +38,7 @@
       "gate_basis_in_tensor_coordinates": [
         2,
         3
-      ],
-      "independent_factors": [
-        {
-          "q": 1,
-          "output_id": "Q1_0000000000000001",
-          "representative_gate": "T1"
-        },
-        {
-          "q": 1,
-          "output_id": "Q1_0000000000000001",
-          "representative_gate": "T1"
-        }
-      ],
-      "factorised_representative_gate": "T^(tensor 2)",
-      "factorised_representative_latex": "\\mathsf{T}^{\\otimes 2}",
-      "factorisation_certificate": {
-        "basis_in_previous_gate_coordinates": [
-          1,
-          2
-        ],
-        "diagonal_clifford_correction": {
-          "S_powers": [],
-          "CZ_pairs": [],
-          "truth_table_points_checked": 4
-        }
-      }
+      ]
     },
     {
       "output_id": "Q2_0000000000000004",
@@ -94,27 +50,7 @@
       "gate_basis_in_tensor_coordinates": [
         1,
         2
-      ],
-      "independent_factors": [
-        {
-          "q": 2,
-          "output_id": "Q2_0000000000000004",
-          "representative_gate": "CS12"
-        }
-      ],
-      "factorised_representative_gate": "CS",
-      "factorised_representative_latex": "\\mathsf{CS}",
-      "factorisation_certificate": {
-        "basis_in_previous_gate_coordinates": [
-          1,
-          2
-        ],
-        "diagonal_clifford_correction": {
-          "S_powers": [],
-          "CZ_pairs": [],
-          "truth_table_points_checked": 4
-        }
-      }
+      ]
     },
     {
       "output_id": "Q3_000000000000004c",
@@ -127,38 +63,7 @@
         5,
         6,
         7
-      ],
-      "independent_factors": [
-        {
-          "q": 1,
-          "output_id": "Q1_0000000000000001",
-          "representative_gate": "T1"
-        },
-        {
-          "q": 1,
-          "output_id": "Q1_0000000000000001",
-          "representative_gate": "T1"
-        },
-        {
-          "q": 1,
-          "output_id": "Q1_0000000000000001",
-          "representative_gate": "T1"
-        }
-      ],
-      "factorised_representative_gate": "T^(tensor 3)",
-      "factorised_representative_latex": "\\mathsf{T}^{\\otimes 3}",
-      "factorisation_certificate": {
-        "basis_in_previous_gate_coordinates": [
-          1,
-          2,
-          4
-        ],
-        "diagonal_clifford_correction": {
-          "S_powers": [],
-          "CZ_pairs": [],
-          "truth_table_points_checked": 8
-        }
-      }
+      ]
     },
     {
       "output_id": "Q3_000000000000000c",
@@ -169,35 +74,9 @@
       ],
       "gate_basis_in_tensor_coordinates": [
         4,
-        2,
-        1
-      ],
-      "independent_factors": [
-        {
-          "q": 1,
-          "output_id": "Q1_0000000000000001",
-          "representative_gate": "T1"
-        },
-        {
-          "q": 2,
-          "output_id": "Q2_0000000000000004",
-          "representative_gate": "CS12"
-        }
-      ],
-      "factorised_representative_gate": "T tensor CS",
-      "factorised_representative_latex": "\\mathsf{T}\\otimes\\allowbreak \\mathsf{CS}",
-      "factorisation_certificate": {
-        "basis_in_previous_gate_coordinates": [
-          1,
-          4,
-          2
-        ],
-        "diagonal_clifford_correction": {
-          "S_powers": [],
-          "CZ_pairs": [],
-          "truth_table_points_checked": 8
-        }
-      }
+        1,
+        2
+      ]
     },
     {
       "output_id": "Q3_0000000000000060",
@@ -210,28 +89,7 @@
         2,
         4,
         5
-      ],
-      "independent_factors": [
-        {
-          "q": 3,
-          "output_id": "Q3_0000000000000060",
-          "representative_gate": "CS12CS13"
-        }
-      ],
-      "factorised_representative_gate": "CS12CS13",
-      "factorised_representative_latex": "\\mathsf{CS}_{12}\\allowbreak\\mathsf{CS}_{13}",
-      "factorisation_certificate": {
-        "basis_in_previous_gate_coordinates": [
-          1,
-          2,
-          4
-        ],
-        "diagonal_clifford_correction": {
-          "S_powers": [],
-          "CZ_pairs": [],
-          "truth_table_points_checked": 8
-        }
-      }
+      ]
     },
     {
       "output_id": "Q3_0000000000000068",
@@ -244,28 +102,7 @@
         4,
         2,
         3
-      ],
-      "independent_factors": [
-        {
-          "q": 3,
-          "output_id": "Q3_0000000000000068",
-          "representative_gate": "T1CS12CS13"
-        }
-      ],
-      "factorised_representative_gate": "T1CS12CS13",
-      "factorised_representative_latex": "\\mathsf{T}_{1}\\allowbreak\\mathsf{CS}_{12}\\allowbreak\\mathsf{CS}_{13}",
-      "factorisation_certificate": {
-        "basis_in_previous_gate_coordinates": [
-          1,
-          2,
-          4
-        ],
-        "diagonal_clifford_correction": {
-          "S_powers": [],
-          "CZ_pairs": [],
-          "truth_table_points_checked": 8
-        }
-      }
+      ]
     },
     {
       "output_id": "Q3_0000000000000048",
@@ -278,28 +115,7 @@
         4,
         1,
         2
-      ],
-      "independent_factors": [
-        {
-          "q": 3,
-          "output_id": "Q3_0000000000000048",
-          "representative_gate": "T1CCZ123"
-        }
-      ],
-      "factorised_representative_gate": "T1CCZ123",
-      "factorised_representative_latex": "\\mathsf{T}_{1}\\allowbreak\\mathsf{CCZ}_{123}",
-      "factorisation_certificate": {
-        "basis_in_previous_gate_coordinates": [
-          1,
-          2,
-          4
-        ],
-        "diagonal_clifford_correction": {
-          "S_powers": [],
-          "CZ_pairs": [],
-          "truth_table_points_checked": 8
-        }
-      }
+      ]
     },
     {
       "output_id": "Q3_0000000000000040",
@@ -312,28 +128,7 @@
         1,
         2,
         4
-      ],
-      "independent_factors": [
-        {
-          "q": 3,
-          "output_id": "Q3_0000000000000040",
-          "representative_gate": "CCZ123"
-        }
-      ],
-      "factorised_representative_gate": "CCZ",
-      "factorised_representative_latex": "\\mathsf{CCZ}",
-      "factorisation_certificate": {
-        "basis_in_previous_gate_coordinates": [
-          1,
-          2,
-          4
-        ],
-        "diagonal_clifford_correction": {
-          "S_powers": [],
-          "CZ_pairs": [],
-          "truth_table_points_checked": 8
-        }
-      }
+      ]
     },
     {
       "output_id": "Q4_00000000000001e0",
@@ -347,44 +142,7 @@
         11,
         13,
         15
-      ],
-      "independent_factors": [
-        {
-          "q": 1,
-          "output_id": "Q1_0000000000000001",
-          "representative_gate": "T1"
-        },
-        {
-          "q": 1,
-          "output_id": "Q1_0000000000000001",
-          "representative_gate": "T1"
-        },
-        {
-          "q": 1,
-          "output_id": "Q1_0000000000000001",
-          "representative_gate": "T1"
-        },
-        {
-          "q": 1,
-          "output_id": "Q1_0000000000000001",
-          "representative_gate": "T1"
-        }
-      ],
-      "factorised_representative_gate": "T^(tensor 4)",
-      "factorised_representative_latex": "\\mathsf{T}^{\\otimes 4}",
-      "factorisation_certificate": {
-        "basis_in_previous_gate_coordinates": [
-          1,
-          2,
-          4,
-          8
-        ],
-        "diagonal_clifford_correction": {
-          "S_powers": [],
-          "CZ_pairs": [],
-          "truth_table_points_checked": 16
-        }
-      }
+      ]
     },
     {
       "output_id": "Q4_00000000000001a0",
@@ -396,41 +154,9 @@
       "gate_basis_in_tensor_coordinates": [
         8,
         9,
-        4,
-        2
-      ],
-      "independent_factors": [
-        {
-          "q": 1,
-          "output_id": "Q1_0000000000000001",
-          "representative_gate": "T1"
-        },
-        {
-          "q": 1,
-          "output_id": "Q1_0000000000000001",
-          "representative_gate": "T1"
-        },
-        {
-          "q": 2,
-          "output_id": "Q2_0000000000000004",
-          "representative_gate": "CS12"
-        }
-      ],
-      "factorised_representative_gate": "T^(tensor 2) tensor CS",
-      "factorised_representative_latex": "\\mathsf{T}^{\\otimes 2}\\otimes\\allowbreak \\mathsf{CS}",
-      "factorisation_certificate": {
-        "basis_in_previous_gate_coordinates": [
-          1,
-          2,
-          8,
-          4
-        ],
-        "diagonal_clifford_correction": {
-          "S_powers": [],
-          "CZ_pairs": [],
-          "truth_table_points_checked": 16
-        }
-      }
+        2,
+        4
+      ]
     },
     {
       "output_id": "Q4_00000000000000e0",
@@ -441,133 +167,38 @@
       ],
       "gate_basis_in_tensor_coordinates": [
         8,
-        5,
         2,
-        3
-      ],
-      "independent_factors": [
-        {
-          "q": 1,
-          "output_id": "Q1_0000000000000001",
-          "representative_gate": "T1"
-        },
-        {
-          "q": 3,
-          "output_id": "Q3_0000000000000060",
-          "representative_gate": "CS12CS13"
-        }
-      ],
-      "factorised_representative_gate": "T tensor (CS12CS13)",
-      "factorised_representative_latex": "\\mathsf{T}\\otimes\\allowbreak \\bigl(\\mathsf{CS}_{12}\\allowbreak\\mathsf{CS}_{13}\\bigr)",
-      "factorisation_certificate": {
-        "basis_in_previous_gate_coordinates": [
-          1,
-          8,
-          2,
-          14
-        ],
-        "diagonal_clifford_correction": {
-          "S_powers": [
-            [
-              4,
-              2
-            ]
-          ],
-          "CZ_pairs": [
-            [
-              2,
-              4
-            ],
-            [
-              3,
-              4
-            ]
-          ],
-          "truth_table_points_checked": 16
-        }
-      }
+        4,
+        5
+      ]
     },
     {
       "output_id": "Q4_00000000000010e0",
       "q": 4,
-      "representative_gate": "T1T2CS23CS24",
+      "representative_gate": "T1T2CS13CS14",
       "tensor_key_words": [
         "0x00000000000010e0"
       ],
       "gate_basis_in_tensor_coordinates": [
-        11,
         12,
-        3,
-        2
-      ],
-      "independent_factors": [
-        {
-          "q": 1,
-          "output_id": "Q1_0000000000000001",
-          "representative_gate": "T1"
-        },
-        {
-          "q": 3,
-          "output_id": "Q3_0000000000000068",
-          "representative_gate": "T1CS12CS13"
-        }
-      ],
-      "factorised_representative_gate": "T tensor (T1CS12CS13)",
-      "factorised_representative_latex": "\\mathsf{T}\\otimes\\allowbreak \\bigl(\\mathsf{T}_{1}\\allowbreak\\mathsf{CS}_{12}\\allowbreak\\mathsf{CS}_{13}\\bigr)",
-      "factorisation_certificate": {
-        "basis_in_previous_gate_coordinates": [
-          2,
-          1,
-          8,
-          4
-        ],
-        "diagonal_clifford_correction": {
-          "S_powers": [],
-          "CZ_pairs": [],
-          "truth_table_points_checked": 16
-        }
-      }
+        11,
+        2,
+        3
+      ]
     },
     {
       "output_id": "Q4_00000000000004c0",
       "q": 4,
-      "representative_gate": "T1T2CCZ234",
+      "representative_gate": "T1T2CCZ134",
       "tensor_key_words": [
         "0x00000000000004c0"
       ],
       "gate_basis_in_tensor_coordinates": [
-        8,
         12,
-        2,
-        1
-      ],
-      "independent_factors": [
-        {
-          "q": 1,
-          "output_id": "Q1_0000000000000001",
-          "representative_gate": "T1"
-        },
-        {
-          "q": 3,
-          "output_id": "Q3_0000000000000048",
-          "representative_gate": "T1CCZ123"
-        }
-      ],
-      "factorised_representative_gate": "T tensor (T1CCZ123)",
-      "factorised_representative_latex": "\\mathsf{T}\\otimes\\allowbreak \\bigl(\\mathsf{T}_{1}\\allowbreak\\mathsf{CCZ}_{123}\\bigr)",
-      "factorisation_certificate": {
-        "basis_in_previous_gate_coordinates": [
-          2,
-          1,
-          8,
-          4
-        ],
-        "diagonal_clifford_correction": {
-          "S_powers": [],
-          "CZ_pairs": [],
-          "truth_table_points_checked": 16
-        }
-      }
+        8,
+        1,
+        2
+      ]
     },
     {
       "output_id": "Q4_00000000000000c0",
@@ -578,37 +209,10 @@
       ],
       "gate_basis_in_tensor_coordinates": [
         8,
-        4,
+        1,
         2,
-        1
-      ],
-      "independent_factors": [
-        {
-          "q": 1,
-          "output_id": "Q1_0000000000000001",
-          "representative_gate": "T1"
-        },
-        {
-          "q": 3,
-          "output_id": "Q3_0000000000000040",
-          "representative_gate": "CCZ123"
-        }
-      ],
-      "factorised_representative_gate": "T tensor CCZ",
-      "factorised_representative_latex": "\\mathsf{T}\\otimes\\allowbreak \\mathsf{CCZ}",
-      "factorisation_certificate": {
-        "basis_in_previous_gate_coordinates": [
-          1,
-          8,
-          4,
-          2
-        ],
-        "diagonal_clifford_correction": {
-          "S_powers": [],
-          "CZ_pairs": [],
-          "truth_table_points_checked": 16
-        }
-      }
+        4
+      ]
     },
     {
       "output_id": "Q4_0000000000000c80",
@@ -622,29 +226,7 @@
         4,
         1,
         2
-      ],
-      "independent_factors": [
-        {
-          "q": 4,
-          "output_id": "Q4_0000000000000c80",
-          "representative_gate": "T1CS12CCZ134"
-        }
-      ],
-      "factorised_representative_gate": "T1CS12CCZ134",
-      "factorised_representative_latex": "\\mathsf{T}_{1}\\allowbreak\\mathsf{CS}_{12}\\allowbreak\\mathsf{CCZ}_{134}",
-      "factorisation_certificate": {
-        "basis_in_previous_gate_coordinates": [
-          1,
-          2,
-          4,
-          8
-        ],
-        "diagonal_clifford_correction": {
-          "S_powers": [],
-          "CZ_pairs": [],
-          "truth_table_points_checked": 16
-        }
-      }
+      ]
     },
     {
       "output_id": "Q4_0000000000000c00",
@@ -658,29 +240,7 @@
         4,
         1,
         2
-      ],
-      "independent_factors": [
-        {
-          "q": 4,
-          "output_id": "Q4_0000000000000c00",
-          "representative_gate": "CS12CCZ134"
-        }
-      ],
-      "factorised_representative_gate": "CS12CCZ134",
-      "factorised_representative_latex": "\\mathsf{CS}_{12}\\allowbreak\\mathsf{CCZ}_{134}",
-      "factorisation_certificate": {
-        "basis_in_previous_gate_coordinates": [
-          1,
-          2,
-          4,
-          8
-        ],
-        "diagonal_clifford_correction": {
-          "S_powers": [],
-          "CZ_pairs": [],
-          "truth_table_points_checked": 16
-        }
-      }
+      ]
     },
     {
       "output_id": "Q4_0000000000000120",
@@ -690,38 +250,11 @@
         "0x0000000000000120"
       ],
       "gate_basis_in_tensor_coordinates": [
-        8,
         1,
-        4,
-        2
-      ],
-      "independent_factors": [
-        {
-          "q": 2,
-          "output_id": "Q2_0000000000000004",
-          "representative_gate": "CS12"
-        },
-        {
-          "q": 2,
-          "output_id": "Q2_0000000000000004",
-          "representative_gate": "CS12"
-        }
-      ],
-      "factorised_representative_gate": "CS^(tensor 2)",
-      "factorised_representative_latex": "\\mathsf{CS}^{\\otimes 2}",
-      "factorisation_certificate": {
-        "basis_in_previous_gate_coordinates": [
-          2,
-          1,
-          8,
-          4
-        ],
-        "diagonal_clifford_correction": {
-          "S_powers": [],
-          "CZ_pairs": [],
-          "truth_table_points_checked": 16
-        }
-      }
+        8,
+        2,
+        4
+      ]
     },
     {
       "output_id": "Q4_0000000000002120",
@@ -735,29 +268,7 @@
         10,
         13,
         4
-      ],
-      "independent_factors": [
-        {
-          "q": 4,
-          "output_id": "Q4_0000000000002120",
-          "representative_gate": "CS12CS13CS24"
-        }
-      ],
-      "factorised_representative_gate": "CS12CS13CS24",
-      "factorised_representative_latex": "\\mathsf{CS}_{12}\\allowbreak\\mathsf{CS}_{13}\\allowbreak\\mathsf{CS}_{24}",
-      "factorisation_certificate": {
-        "basis_in_previous_gate_coordinates": [
-          1,
-          2,
-          4,
-          8
-        ],
-        "diagonal_clifford_correction": {
-          "S_powers": [],
-          "CZ_pairs": [],
-          "truth_table_points_checked": 16
-        }
-      }
+      ]
     },
     {
       "output_id": "Q4_00000000000021a0",
@@ -771,29 +282,7 @@
         2,
         1,
         4
-      ],
-      "independent_factors": [
-        {
-          "q": 4,
-          "output_id": "Q4_00000000000021a0",
-          "representative_gate": "T1CS12CS13CS24"
-        }
-      ],
-      "factorised_representative_gate": "T1CS12CS13CS24",
-      "factorised_representative_latex": "\\mathsf{T}_{1}\\allowbreak\\mathsf{CS}_{12}\\allowbreak\\mathsf{CS}_{13}\\allowbreak\\mathsf{CS}_{24}",
-      "factorisation_certificate": {
-        "basis_in_previous_gate_coordinates": [
-          1,
-          2,
-          4,
-          8
-        ],
-        "diagonal_clifford_correction": {
-          "S_powers": [],
-          "CZ_pairs": [],
-          "truth_table_points_checked": 16
-        }
-      }
+      ]
     },
     {
       "output_id": "Q4_00000000000011e0",
@@ -807,29 +296,7 @@
         8,
         2,
         3
-      ],
-      "independent_factors": [
-        {
-          "q": 4,
-          "output_id": "Q4_00000000000011e0",
-          "representative_gate": "T1T2CS12CS13CS24"
-        }
-      ],
-      "factorised_representative_gate": "T1T2CS12CS13CS24",
-      "factorised_representative_latex": "\\mathsf{T}_{1}\\allowbreak\\mathsf{T}_{2}\\allowbreak\\mathsf{CS}_{12}\\allowbreak\\mathsf{CS}_{13}\\allowbreak\\mathsf{CS}_{24}",
-      "factorisation_certificate": {
-        "basis_in_previous_gate_coordinates": [
-          1,
-          2,
-          4,
-          8
-        ],
-        "diagonal_clifford_correction": {
-          "S_powers": [],
-          "CZ_pairs": [],
-          "truth_table_points_checked": 16
-        }
-      }
+      ]
     },
     {
       "output_id": "Q4_00000000000010a0",
@@ -843,297 +310,82 @@
         4,
         2,
         1
-      ],
-      "independent_factors": [
-        {
-          "q": 4,
-          "output_id": "Q4_00000000000010a0",
-          "representative_gate": "T1CS23CCZ124"
-        }
-      ],
-      "factorised_representative_gate": "T1CS23CCZ124",
-      "factorised_representative_latex": "\\mathsf{T}_{1}\\allowbreak\\mathsf{CS}_{23}\\allowbreak\\mathsf{CCZ}_{124}",
-      "factorisation_certificate": {
-        "basis_in_previous_gate_coordinates": [
-          1,
-          2,
-          4,
-          8
-        ],
-        "diagonal_clifford_correction": {
-          "S_powers": [],
-          "CZ_pairs": [],
-          "truth_table_points_checked": 16
-        }
-      }
+      ]
     },
     {
       "output_id": "Q5_0000000000004120",
       "q": 5,
-      "representative_gate": "T1CS23CS45",
+      "representative_gate": "T5CS14CS23",
       "tensor_key_words": [
         "0x0000000000004120"
       ],
       "gate_basis_in_tensor_coordinates": [
-        16,
-        4,
+        1,
         2,
+        4,
         8,
-        1
-      ],
-      "independent_factors": [
-        {
-          "q": 1,
-          "output_id": "Q1_0000000000000001",
-          "representative_gate": "T1"
-        },
-        {
-          "q": 2,
-          "output_id": "Q2_0000000000000004",
-          "representative_gate": "CS12"
-        },
-        {
-          "q": 2,
-          "output_id": "Q2_0000000000000004",
-          "representative_gate": "CS12"
-        }
-      ],
-      "factorised_representative_gate": "T tensor CS^(tensor 2)",
-      "factorised_representative_latex": "\\mathsf{T}\\otimes\\allowbreak \\mathsf{CS}^{\\otimes 2}",
-      "factorisation_certificate": {
-        "basis_in_previous_gate_coordinates": [
-          16,
-          4,
-          2,
-          8,
-          1
-        ],
-        "diagonal_clifford_correction": {
-          "S_powers": [],
-          "CZ_pairs": [],
-          "truth_table_points_checked": 32
-        }
-      }
+        16
+      ]
     },
     {
       "output_id": "Q5_0000000000006120",
       "q": 5,
-      "representative_gate": "T1CS23CS24CS35",
+      "representative_gate": "T5CS14CS23CCZ234",
       "tensor_key_words": [
         "0x0000000000006120"
       ],
       "gate_basis_in_tensor_coordinates": [
-        16,
-        12,
+        4,
         1,
-        2,
-        11
-      ],
-      "independent_factors": [
-        {
-          "q": 1,
-          "output_id": "Q1_0000000000000001",
-          "representative_gate": "T1"
-        },
-        {
-          "q": 4,
-          "output_id": "Q4_0000000000002120",
-          "representative_gate": "CS12CS13CS24"
-        }
-      ],
-      "factorised_representative_gate": "T tensor (CS12CS13CS24)",
-      "factorised_representative_latex": "\\mathsf{T}\\otimes\\allowbreak \\bigl(\\mathsf{CS}_{12}\\allowbreak\\mathsf{CS}_{13}\\allowbreak\\mathsf{CS}_{24}\\bigr)",
-      "factorisation_certificate": {
-        "basis_in_previous_gate_coordinates": [
-          16,
-          4,
-          2,
-          10,
-          13
-        ],
-        "diagonal_clifford_correction": {
-          "S_powers": [
-            [
-              5,
-              1
-            ]
-          ],
-          "CZ_pairs": [
-            [
-              2,
-              4
-            ],
-            [
-              3,
-              5
-            ]
-          ],
-          "truth_table_points_checked": 32
-        }
-      }
+        12,
+        3,
+        16
+      ]
     },
     {
       "output_id": "Q5_000000000000a000",
       "q": 5,
-      "representative_gate": "CS12CCZ345",
+      "representative_gate": "CS15CCZ234",
       "tensor_key_words": [
         "0x000000000000a000"
       ],
       "gate_basis_in_tensor_coordinates": [
-        16,
         1,
-        8,
+        2,
         4,
-        2
-      ],
-      "independent_factors": [
-        {
-          "q": 2,
-          "output_id": "Q2_0000000000000004",
-          "representative_gate": "CS12"
-        },
-        {
-          "q": 3,
-          "output_id": "Q3_0000000000000040",
-          "representative_gate": "CCZ123"
-        }
-      ],
-      "factorised_representative_gate": "CS tensor CCZ",
-      "factorised_representative_latex": "\\mathsf{CS}\\otimes\\allowbreak \\mathsf{CCZ}",
-      "factorisation_certificate": {
-        "basis_in_previous_gate_coordinates": [
-          16,
-          1,
-          8,
-          4,
-          2
-        ],
-        "diagonal_clifford_correction": {
-          "S_powers": [],
-          "CZ_pairs": [],
-          "truth_table_points_checked": 32
-        }
-      }
+        8,
+        16
+      ]
     },
     {
       "output_id": "Q5_000000000000e000",
       "q": 5,
-      "representative_gate": "T1T2CCZ345",
+      "representative_gate": "T5CS15CCZ234",
       "tensor_key_words": [
         "0x000000000000e000"
       ],
       "gate_basis_in_tensor_coordinates": [
-        17,
-        16,
-        8,
+        1,
+        2,
         4,
-        2
-      ],
-      "independent_factors": [
-        {
-          "q": 1,
-          "output_id": "Q1_0000000000000001",
-          "representative_gate": "T1"
-        },
-        {
-          "q": 1,
-          "output_id": "Q1_0000000000000001",
-          "representative_gate": "T1"
-        },
-        {
-          "q": 3,
-          "output_id": "Q3_0000000000000040",
-          "representative_gate": "CCZ123"
-        }
-      ],
-      "factorised_representative_gate": "T^(tensor 2) tensor CCZ",
-      "factorised_representative_latex": "\\mathsf{T}^{\\otimes 2}\\otimes\\allowbreak \\mathsf{CCZ}",
-      "factorisation_certificate": {
-        "basis_in_previous_gate_coordinates": [
-          17,
-          16,
-          8,
-          4,
-          2
-        ],
-        "diagonal_clifford_correction": {
-          "S_powers": [
-            [
-              1,
-              1
-            ]
-          ],
-          "CZ_pairs": [
-            [
-              1,
-              2
-            ]
-          ],
-          "truth_table_points_checked": 32
-        }
-      }
+        8,
+        16
+      ]
     },
     {
       "output_id": "Q5_000000000000e400",
       "q": 5,
-      "representative_gate": "T1T2CS34CS35",
+      "representative_gate": "T5CS15CS34CCZ234",
       "tensor_key_words": [
         "0x000000000000e400"
       ],
       "gate_basis_in_tensor_coordinates": [
-        17,
-        16,
-        8,
+        1,
+        2,
         4,
-        6
-      ],
-      "independent_factors": [
-        {
-          "q": 1,
-          "output_id": "Q1_0000000000000001",
-          "representative_gate": "T1"
-        },
-        {
-          "q": 1,
-          "output_id": "Q1_0000000000000001",
-          "representative_gate": "T1"
-        },
-        {
-          "q": 3,
-          "output_id": "Q3_0000000000000060",
-          "representative_gate": "CS12CS13"
-        }
-      ],
-      "factorised_representative_gate": "T^(tensor 2) tensor (CS12CS13)",
-      "factorised_representative_latex": "\\mathsf{T}^{\\otimes 2}\\otimes\\allowbreak \\bigl(\\mathsf{CS}_{12}\\allowbreak\\mathsf{CS}_{13}\\bigr)",
-      "factorisation_certificate": {
-        "basis_in_previous_gate_coordinates": [
-          17,
-          16,
-          8,
-          4,
-          6
-        ],
-        "diagonal_clifford_correction": {
-          "S_powers": [
-            [
-              1,
-              1
-            ]
-          ],
-          "CZ_pairs": [
-            [
-              1,
-              2
-            ],
-            [
-              3,
-              5
-            ]
-          ],
-          "truth_table_points_checked": 32
-        }
-      }
+        8,
+        16
+      ]
     },
     {
       "output_id": "Q5_000000000008a400",
@@ -1148,78 +400,22 @@
         4,
         8,
         16
-      ],
-      "independent_factors": [
-        {
-          "q": 5,
-          "output_id": "Q5_000000000008a400",
-          "representative_gate": "CS15CS34CCZ125CCZ234"
-        }
-      ],
-      "factorised_representative_gate": "CS15CS34CCZ125CCZ234",
-      "factorised_representative_latex": "\\mathsf{CS}_{15}\\allowbreak\\mathsf{CS}_{34}\\allowbreak\\mathsf{CCZ}_{125}\\allowbreak\\mathsf{CCZ}_{234}",
-      "factorisation_certificate": {
-        "basis_in_previous_gate_coordinates": [
-          1,
-          2,
-          4,
-          8,
-          16
-        ],
-        "diagonal_clifford_correction": {
-          "S_powers": [],
-          "CZ_pairs": [],
-          "truth_table_points_checked": 32
-        }
-      }
+      ]
     },
     {
       "output_id": "Q5_0000000000090400",
       "q": 5,
-      "representative_gate": "CS12CS34CS35",
+      "representative_gate": "CS25CS34CCZ125",
       "tensor_key_words": [
         "0x0000000000090400"
       ],
       "gate_basis_in_tensor_coordinates": [
-        8,
-        4,
-        16,
+        1,
         2,
-        3
-      ],
-      "independent_factors": [
-        {
-          "q": 2,
-          "output_id": "Q2_0000000000000004",
-          "representative_gate": "CS12"
-        },
-        {
-          "q": 3,
-          "output_id": "Q3_0000000000000060",
-          "representative_gate": "CS12CS13"
-        }
-      ],
-      "factorised_representative_gate": "CS tensor (CS12CS13)",
-      "factorised_representative_latex": "\\mathsf{CS}\\otimes\\allowbreak \\bigl(\\mathsf{CS}_{12}\\allowbreak\\mathsf{CS}_{13}\\bigr)",
-      "factorisation_certificate": {
-        "basis_in_previous_gate_coordinates": [
-          8,
-          4,
-          16,
-          2,
-          3
-        ],
-        "diagonal_clifford_correction": {
-          "S_powers": [],
-          "CZ_pairs": [
-            [
-              3,
-              5
-            ]
-          ],
-          "truth_table_points_checked": 32
-        }
-      }
+        4,
+        8,
+        16
+      ]
     },
     {
       "output_id": "Q5_0000000000142000",
@@ -1234,30 +430,7 @@
         4,
         8,
         16
-      ],
-      "independent_factors": [
-        {
-          "q": 5,
-          "output_id": "Q5_0000000000142000",
-          "representative_gate": "CS45CCZ135CCZ234"
-        }
-      ],
-      "factorised_representative_gate": "CS45CCZ135CCZ234",
-      "factorised_representative_latex": "\\mathsf{CS}_{45}\\allowbreak\\mathsf{CCZ}_{135}\\allowbreak\\mathsf{CCZ}_{234}",
-      "factorisation_certificate": {
-        "basis_in_previous_gate_coordinates": [
-          1,
-          2,
-          4,
-          8,
-          16
-        ],
-        "diagonal_clifford_correction": {
-          "S_powers": [],
-          "CZ_pairs": [],
-          "truth_table_points_checked": 32
-        }
-      }
+      ]
     },
     {
       "output_id": "Q5_0000000000206000",
@@ -1272,30 +445,7 @@
         4,
         8,
         16
-      ],
-      "independent_factors": [
-        {
-          "q": 5,
-          "output_id": "Q5_0000000000206000",
-          "representative_gate": "T5CCZ145CCZ234"
-        }
-      ],
-      "factorised_representative_gate": "T5CCZ145CCZ234",
-      "factorised_representative_latex": "\\mathsf{T}_{5}\\allowbreak\\mathsf{CCZ}_{145}\\allowbreak\\mathsf{CCZ}_{234}",
-      "factorisation_certificate": {
-        "basis_in_previous_gate_coordinates": [
-          1,
-          2,
-          4,
-          8,
-          16
-        ],
-        "diagonal_clifford_correction": {
-          "S_powers": [],
-          "CZ_pairs": [],
-          "truth_table_points_checked": 32
-        }
-      }
+      ]
     },
     {
       "output_id": "Q5_0000000000210400",
@@ -1310,30 +460,7 @@
         4,
         8,
         16
-      ],
-      "independent_factors": [
-        {
-          "q": 5,
-          "output_id": "Q5_0000000000210400",
-          "representative_gate": "CS25CS34CCZ145"
-        }
-      ],
-      "factorised_representative_gate": "CS25CS34CCZ145",
-      "factorised_representative_latex": "\\mathsf{CS}_{25}\\allowbreak\\mathsf{CS}_{34}\\allowbreak\\mathsf{CCZ}_{145}",
-      "factorisation_certificate": {
-        "basis_in_previous_gate_coordinates": [
-          1,
-          2,
-          4,
-          8,
-          16
-        ],
-        "diagonal_clifford_correction": {
-          "S_powers": [],
-          "CZ_pairs": [],
-          "truth_table_points_checked": 32
-        }
-      }
+      ]
     },
     {
       "output_id": "Q5_0000000000216400",
@@ -1348,88 +475,22 @@
         4,
         8,
         16
-      ],
-      "independent_factors": [
-        {
-          "q": 5,
-          "output_id": "Q5_0000000000216400",
-          "representative_gate": "T5CS25CS34CCZ145CCZ234"
-        }
-      ],
-      "factorised_representative_gate": "T5CS25CS34CCZ145CCZ234",
-      "factorised_representative_latex": "\\mathsf{T}_{5}\\allowbreak\\mathsf{CS}_{25}\\allowbreak\\mathsf{CS}_{34}\\allowbreak\\mathsf{CCZ}_{145}\\allowbreak\\mathsf{CCZ}_{234}",
-      "factorisation_certificate": {
-        "basis_in_previous_gate_coordinates": [
-          1,
-          2,
-          4,
-          8,
-          16
-        ],
-        "diagonal_clifford_correction": {
-          "S_powers": [],
-          "CZ_pairs": [],
-          "truth_table_points_checked": 32
-        }
-      }
+      ]
     },
     {
       "output_id": "Q5_0000000000404120",
       "q": 5,
-      "representative_gate": "T1T2T3CS45",
+      "representative_gate": "T5CS14CS23CCZ235",
       "tensor_key_words": [
         "0x0000000000404120"
       ],
       "gate_basis_in_tensor_coordinates": [
-        18,
-        20,
-        22,
+        1,
+        2,
+        4,
         8,
-        1
-      ],
-      "independent_factors": [
-        {
-          "q": 1,
-          "output_id": "Q1_0000000000000001",
-          "representative_gate": "T1"
-        },
-        {
-          "q": 1,
-          "output_id": "Q1_0000000000000001",
-          "representative_gate": "T1"
-        },
-        {
-          "q": 1,
-          "output_id": "Q1_0000000000000001",
-          "representative_gate": "T1"
-        },
-        {
-          "q": 2,
-          "output_id": "Q2_0000000000000004",
-          "representative_gate": "CS12"
-        }
-      ],
-      "factorised_representative_gate": "T^(tensor 3) tensor CS",
-      "factorised_representative_latex": "\\mathsf{T}^{\\otimes 3}\\otimes\\allowbreak \\mathsf{CS}",
-      "factorisation_certificate": {
-        "basis_in_previous_gate_coordinates": [
-          18,
-          20,
-          22,
-          8,
-          1
-        ],
-        "diagonal_clifford_correction": {
-          "S_powers": [
-            [
-              3,
-              3
-            ]
-          ],
-          "CZ_pairs": [],
-          "truth_table_points_checked": 32
-        }
-      }
+        16
+      ]
     },
     {
       "output_id": "Q5_0000000000406120",
@@ -1444,30 +505,7 @@
         4,
         8,
         16
-      ],
-      "independent_factors": [
-        {
-          "q": 5,
-          "output_id": "Q5_0000000000406120",
-          "representative_gate": "T5CS14CS23CCZ234CCZ235"
-        }
-      ],
-      "factorised_representative_gate": "T5CS14CS23CCZ234CCZ235",
-      "factorised_representative_latex": "\\mathsf{T}_{5}\\allowbreak\\mathsf{CS}_{14}\\allowbreak\\mathsf{CS}_{23}\\allowbreak\\mathsf{CCZ}_{234}\\allowbreak\\mathsf{CCZ}_{235}",
-      "factorisation_certificate": {
-        "basis_in_previous_gate_coordinates": [
-          1,
-          2,
-          4,
-          8,
-          16
-        ],
-        "diagonal_clifford_correction": {
-          "S_powers": [],
-          "CZ_pairs": [],
-          "truth_table_points_checked": 32
-        }
-      }
+      ]
     },
     {
       "output_id": "Q5_0000000000600000",
@@ -1482,30 +520,7 @@
         4,
         8,
         16
-      ],
-      "independent_factors": [
-        {
-          "q": 5,
-          "output_id": "Q5_0000000000600000",
-          "representative_gate": "CCZ145CCZ235"
-        }
-      ],
-      "factorised_representative_gate": "CCZ145CCZ235",
-      "factorised_representative_latex": "\\mathsf{CCZ}_{145}\\allowbreak\\mathsf{CCZ}_{235}",
-      "factorisation_certificate": {
-        "basis_in_previous_gate_coordinates": [
-          1,
-          2,
-          4,
-          8,
-          16
-        ],
-        "diagonal_clifford_correction": {
-          "S_powers": [],
-          "CZ_pairs": [],
-          "truth_table_points_checked": 32
-        }
-      }
+      ]
     },
     {
       "output_id": "Q5_0000000000604000",
@@ -1520,30 +535,7 @@
         4,
         8,
         16
-      ],
-      "independent_factors": [
-        {
-          "q": 5,
-          "output_id": "Q5_0000000000604000",
-          "representative_gate": "T5CCZ145CCZ235"
-        }
-      ],
-      "factorised_representative_gate": "T5CCZ145CCZ235",
-      "factorised_representative_latex": "\\mathsf{T}_{5}\\allowbreak\\mathsf{CCZ}_{145}\\allowbreak\\mathsf{CCZ}_{235}",
-      "factorisation_certificate": {
-        "basis_in_previous_gate_coordinates": [
-          1,
-          2,
-          4,
-          8,
-          16
-        ],
-        "diagonal_clifford_correction": {
-          "S_powers": [],
-          "CZ_pairs": [],
-          "truth_table_points_checked": 32
-        }
-      }
+      ]
     },
     {
       "output_id": "Q5_0000000000604120",
@@ -1558,93 +550,22 @@
         4,
         8,
         16
-      ],
-      "independent_factors": [
-        {
-          "q": 5,
-          "output_id": "Q5_0000000000604120",
-          "representative_gate": "T5CS14CS23CCZ145CCZ235"
-        }
-      ],
-      "factorised_representative_gate": "T5CS14CS23CCZ145CCZ235",
-      "factorised_representative_latex": "\\mathsf{T}_{5}\\allowbreak\\mathsf{CS}_{14}\\allowbreak\\mathsf{CS}_{23}\\allowbreak\\mathsf{CCZ}_{145}\\allowbreak\\mathsf{CCZ}_{235}",
-      "factorisation_certificate": {
-        "basis_in_previous_gate_coordinates": [
-          1,
-          2,
-          4,
-          8,
-          16
-        ],
-        "diagonal_clifford_correction": {
-          "S_powers": [],
-          "CZ_pairs": [],
-          "truth_table_points_checked": 32
-        }
-      }
+      ]
     },
     {
       "output_id": "Q5_0000000000606120",
       "q": 5,
-      "representative_gate": "T1T2T3T4T5",
+      "representative_gate": "T1T2T3CS45CCZ145",
       "tensor_key_words": [
         "0x0000000000606120"
       ],
       "gate_basis_in_tensor_coordinates": [
+        22,
         19,
         21,
-        24,
-        23,
-        25
-      ],
-      "independent_factors": [
-        {
-          "q": 1,
-          "output_id": "Q1_0000000000000001",
-          "representative_gate": "T1"
-        },
-        {
-          "q": 1,
-          "output_id": "Q1_0000000000000001",
-          "representative_gate": "T1"
-        },
-        {
-          "q": 1,
-          "output_id": "Q1_0000000000000001",
-          "representative_gate": "T1"
-        },
-        {
-          "q": 1,
-          "output_id": "Q1_0000000000000001",
-          "representative_gate": "T1"
-        },
-        {
-          "q": 1,
-          "output_id": "Q1_0000000000000001",
-          "representative_gate": "T1"
-        }
-      ],
-      "factorised_representative_gate": "T^(tensor 5)",
-      "factorised_representative_latex": "\\mathsf{T}^{\\otimes 5}",
-      "factorisation_certificate": {
-        "basis_in_previous_gate_coordinates": [
-          2,
-          4,
-          17,
-          9,
-          25
-        ],
-        "diagonal_clifford_correction": {
-          "S_powers": [
-            [
-              5,
-              3
-            ]
-          ],
-          "CZ_pairs": [],
-          "truth_table_points_checked": 32
-        }
-      }
+        1,
+        14
+      ]
     },
     {
       "output_id": "Q5_0000000000612400",
@@ -1659,30 +580,7 @@
         4,
         8,
         16
-      ],
-      "independent_factors": [
-        {
-          "q": 5,
-          "output_id": "Q5_0000000000612400",
-          "representative_gate": "CS25CS34CCZ145CCZ234CCZ235"
-        }
-      ],
-      "factorised_representative_gate": "CS25CS34CCZ145CCZ234CCZ235",
-      "factorised_representative_latex": "\\mathsf{CS}_{25}\\allowbreak\\mathsf{CS}_{34}\\allowbreak\\mathsf{CCZ}_{145}\\allowbreak\\mathsf{CCZ}_{234}\\allowbreak\\mathsf{CCZ}_{235}",
-      "factorisation_certificate": {
-        "basis_in_previous_gate_coordinates": [
-          1,
-          2,
-          4,
-          8,
-          16
-        ],
-        "diagonal_clifford_correction": {
-          "S_powers": [],
-          "CZ_pairs": [],
-          "truth_table_points_checked": 32
-        }
-      }
+      ]
     },
     {
       "output_id": "Q5_0000000000640000",
@@ -1697,30 +595,7 @@
         4,
         8,
         16
-      ],
-      "independent_factors": [
-        {
-          "q": 5,
-          "output_id": "Q5_0000000000640000",
-          "representative_gate": "CS45CCZ145CCZ235"
-        }
-      ],
-      "factorised_representative_gate": "CS45CCZ145CCZ235",
-      "factorised_representative_latex": "\\mathsf{CS}_{45}\\allowbreak\\mathsf{CCZ}_{145}\\allowbreak\\mathsf{CCZ}_{235}",
-      "factorisation_certificate": {
-        "basis_in_previous_gate_coordinates": [
-          1,
-          2,
-          4,
-          8,
-          16
-        ],
-        "diagonal_clifford_correction": {
-          "S_powers": [],
-          "CZ_pairs": [],
-          "truth_table_points_checked": 32
-        }
-      }
+      ]
     },
     {
       "output_id": "Q5_000000000088a400",
@@ -1735,30 +610,7 @@
         20,
         10,
         2
-      ],
-      "independent_factors": [
-        {
-          "q": 5,
-          "output_id": "Q5_000000000088a400",
-          "representative_gate": "CS12CS34CCZ135CCZ245"
-        }
-      ],
-      "factorised_representative_gate": "CS12CS34CCZ135CCZ245",
-      "factorised_representative_latex": "\\mathsf{CS}_{12}\\allowbreak\\mathsf{CS}_{34}\\allowbreak\\mathsf{CCZ}_{135}\\allowbreak\\mathsf{CCZ}_{245}",
-      "factorisation_certificate": {
-        "basis_in_previous_gate_coordinates": [
-          1,
-          2,
-          4,
-          8,
-          16
-        ],
-        "diagonal_clifford_correction": {
-          "S_powers": [],
-          "CZ_pairs": [],
-          "truth_table_points_checked": 32
-        }
-      }
+      ]
     },
     {
       "output_id": "Q5_0000000001004120",
@@ -1773,78 +625,22 @@
         4,
         8,
         16
-      ],
-      "independent_factors": [
-        {
-          "q": 5,
-          "output_id": "Q5_0000000001004120",
-          "representative_gate": "T5CS14CS23CCZ345"
-        }
-      ],
-      "factorised_representative_gate": "T5CS14CS23CCZ345",
-      "factorised_representative_latex": "\\mathsf{T}_{5}\\allowbreak\\mathsf{CS}_{14}\\allowbreak\\mathsf{CS}_{23}\\allowbreak\\mathsf{CCZ}_{345}",
-      "factorisation_certificate": {
-        "basis_in_previous_gate_coordinates": [
-          1,
-          2,
-          4,
-          8,
-          16
-        ],
-        "diagonal_clifford_correction": {
-          "S_powers": [],
-          "CZ_pairs": [],
-          "truth_table_points_checked": 32
-        }
-      }
+      ]
     },
     {
       "output_id": "Q5_0000000001004c00",
       "q": 5,
-      "representative_gate": "T1T2CS23CCZ245",
+      "representative_gate": "T5CS34CCZ124CCZ345",
       "tensor_key_words": [
         "0x0000000001004c00"
       ],
       "gate_basis_in_tensor_coordinates": [
-        20,
-        24,
-        4,
+        1,
         2,
-        1
-      ],
-      "independent_factors": [
-        {
-          "q": 1,
-          "output_id": "Q1_0000000000000001",
-          "representative_gate": "T1"
-        },
-        {
-          "q": 4,
-          "output_id": "Q4_0000000000000c80",
-          "representative_gate": "T1CS12CCZ134"
-        }
-      ],
-      "factorised_representative_gate": "T tensor (T1CS12CCZ134)",
-      "factorised_representative_latex": "\\mathsf{T}\\otimes\\allowbreak \\bigl(\\mathsf{T}_{1}\\allowbreak\\mathsf{CS}_{12}\\allowbreak\\mathsf{CCZ}_{134}\\bigr)",
-      "factorisation_certificate": {
-        "basis_in_previous_gate_coordinates": [
-          20,
-          24,
-          4,
-          2,
-          1
-        ],
-        "diagonal_clifford_correction": {
-          "S_powers": [],
-          "CZ_pairs": [
-            [
-              2,
-              3
-            ]
-          ],
-          "truth_table_points_checked": 32
-        }
-      }
+        4,
+        8,
+        16
+      ]
     },
     {
       "output_id": "Q5_0000000001084400",
@@ -1859,96 +655,22 @@
         4,
         8,
         16
-      ],
-      "independent_factors": [
-        {
-          "q": 5,
-          "output_id": "Q5_0000000001084400",
-          "representative_gate": "T5CS34CCZ125CCZ345"
-        }
-      ],
-      "factorised_representative_gate": "T5CS34CCZ125CCZ345",
-      "factorised_representative_latex": "\\mathsf{T}_{5}\\allowbreak\\mathsf{CS}_{34}\\allowbreak\\mathsf{CCZ}_{125}\\allowbreak\\mathsf{CCZ}_{345}",
-      "factorisation_certificate": {
-        "basis_in_previous_gate_coordinates": [
-          1,
-          2,
-          4,
-          8,
-          16
-        ],
-        "diagonal_clifford_correction": {
-          "S_powers": [],
-          "CZ_pairs": [],
-          "truth_table_points_checked": 32
-        }
-      }
+      ]
     },
     {
       "output_id": "Q5_0000000001084c00",
       "q": 5,
-      "representative_gate": "T1T2T3CCZ345",
+      "representative_gate": "T1CS12CS23CCZ345",
       "tensor_key_words": [
         "0x0000000001084c00"
       ],
       "gate_basis_in_tensor_coordinates": [
         24,
-        28,
-        20,
-        2,
-        1
-      ],
-      "independent_factors": [
-        {
-          "q": 1,
-          "output_id": "Q1_0000000000000001",
-          "representative_gate": "T1"
-        },
-        {
-          "q": 1,
-          "output_id": "Q1_0000000000000001",
-          "representative_gate": "T1"
-        },
-        {
-          "q": 3,
-          "output_id": "Q3_0000000000000048",
-          "representative_gate": "T1CCZ123"
-        }
-      ],
-      "factorised_representative_gate": "T^(tensor 2) tensor (T1CCZ123)",
-      "factorised_representative_latex": "\\mathsf{T}^{\\otimes 2}\\otimes\\allowbreak \\bigl(\\mathsf{T}_{1}\\allowbreak\\mathsf{CCZ}_{123}\\bigr)",
-      "factorisation_certificate": {
-        "basis_in_previous_gate_coordinates": [
-          1,
-          3,
-          7,
-          16,
-          8
-        ],
-        "diagonal_clifford_correction": {
-          "S_powers": [
-            [
-              2,
-              1
-            ],
-            [
-              3,
-              2
-            ]
-          ],
-          "CZ_pairs": [
-            [
-              1,
-              2
-            ],
-            [
-              1,
-              3
-            ]
-          ],
-          "truth_table_points_checked": 32
-        }
-      }
+        4,
+        8,
+        1,
+        2
+      ]
     },
     {
       "output_id": "Q5_0000000001094400",
@@ -1963,250 +685,68 @@
         4,
         8,
         16
-      ],
-      "independent_factors": [
-        {
-          "q": 5,
-          "output_id": "Q5_0000000001094400",
-          "representative_gate": "T5CS25CS34CCZ125CCZ345"
-        }
-      ],
-      "factorised_representative_gate": "T5CS25CS34CCZ125CCZ345",
-      "factorised_representative_latex": "\\mathsf{T}_{5}\\allowbreak\\mathsf{CS}_{25}\\allowbreak\\mathsf{CS}_{34}\\allowbreak\\mathsf{CCZ}_{125}\\allowbreak\\mathsf{CCZ}_{345}",
-      "factorisation_certificate": {
-        "basis_in_previous_gate_coordinates": [
-          1,
-          2,
-          4,
-          8,
-          16
-        ],
-        "diagonal_clifford_correction": {
-          "S_powers": [],
-          "CZ_pairs": [],
-          "truth_table_points_checked": 32
-        }
-      }
+      ]
     },
     {
       "output_id": "Q5_0000000001406120",
       "q": 5,
-      "representative_gate": "T1T2CS23CS24CS35",
+      "representative_gate": "T1CS12CS23CS24CS35",
       "tensor_key_words": [
         "0x0000000001406120"
       ],
       "gate_basis_in_tensor_coordinates": [
         18,
-        20,
-        10,
+        13,
+        1,
         2,
-        1
-      ],
-      "independent_factors": [
-        {
-          "q": 1,
-          "output_id": "Q1_0000000000000001",
-          "representative_gate": "T1"
-        },
-        {
-          "q": 4,
-          "output_id": "Q4_00000000000021a0",
-          "representative_gate": "T1CS12CS13CS24"
-        }
-      ],
-      "factorised_representative_gate": "T tensor (T1CS12CS13CS24)",
-      "factorised_representative_latex": "\\mathsf{T}\\otimes\\allowbreak \\bigl(\\mathsf{T}_{1}\\allowbreak\\mathsf{CS}_{12}\\allowbreak\\mathsf{CS}_{13}\\allowbreak\\mathsf{CS}_{24}\\bigr)",
-      "factorisation_certificate": {
-        "basis_in_previous_gate_coordinates": [
-          1,
-          23,
-          16,
-          8,
-          4
-        ],
-        "diagonal_clifford_correction": {
-          "S_powers": [
-            [
-              2,
-              3
-            ]
-          ],
-          "CZ_pairs": [
-            [
-              1,
-              2
-            ],
-            [
-              2,
-              3
-            ],
-            [
-              2,
-              5
-            ]
-          ],
-          "truth_table_points_checked": 32
-        }
-      }
+        10
+      ]
     },
     {
       "output_id": "Q5_0000000001494c00",
       "q": 5,
-      "representative_gate": "T1T2T3CS34CS35",
+      "representative_gate": "T1T2T3CS14CCZ145",
       "tensor_key_words": [
         "0x0000000001494c00"
       ],
       "gate_basis_in_tensor_coordinates": [
+        18,
         24,
         29,
-        18,
         6,
-        7
-      ],
-      "independent_factors": [
-        {
-          "q": 1,
-          "output_id": "Q1_0000000000000001",
-          "representative_gate": "T1"
-        },
-        {
-          "q": 1,
-          "output_id": "Q1_0000000000000001",
-          "representative_gate": "T1"
-        },
-        {
-          "q": 3,
-          "output_id": "Q3_0000000000000068",
-          "representative_gate": "T1CS12CS13"
-        }
-      ],
-      "factorised_representative_gate": "T^(tensor 2) tensor (T1CS12CS13)",
-      "factorised_representative_latex": "\\mathsf{T}^{\\otimes 2}\\otimes\\allowbreak \\bigl(\\mathsf{T}_{1}\\allowbreak\\mathsf{CS}_{12}\\allowbreak\\mathsf{CS}_{13}\\bigr)",
-      "factorisation_certificate": {
-        "basis_in_previous_gate_coordinates": [
-          2,
-          4,
-          1,
-          8,
-          24
-        ],
-        "diagonal_clifford_correction": {
-          "S_powers": [],
-          "CZ_pairs": [
-            [
-              3,
-              5
-            ]
-          ],
-          "truth_table_points_checked": 32
-        }
-      }
+        1
+      ]
     },
     {
       "output_id": "Q5_0000000001604120",
       "q": 5,
-      "representative_gate": "T1T2T3CS23CS24CS35",
+      "representative_gate": "T5CS14CS23CCZ145CCZ235CCZ345",
       "tensor_key_words": [
         "0x0000000001604120"
       ],
       "gate_basis_in_tensor_coordinates": [
-        19,
-        21,
-        26,
+        1,
         2,
-        1
-      ],
-      "independent_factors": [
-        {
-          "q": 1,
-          "output_id": "Q1_0000000000000001",
-          "representative_gate": "T1"
-        },
-        {
-          "q": 4,
-          "output_id": "Q4_00000000000011e0",
-          "representative_gate": "T1T2CS12CS13CS24"
-        }
-      ],
-      "factorised_representative_gate": "T tensor (T1T2CS12CS13CS24)",
-      "factorised_representative_latex": "\\mathsf{T}\\otimes\\allowbreak \\bigl(\\mathsf{T}_{1}\\allowbreak\\mathsf{T}_{2}\\allowbreak\\mathsf{CS}_{12}\\allowbreak\\mathsf{CS}_{13}\\allowbreak\\mathsf{CS}_{24}\\bigr)",
-      "factorisation_certificate": {
-        "basis_in_previous_gate_coordinates": [
-          19,
-          21,
-          26,
-          2,
-          1
-        ],
-        "diagonal_clifford_correction": {
-          "S_powers": [],
-          "CZ_pairs": [
-            [
-              2,
-              4
-            ],
-            [
-              3,
-              5
-            ]
-          ],
-          "truth_table_points_checked": 32
-        }
-      }
+        4,
+        8,
+        16
+      ]
     },
     {
       "output_id": "Q6_000000000a08a400",
       "q": 6,
-      "representative_gate": "T1T6CS25CS34CCZ256CCZ346",
+      "representative_gate": "T1T2CS13CS14CS35CS46",
       "tensor_key_words": [
         "0x000000000a08a400"
       ],
       "gate_basis_in_tensor_coordinates": [
+        58,
         32,
-        8,
-        16,
         1,
         4,
-        34
-      ],
-      "independent_factors": [
-        {
-          "q": 1,
-          "output_id": "Q1_0000000000000001",
-          "representative_gate": "T1"
-        },
-        {
-          "q": 5,
-          "output_id": "Q5_0000000000604120",
-          "representative_gate": "T5CS14CS23CCZ145CCZ235"
-        }
-      ],
-      "factorised_representative_gate": "T tensor (T5CS14CS23CCZ145CCZ235)",
-      "factorised_representative_latex": "\\mathsf{T}\\otimes\\allowbreak \\bigl(\\mathsf{T}_{5}\\allowbreak\\mathsf{CS}_{14}\\allowbreak\\mathsf{CS}_{23}\\allowbreak\\mathsf{CCZ}_{145}\\allowbreak\\mathsf{CCZ}_{235}\\bigr)",
-      "factorisation_certificate": {
-        "basis_in_previous_gate_coordinates": [
-          2,
-          32,
-          16,
-          4,
-          8,
-          49
-        ],
-        "diagonal_clifford_correction": {
-          "S_powers": [],
-          "CZ_pairs": [
-            [
-              4,
-              6
-            ],
-            [
-              5,
-              6
-            ]
-          ],
-          "truth_table_points_checked": 64
-        }
-      }
+        16,
+        8
+      ]
     },
     {
       "output_id": "Q6_0000001310640000",
@@ -2222,31 +762,7 @@
         8,
         3,
         2
-      ],
-      "independent_factors": [
-        {
-          "q": 6,
-          "output_id": "Q6_0000001310640000",
-          "representative_gate": "CS12CS34CCZ125CCZ135CCZ136CCZ246CCZ345"
-        }
-      ],
-      "factorised_representative_gate": "CS12CS34CCZ125CCZ135CCZ136CCZ246CCZ345",
-      "factorised_representative_latex": "\\mathsf{CS}_{12}\\allowbreak\\mathsf{CS}_{34}\\allowbreak\\mathsf{CCZ}_{125}\\allowbreak\\mathsf{CCZ}_{135}\\allowbreak\\mathsf{CCZ}_{136}\\allowbreak\\mathsf{CCZ}_{246}\\allowbreak\\mathsf{CCZ}_{345}",
-      "factorisation_certificate": {
-        "basis_in_previous_gate_coordinates": [
-          1,
-          2,
-          4,
-          8,
-          16,
-          32
-        ],
-        "diagonal_clifford_correction": {
-          "S_powers": [],
-          "CZ_pairs": [],
-          "truth_table_points_checked": 64
-        }
-      }
+      ]
     },
     {
       "output_id": "Q6_0000001940600000",
@@ -2262,108 +778,23 @@
         4,
         8,
         3
-      ],
-      "independent_factors": [
-        {
-          "q": 6,
-          "output_id": "Q6_0000001940600000",
-          "representative_gate": "CS12CCZ134CCZ135CCZ146CCZ234CCZ256"
-        }
-      ],
-      "factorised_representative_gate": "CS12CCZ134CCZ135CCZ146CCZ234CCZ256",
-      "factorised_representative_latex": "\\mathsf{CS}_{12}\\allowbreak\\mathsf{CCZ}_{134}\\allowbreak\\mathsf{CCZ}_{135}\\allowbreak\\mathsf{CCZ}_{146}\\allowbreak\\mathsf{CCZ}_{234}\\allowbreak\\mathsf{CCZ}_{256}",
-      "factorisation_certificate": {
-        "basis_in_previous_gate_coordinates": [
-          1,
-          2,
-          4,
-          8,
-          16,
-          32
-        ],
-        "diagonal_clifford_correction": {
-          "S_powers": [],
-          "CZ_pairs": [],
-          "truth_table_points_checked": 64
-        }
-      }
+      ]
     },
     {
       "output_id": "Q6_0000004002090400",
       "q": 6,
-      "representative_gate": "T1T2T3CS45CS46",
+      "representative_gate": "T1CS12CS23CS45CCZ456",
       "tensor_key_words": [
         "0x0000004002090400"
       ],
       "gate_basis_in_tensor_coordinates": [
         36,
-        44,
-        40,
-        16,
+        8,
+        4,
         2,
-        3
-      ],
-      "independent_factors": [
-        {
-          "q": 1,
-          "output_id": "Q1_0000000000000001",
-          "representative_gate": "T1"
-        },
-        {
-          "q": 1,
-          "output_id": "Q1_0000000000000001",
-          "representative_gate": "T1"
-        },
-        {
-          "q": 1,
-          "output_id": "Q1_0000000000000001",
-          "representative_gate": "T1"
-        },
-        {
-          "q": 3,
-          "output_id": "Q3_0000000000000060",
-          "representative_gate": "CS12CS13"
-        }
-      ],
-      "factorised_representative_gate": "T^(tensor 3) tensor (CS12CS13)",
-      "factorised_representative_latex": "\\mathsf{T}^{\\otimes 3}\\otimes\\allowbreak \\bigl(\\mathsf{CS}_{12}\\allowbreak\\mathsf{CS}_{13}\\bigr)",
-      "factorisation_certificate": {
-        "basis_in_previous_gate_coordinates": [
-          1,
-          3,
-          7,
-          16,
-          8,
-          40
-        ],
-        "diagonal_clifford_correction": {
-          "S_powers": [
-            [
-              2,
-              1
-            ],
-            [
-              3,
-              2
-            ]
-          ],
-          "CZ_pairs": [
-            [
-              1,
-              2
-            ],
-            [
-              1,
-              3
-            ],
-            [
-              4,
-              6
-            ]
-          ],
-          "truth_table_points_checked": 64
-        }
-      }
+        16,
+        1
+      ]
     },
     {
       "output_id": "Q6_0000000210440000",
@@ -2379,31 +810,7 @@
         4,
         1,
         2
-      ],
-      "independent_factors": [
-        {
-          "q": 6,
-          "output_id": "Q6_0000000210440000",
-          "representative_gate": "CS12CS34CCZ135CCZ246"
-        }
-      ],
-      "factorised_representative_gate": "CS12CS34CCZ135CCZ246",
-      "factorised_representative_latex": "\\mathsf{CS}_{12}\\allowbreak\\mathsf{CS}_{34}\\allowbreak\\mathsf{CCZ}_{135}\\allowbreak\\mathsf{CCZ}_{246}",
-      "factorisation_certificate": {
-        "basis_in_previous_gate_coordinates": [
-          1,
-          2,
-          4,
-          8,
-          16,
-          32
-        ],
-        "diagonal_clifford_correction": {
-          "S_powers": [],
-          "CZ_pairs": [],
-          "truth_table_points_checked": 64
-        }
-      }
+      ]
     },
     {
       "output_id": "Q6_0000000c09040000",
@@ -2419,31 +826,7 @@
         8,
         4,
         1
-      ],
-      "independent_factors": [
-        {
-          "q": 6,
-          "output_id": "Q6_0000000c09040000",
-          "representative_gate": "CS12CS34CCZ125CCZ136CCZ345"
-        }
-      ],
-      "factorised_representative_gate": "CS12CS34CCZ125CCZ136CCZ345",
-      "factorised_representative_latex": "\\mathsf{CS}_{12}\\allowbreak\\mathsf{CS}_{34}\\allowbreak\\mathsf{CCZ}_{125}\\allowbreak\\mathsf{CCZ}_{136}\\allowbreak\\mathsf{CCZ}_{345}",
-      "factorisation_certificate": {
-        "basis_in_previous_gate_coordinates": [
-          1,
-          2,
-          4,
-          8,
-          16,
-          32
-        ],
-        "diagonal_clifford_correction": {
-          "S_powers": [],
-          "CZ_pairs": [],
-          "truth_table_points_checked": 64
-        }
-      }
+      ]
     },
     {
       "output_id": "Q6_0000001441000000",
@@ -2459,236 +842,55 @@
         8,
         2,
         4
-      ],
-      "independent_factors": [
-        {
-          "q": 6,
-          "output_id": "Q6_0000001441000000",
-          "representative_gate": "CS12CCZ123CCZ145CCZ246"
-        }
-      ],
-      "factorised_representative_gate": "CS12CCZ123CCZ145CCZ246",
-      "factorised_representative_latex": "\\mathsf{CS}_{12}\\allowbreak\\mathsf{CCZ}_{123}\\allowbreak\\mathsf{CCZ}_{145}\\allowbreak\\mathsf{CCZ}_{246}",
-      "factorisation_certificate": {
-        "basis_in_previous_gate_coordinates": [
-          1,
-          2,
-          4,
-          8,
-          16,
-          32
-        ],
-        "diagonal_clifford_correction": {
-          "S_powers": [],
-          "CZ_pairs": [],
-          "truth_table_points_checked": 64
-        }
-      }
+      ]
     },
     {
       "output_id": "Q6_0000000002600000",
       "q": 6,
-      "representative_gate": "T1CCZ256CCZ346",
+      "representative_gate": "T1CCZ234CCZ256",
       "tensor_key_words": [
         "0x0000000002600000"
       ],
       "gate_basis_in_tensor_coordinates": [
         32,
-        4,
-        8,
+        16,
         1,
+        8,
         2,
-        16
-      ],
-      "independent_factors": [
-        {
-          "q": 1,
-          "output_id": "Q1_0000000000000001",
-          "representative_gate": "T1"
-        },
-        {
-          "q": 5,
-          "output_id": "Q5_0000000000600000",
-          "representative_gate": "CCZ145CCZ235"
-        }
-      ],
-      "factorised_representative_gate": "T tensor (CCZ145CCZ235)",
-      "factorised_representative_latex": "\\mathsf{T}\\otimes\\allowbreak \\bigl(\\mathsf{CCZ}_{145}\\allowbreak\\mathsf{CCZ}_{235}\\bigr)",
-      "factorisation_certificate": {
-        "basis_in_previous_gate_coordinates": [
-          1,
-          32,
-          8,
-          4,
-          16,
-          2
-        ],
-        "diagonal_clifford_correction": {
-          "S_powers": [],
-          "CZ_pairs": [],
-          "truth_table_points_checked": 64
-        }
-      }
+        4
+      ]
     },
     {
       "output_id": "Q6_000000040200a000",
       "q": 6,
-      "representative_gate": "T1T2T3CCZ456",
+      "representative_gate": "T1CS12CS23CCZ456",
       "tensor_key_words": [
         "0x000000040200a000"
       ],
       "gate_basis_in_tensor_coordinates": [
         33,
-        49,
-        48,
-        8,
+        16,
+        1,
+        2,
         4,
-        2
-      ],
-      "independent_factors": [
-        {
-          "q": 1,
-          "output_id": "Q1_0000000000000001",
-          "representative_gate": "T1"
-        },
-        {
-          "q": 1,
-          "output_id": "Q1_0000000000000001",
-          "representative_gate": "T1"
-        },
-        {
-          "q": 1,
-          "output_id": "Q1_0000000000000001",
-          "representative_gate": "T1"
-        },
-        {
-          "q": 3,
-          "output_id": "Q3_0000000000000040",
-          "representative_gate": "CCZ123"
-        }
-      ],
-      "factorised_representative_gate": "T^(tensor 3) tensor CCZ",
-      "factorised_representative_latex": "\\mathsf{T}^{\\otimes 3}\\otimes\\allowbreak \\mathsf{CCZ}",
-      "factorisation_certificate": {
-        "basis_in_previous_gate_coordinates": [
-          1,
-          3,
-          7,
-          32,
-          16,
-          8
-        ],
-        "diagonal_clifford_correction": {
-          "S_powers": [
-            [
-              2,
-              1
-            ],
-            [
-              3,
-              2
-            ]
-          ],
-          "CZ_pairs": [
-            [
-              1,
-              2
-            ],
-            [
-              1,
-              3
-            ]
-          ],
-          "truth_table_points_checked": 64
-        }
-      }
+        8
+      ]
     },
     {
       "output_id": "Q6_000000400a08a400",
       "q": 6,
-      "representative_gate": "T1T2T3T4T5T6",
+      "representative_gate": "T1T2CS13CS34CS56CCZ256",
       "tensor_key_words": [
         "0x000000400a08a400"
       ],
       "gate_basis_in_tensor_coordinates": [
         35,
-        36,
-        44,
-        51,
-        40,
-        50
-      ],
-      "independent_factors": [
-        {
-          "q": 1,
-          "output_id": "Q1_0000000000000001",
-          "representative_gate": "T1"
-        },
-        {
-          "q": 1,
-          "output_id": "Q1_0000000000000001",
-          "representative_gate": "T1"
-        },
-        {
-          "q": 1,
-          "output_id": "Q1_0000000000000001",
-          "representative_gate": "T1"
-        },
-        {
-          "q": 1,
-          "output_id": "Q1_0000000000000001",
-          "representative_gate": "T1"
-        },
-        {
-          "q": 1,
-          "output_id": "Q1_0000000000000001",
-          "representative_gate": "T1"
-        },
-        {
-          "q": 1,
-          "output_id": "Q1_0000000000000001",
-          "representative_gate": "T1"
-        }
-      ],
-      "factorised_representative_gate": "T^(tensor 6)",
-      "factorised_representative_latex": "\\mathsf{T}^{\\otimes 6}",
-      "factorisation_certificate": {
-        "basis_in_previous_gate_coordinates": [
-          1,
-          5,
-          13,
-          34,
-          18,
-          50
-        ],
-        "diagonal_clifford_correction": {
-          "S_powers": [
-            [
-              2,
-              1
-            ],
-            [
-              3,
-              2
-            ],
-            [
-              6,
-              3
-            ]
-          ],
-          "CZ_pairs": [
-            [
-              1,
-              2
-            ],
-            [
-              1,
-              3
-            ]
-          ],
-          "truth_table_points_checked": 64
-        }
-      }
+        41,
+        7,
+        8,
+        1,
+        26
+      ]
     },
     {
       "output_id": "Q7_0048206040000000",
@@ -2705,32 +907,7 @@
         2,
         1,
         4
-      ],
-      "independent_factors": [
-        {
-          "q": 7,
-          "output_id": "Q7_0048206040000000",
-          "representative_gate": "CS12CS34CCZ125CCZ136CCZ247CCZ345"
-        }
-      ],
-      "factorised_representative_gate": "CS12CS34CCZ125CCZ136CCZ247CCZ345",
-      "factorised_representative_latex": "\\mathsf{CS}_{12}\\allowbreak\\mathsf{CS}_{34}\\allowbreak\\mathsf{CCZ}_{125}\\allowbreak\\mathsf{CCZ}_{136}\\allowbreak\\mathsf{CCZ}_{247}\\allowbreak\\mathsf{CCZ}_{345}",
-      "factorisation_certificate": {
-        "basis_in_previous_gate_coordinates": [
-          1,
-          2,
-          4,
-          8,
-          16,
-          32,
-          64
-        ],
-        "diagonal_clifford_correction": {
-          "S_powers": [],
-          "CZ_pairs": [],
-          "truth_table_points_checked": 128
-        }
-      }
+      ]
     },
     {
       "output_id": "Q7_0650806000000000",
@@ -2747,32 +924,7 @@
         8,
         16,
         6
-      ],
-      "independent_factors": [
-        {
-          "q": 7,
-          "output_id": "Q7_0650806000000000",
-          "representative_gate": "CS12CCZ123CCZ145CCZ146CCZ157CCZ245CCZ267"
-        }
-      ],
-      "factorised_representative_gate": "CS12CCZ123CCZ145CCZ146CCZ157CCZ245CCZ267",
-      "factorised_representative_latex": "\\mathsf{CS}_{12}\\allowbreak\\mathsf{CCZ}_{123}\\allowbreak\\mathsf{CCZ}_{145}\\allowbreak\\mathsf{CCZ}_{146}\\allowbreak\\mathsf{CCZ}_{157}\\allowbreak\\mathsf{CCZ}_{245}\\allowbreak\\mathsf{CCZ}_{267}",
-      "factorisation_certificate": {
-        "basis_in_previous_gate_coordinates": [
-          1,
-          2,
-          4,
-          8,
-          16,
-          32,
-          64
-        ],
-        "diagonal_clifford_correction": {
-          "S_powers": [],
-          "CZ_pairs": [],
-          "truth_table_points_checked": 128
-        }
-      }
+      ]
     }
   ],
   "protocols": [
@@ -4396,18 +2548,5 @@
         "000000000000000011111111111111111111111111111111"
       ]
     }
-  ],
-  "output_representative_presentation": {
-    "method": "primitive-centroid-idempotents-v1",
-    "preferred_field": "factorised_representative_gate",
-    "expanded_coordinate_field": "representative_gate",
-    "factor_order": "Increasing qubit count, then established output ID",
-    "factor_coordinates": "Each tensor factor uses its own local qubit indices; the expanded gate uses consecutive disjoint blocks",
-    "scope": "The 62 intrinsic output classes of the n<=54, d_Z>=3 frontier",
-    "minimum_gate_count_claim": false,
-    "description": "Exact indecomposable output factors; fixed previously simplified representatives within factors. Protocol matrices and class IDs are unchanged.",
-    "previous_catalogue_sha256": "83ed854ac51761d5188fbfd03d6fb248b4d39edc717db99d3c910398c011a265",
-    "previous_catalogue_github_path": "provenance/pareto_frontier_before_factorisation.json",
-    "previous_catalogue_figshare_path": "pareto_frontier_before_factorisation.json"
-  }
+  ]
 }

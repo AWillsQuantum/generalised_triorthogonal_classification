@@ -12,6 +12,8 @@ import zipfile
 
 EXTRAS = ("README.md", "CITATION.cff", "LICENSE_DATA.md", ".gitignore", ".gitattributes",
           "code/delivery.py", "delivery_tests/test_delivery.py",
+          "code/output_factorisation.py", "code/verify_output_factorisation.py",
+          "delivery_tests/test_output_factorisation.py", "theory/output_factorisation.md",
           "packaging/figshare_README.md", "packaging/figshare_DATA_FORMAT.md")
 
 
@@ -64,6 +66,24 @@ def build(source, destination, templates):
                 copy_file(source / name, data / target)
                 copies.append(dict(delivery="data", path=target))
             rows.append(dict(path=name, copies=copies))
+    preferred = templates / "data/protocols/pareto_frontier.json"
+    if preferred.exists():
+        metadata = json.loads(preferred.read_bytes()).get("output_representative_presentation", {})
+        source_frontier = source / "data/protocols/pareto_frontier.json"
+        if metadata.get("previous_catalogue_sha256") == hashlib.sha256(source_frontier.read_bytes()).hexdigest():
+            sys.path.insert(0, str(templates / "code"))
+            from output_factorisation import verify_presentation_update
+            verify_presentation_update(json.loads(source_frontier.read_bytes()), json.loads(preferred.read_bytes()))
+            github_original = "provenance/pareto_frontier_before_factorisation.json"
+            data_original = "pareto_frontier_before_factorisation.json"
+            copy_file(source_frontier, github / github_original)
+            copy_file(source_frontier, data / data_original)
+            row = next(r for r in rows if r["path"] == "data/protocols/pareto_frontier.json")
+            row["copies"] = [dict(delivery="github", path=github_original), dict(delivery="data", path=data_original)]
+            copy_file(preferred, github / "data/protocols/pareto_frontier.json")
+            copy_file(preferred, data / "pareto_frontier.json")
+            for root in (github, data):
+                copy_file(templates / "OUTPUT_FACTORISATION.json", root / "OUTPUT_FACTORISATION.json")
     layout = dict(schema="triorthogonal-two-delivery-layout-v2",
                   original_manifest_sha256=baseline["manifest_sha256"], files=rows)
     layout_raw = (json.dumps(layout, indent=2) + "\n").encode("ascii")

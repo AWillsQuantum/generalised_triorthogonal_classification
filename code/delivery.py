@@ -163,9 +163,13 @@ class Delivery:
                 or sum(p.stat().st_size for p in data_files) > 20_000_000_000):
             raise ValueError("Data delivery exceeds the Figshare free-account upload limits")
         copies_checked = 0
+        original_frontier = None
         with ExitStack() as stack:
             archives = self.open_archives(stack)
             for name, record in self.records.items():
+                if name == "data/protocols/pareto_frontier.json":
+                    with self.open_copy(self.locations[name][0], archives) as stream:
+                        original_frontier = stream.read()
                 for copy in self.locations[name]:
                     with self.open_copy(copy, archives) as stream:
                         size, digest = stream_digest(stream)
@@ -176,13 +180,24 @@ class Delivery:
         second = local_file(self.roots["data"], "pareto_frontier.json").read_bytes()
         if first != second:
             raise ValueError("The protocol catalogues differ")
+        presentation = None
+        current = json.loads(first)
+        if "output_representative_presentation" in current:
+            from output_factorisation import verify_presentation_update
+            if hashlib.sha256(original_frontier).hexdigest() != current[
+                    "output_representative_presentation"]["previous_catalogue_sha256"]:
+                raise ValueError("The presentation uses a different original catalogue")
+            presentation = verify_presentation_update(json.loads(original_frontier), current)
+        elif first != original_frontier:
+            raise ValueError("Changed catalogue without a presentation certificate")
         return dict(schema="triorthogonal-delivery-verification-v1", status="pass",
             original_files_including_manifest=len(self.records), copies_checked=copies_checked,
             original_bytes=sum(r["bytes"] for r in self.records.values()),
             original_manifest_sha256=self.layout["original_manifest_sha256"],
             every_original_file_preserved=True, all_original_code_in_github=True,
             inner_compressed_streams_unchanged=True, catalogue=catalogue_summary(first),
-            packages=package_checks, classification_recomputed=False)
+            packages=package_checks, output_presentation_verification=presentation,
+            classification_recomputed=False)
 
     def assemble(self, destination):
         destination = Path(destination).absolute()

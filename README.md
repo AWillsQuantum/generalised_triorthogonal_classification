@@ -45,8 +45,13 @@ is 53. These are frontier counts, not counts of all protocol matrices.
 
 The complete catalogue is `data/protocols/pareto_frontier.json`. It contains
 matrices, exact distances, leading error coefficients, representative gates and
-output-basis certificates. Gate representatives are heuristically simplified,
-not certified minimal. The Figshare file `pareto_frontier.json` is byte-identical.
+output-basis certificates. `factorised_representative_gate` displays independent
+output factors, for example `T^(tensor 6)` or `CS tensor CCZ`.
+`factorised_representative_latex` gives the typeset form. Indices within each
+tensor factor are local; `representative_gate` is the expanded, machine-readable
+gate in consecutive disjoint qubit blocks. Factorisation is exact; the fixed
+short representatives inside factors are not certified minimal. The Figshare
+file `pareto_frontier.json` is byte-identical.
 
 The space data comprise 301,029,259 affine-equivalence classes through length
 54, including decomposable spaces; 293,172,583 have length 54. The small
@@ -61,6 +66,7 @@ Use Python 3.11 or later. The following checks use only the standard library:
 ```sh
 python -B code/verify_release_integrity.py --allow-extra
 python -B code/verify_protocols.py
+python -B code/verify_output_factorisation.py
 python -B -m unittest discover -s delivery_tests -v
 ```
 
@@ -97,6 +103,14 @@ README. It extracts the ZIP envelopes but leaves `.zst` streams compressed;
 it does not expand millions of matrices. Allow about 5.6 GB of additional disk
 space for assembly. Regenerating the full classification can require much more
 temporary storage and computation.
+
+The original catalogue, retained as `provenance/pareto_frontier_before_factorisation.json`,
+has the older output labels because its exact bytes are bound into historical
+certificates. Assembly restores those bytes. The current catalogue above has
+the same 74 protocols and 62 output IDs, with factored labels and exact basis
+certificates. The delivery verifier also checks that this update changes no
+scientific fields. See `OUTPUT_FACTORISATION.json` and
+`theory/output_factorisation.md`; neither large archive has changed.
 
 The composition verifier joins the finite space induction, protocol source
 partitions, logical successor closure and independently checked frontier.

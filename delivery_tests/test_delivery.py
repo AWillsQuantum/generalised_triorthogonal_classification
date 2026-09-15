@@ -207,6 +207,28 @@ class DeliveryTests(unittest.TestCase):
             self.assertIn("Authors: **Adam Wills, Shubham P. Jain and Shraddha Singh**.", text)
             self.assertIn(acknowledgement, text)
 
+    def test_builder_preserves_factored_presentation_and_original(self):
+        old = (ROOT / "provenance/pareto_frontier_before_factorisation.json").read_bytes()
+        self.put(self.original, "data/protocols/pareto_frontier.json", old)
+        self.put(self.original, "code/verify_release_integrity.py",
+                 (ROOT / "code/verify_release_integrity.py").read_bytes())
+        create(self.original)
+        spec = importlib.util.spec_from_file_location(
+            "factored_delivery_builder", ROOT / "packaging/build_deliveries.py")
+        builder = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(builder)
+        destination = self.root / "factored"
+        builder.build(self.original, destination, ROOT)
+        delivered = Delivery(destination / "github", destination / "figshare")
+        report = delivered.verify()
+        self.assertTrue(report["output_presentation_verification"]["scientific_fields_unchanged"])
+        self.assertEqual((destination / "figshare/pareto_frontier_before_factorisation.json").read_bytes(), old)
+        self.assertEqual((destination / "figshare/pareto_frontier.json").read_bytes(),
+                         (ROOT / "data/protocols/pareto_frontier.json").read_bytes())
+        assembled = self.root / "factored_assembled"
+        delivered.assemble(assembled)
+        self.assertEqual((assembled / "data/protocols/pareto_frontier.json").read_bytes(), old)
+
 
 if __name__ == "__main__":
     unittest.main()

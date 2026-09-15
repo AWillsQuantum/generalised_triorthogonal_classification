@@ -35,6 +35,9 @@ licence grant and retain their own terms.
 
 - `pareto_frontier.json`: the complete, directly readable 74-point protocol
   catalogue, identical to GitHub's `data/protocols/pareto_frontier.json`.
+- `pareto_frontier_before_factorisation.json`: the original hash-bound catalogue
+  with the earlier labels, retained solely for historical certificate replay.
+- `OUTPUT_FACTORISATION.json`: verification summary for the presentation update.
 - `space_catalogues.zip`: all compact unital-space shards and their index.
 - `classification_evidence.zip`: finite mathematical censuses, contraction
   data, output profiles, seeds and all original certificates.
@@ -65,6 +68,15 @@ distance four and two at distance five. Each JSON witness includes its full
 matrix, exact distance, leading error coefficient and output information;
 the `outputs` array provides the representative gates and their basis
 certificates. The largest undominated protocol has 53 inputs.
+
+Use `factorised_representative_gate` for the independent-factor display, such
+as `T^(tensor 6)` or `CS tensor CCZ`, and `factorised_representative_latex` for
+typesetting. Each factor uses local qubit indices. `representative_gate` remains
+an expanded parseable gate using consecutive disjoint blocks. Factorisation is
+exact; short representatives within factors are not certified minimum. The
+protocol matrices, class IDs and metrics are unchanged. The matching GitHub
+verifier certifies the new labels against the original catalogue and matrices.
+Original-release assembly restores the earlier hash-bound labels for audit replay.
 
 The spaces comprise **301,029,259 affine-equivalence classes** through length
 54, including decomposable spaces, of which 293,172,583 have length 54.

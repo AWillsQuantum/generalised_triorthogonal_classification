@@ -18202,11 +18202,11 @@
       "copies": [
         {
           "delivery": "github",
-          "path": "data/protocols/pareto_frontier.json"
+          "path": "provenance/pareto_frontier_before_factorisation.json"
         },
         {
           "delivery": "data",
-          "path": "pareto_frontier.json"
+          "path": "pareto_frontier_before_factorisation.json"
         }
       ]
     },

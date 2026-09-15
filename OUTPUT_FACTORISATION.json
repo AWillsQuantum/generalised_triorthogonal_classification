@@ -1,0 +1,63 @@
+{
+  "status": "pass",
+  "outputs": 62,
+  "protocols": 74,
+  "scientific_fields_unchanged": true,
+  "exact_indecomposable_factorisation": true,
+  "full_phase_equivalence": true,
+  "decomposition_counts": {
+    "1": 34,
+    "2": 15,
+    "3": 7,
+    "4": 4,
+    "5": 1,
+    "6": 1
+  },
+  "schema": "triorthogonal-output-factorisation-update-v1",
+  "date": "2026-09-15",
+  "previous_catalogue_sha256": "83ed854ac51761d5188fbfd03d6fb248b4d39edc717db99d3c910398c011a265",
+  "catalogue_sha256": "5f60bbd546769a71dbadbe97992b091fabc77b8c20b1697d869dc0c1484d7e95",
+  "previous_label_count": 62,
+  "expanded_labels_changed": 20,
+  "old_total_gate_factors": 231,
+  "new_total_gate_factors": 231,
+  "class_ids_unchanged": true,
+  "matrices_unchanged": true,
+  "archives_unchanged": true,
+  "minimum_gate_count_claim": false,
+  "implementation_sha256": "3b1229c0a5bcfda42bccb502957ec23b6d0a8933dd7f568c245d4cf4f8b5c074",
+  "local_seconds": 2.076072900003055,
+  "tests": {
+    "tests": 24,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "status": "pass"
+  },
+  "independent_protocol_witness_verification": {
+    "schema": "triorthogonal-witness-verification-v1",
+    "status": "pass",
+    "catalogue_sha256": "5f60bbd546769a71dbadbe97992b091fabc77b8c20b1697d869dc0c1484d7e95",
+    "protocols": 74,
+    "outputs": 62,
+    "output_inequivalence_pairs_checked": 518,
+    "distance_counts": {
+      "3": 67,
+      "4": 5,
+      "5": 2
+    },
+    "checks": {
+      "full_rank": true,
+      "distinct_columns": true,
+      "mixed_overlap_conditions": true,
+      "intrinsic_outputs": true,
+      "gate_basis_certificates": true,
+      "exact_distances": true,
+      "leading_error_coefficients": true,
+      "pairwise_output_inequivalence": true,
+      "pareto_nondominance_within_catalogue": true
+    },
+    "enumeration_completeness_established": false,
+    "note": "This verifies witnesses, output separation and nondominance within the supplied list. Exhaustive coverage requires the separate enumeration evidence."
+  }
+}

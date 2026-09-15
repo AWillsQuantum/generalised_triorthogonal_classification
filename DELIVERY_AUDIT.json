@@ -3021,9 +3021,9 @@
   "new_licence_selected": true,
   "uploaded": false,
   "packaging_sources_sha256": {
-    "code/delivery.py": "a714734d104f5d55d8c6b4df8525c4f4c02770284e57c6c8766c3c076660ddb5",
-    "delivery_tests/test_delivery.py": "8614e5123ee3753532a22071ae55ee9a2965363ac1c006f9a377a4a5b8d5c966",
-    "packaging/build_deliveries.py": "6ce56d6414f4675c5577ba758b6716e31256b3b7d4cc5e1525f41d25ae89b801"
+    "code/delivery.py": "1d9e7061f2266c0588522ec1ecc92154781fb780a25fc8fcf0b1da5c0fb3d96e",
+    "delivery_tests/test_delivery.py": "770954152cf90f20d7cdcd3195ada708a11b41413030a1968a6646afd099ac61",
+    "packaging/build_deliveries.py": "2b07783a4c328cb524ebafe8fd84d1c96ba5ba678501f53ed05ad257ca43fa9a"
   },
   "archives": {
     "classification_evidence.zip": {
@@ -3080,6 +3080,65 @@
       "failures": 0,
       "errors": 0
     },
+    "publication_performed": false
+  },
+  "output_representative_update": {
+    "date": "2026-09-15",
+    "status": "pass",
+    "historical_audit_fields_retained": true,
+    "current_catalogue_sha256": "5f60bbd546769a71dbadbe97992b091fabc77b8c20b1697d869dc0c1484d7e95",
+    "update_certificate_sha256": "1f6f86f943af29dd422aca21ae32e1cc797bc20ce0f28647f9906c1a9d1b9876",
+    "witness_verification": {
+      "schema": "triorthogonal-witness-verification-v1",
+      "status": "pass",
+      "catalogue_sha256": "5f60bbd546769a71dbadbe97992b091fabc77b8c20b1697d869dc0c1484d7e95",
+      "protocols": 74,
+      "outputs": 62,
+      "output_inequivalence_pairs_checked": 518,
+      "distance_counts": {
+        "3": 67,
+        "4": 5,
+        "5": 2
+      },
+      "checks": {
+        "full_rank": true,
+        "distinct_columns": true,
+        "mixed_overlap_conditions": true,
+        "intrinsic_outputs": true,
+        "gate_basis_certificates": true,
+        "exact_distances": true,
+        "leading_error_coefficients": true,
+        "pairwise_output_inequivalence": true,
+        "pareto_nondominance_within_catalogue": true
+      },
+      "enumeration_completeness_established": false,
+      "note": "This verifies witnesses, output separation and nondominance within the supplied list. Exhaustive coverage requires the separate enumeration evidence."
+    },
+    "presentation_verification": {
+      "status": "pass",
+      "outputs": 62,
+      "protocols": 74,
+      "scientific_fields_unchanged": true,
+      "exact_indecomposable_factorisation": true,
+      "full_phase_equivalence": true,
+      "decomposition_counts": {
+        "1": 34,
+        "2": 15,
+        "3": 7,
+        "4": 4,
+        "5": 1,
+        "6": 1
+      }
+    },
+    "tests": {
+      "tests": 24,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "status": "pass"
+    },
+    "original_catalogue_preserved": true,
+    "large_archives_unchanged": true,
     "publication_performed": false
   }
 }

@@ -4,8 +4,8 @@
   "excluded_files": [
     "MANIFEST.json"
   ],
-  "file_count": 315,
-  "payload_bytes": 6240798,
+  "file_count": 321,
+  "payload_bytes": 6415054,
   "files": [
     {
       "path": ".gitattributes",
@@ -49,8 +49,8 @@
     },
     {
       "path": "code/delivery.py",
-      "bytes": 11427,
-      "sha256": "a714734d104f5d55d8c6b4df8525c4f4c02770284e57c6c8766c3c076660ddb5"
+      "bytes": 12395,
+      "sha256": "1d9e7061f2266c0588522ec1ecc92154781fb780a25fc8fcf0b1da5c0fb3d96e"
     },
     {
       "path": "code/enumerate_c48_marked_spaces.py",
@@ -271,6 +271,11 @@
       "path": "code/native/vendor/bliss-0.77.zip",
       "bytes": 117888,
       "sha256": "acc8b98034f30fad24c897f365abd866c13d9f1bb207e398d0caf136875972a4"
+    },
+    {
+      "path": "code/output_factorisation.py",
+      "bytes": 15259,
+      "sha256": "3b1229c0a5bcfda42bccb502957ec23b6d0a8933dd7f568c245d4cf4f8b5c074"
     },
     {
       "path": "code/prepare_c48_marked_inputs.py",
@@ -1013,6 +1018,11 @@
       "sha256": "773adc1988b087749406b7fd9c3945a56464e733beeadcb77c3863dbced24f2c"
     },
     {
+      "path": "code/verify_output_factorisation.py",
+      "bytes": 1049,
+      "sha256": "182e59dfb433f2622e440e8f6148f78c283d1503e20cbd705bd3078b14093dc3"
+    },
+    {
       "path": "code/verify_output_profile_gates.py",
       "bytes": 4782,
       "sha256": "2e5d5157556b95a100856bd14e29cb359edd262d2b80cbe3a9e943fe3d7f78de"
@@ -1154,8 +1164,8 @@
     },
     {
       "path": "data/protocols/pareto_frontier.json",
-      "bytes": 84406,
-      "sha256": "83ed854ac51761d5188fbfd03d6fb248b4d39edc717db99d3c910398c011a265"
+      "bytes": 138619,
+      "sha256": "5f60bbd546769a71dbadbe97992b091fabc77b8c20b1697d869dc0c1484d7e95"
     },
     {
       "path": "data/spaces/c16/m04/spaces_000000000.utspace.zst",
@@ -1169,18 +1179,23 @@
     },
     {
       "path": "DELIVERY_AUDIT.json",
-      "bytes": 384231,
-      "sha256": "2fed0c5ba9666dc4bd2284973e97004ab6ea9fc944240eeafac318bc39313083"
+      "bytes": 386234,
+      "sha256": "963b4b9bdf86eab06bd49c8d86d556ce18bcf15404e328e91d5834aabbb71c44"
     },
     {
       "path": "delivery_layout.json",
-      "bytes": 1173776,
-      "sha256": "3357254fc66d8cafef76f1e15553c5998d02d9bd905fdad3c8220d0af7089b0c"
+      "bytes": 1173814,
+      "sha256": "e8412f27ac62f9a4dace95ff7f91af21cc30e3fa5f5a8c29267f7884b5b841a1"
     },
     {
       "path": "delivery_tests/test_delivery.py",
-      "bytes": 10417,
-      "sha256": "8614e5123ee3753532a22071ae55ee9a2965363ac1c006f9a377a4a5b8d5c966"
+      "bytes": 11852,
+      "sha256": "770954152cf90f20d7cdcd3195ada708a11b41413030a1968a6646afd099ac61"
+    },
+    {
+      "path": "delivery_tests/test_output_factorisation.py",
+      "bytes": 4383,
+      "sha256": "f836e363707f259e748dbfbcff235d664d4b5bc5b9d8a8a531468911a974a5f7"
     },
     {
       "path": "LICENSE_DATA.md",
@@ -1188,19 +1203,24 @@
       "sha256": "ddfaf5a5a17fc596ee190f63a0acdfd24d48a81b57f24e402204358d0ddc3e64"
     },
     {
+      "path": "OUTPUT_FACTORISATION.json",
+      "bytes": 2080,
+      "sha256": "1f6f86f943af29dd422aca21ae32e1cc797bc20ce0f28647f9906c1a9d1b9876"
+    },
+    {
       "path": "packaging/build_deliveries.py",
-      "bytes": 4624,
-      "sha256": "6ce56d6414f4675c5577ba758b6716e31256b3b7d4cc5e1525f41d25ae89b801"
+      "bytes": 6205,
+      "sha256": "2b07783a4c328cb524ebafe8fd84d1c96ba5ba678501f53ed05ad257ca43fa9a"
     },
     {
       "path": "packaging/figshare_DATA_FORMAT.md",
-      "bytes": 3977,
-      "sha256": "08bbf8d3b03a7e302cbceb0dbf04be9bb01704e8ebca2e6a0967b363581307ab"
+      "bytes": 4993,
+      "sha256": "76e6ccab6a13fbdb1281b5a0da8f63648c8efa2f472b4b19b1b01d244cb31d75"
     },
     {
       "path": "packaging/figshare_README.md",
-      "bytes": 5733,
-      "sha256": "2799b2e64a5127ff40904399cb8ff34f2c4f2bce56435bf579f19c81479af672"
+      "bytes": 6605,
+      "sha256": "8c0f3b5318bd469586c584a648ac29d89e19ad7425d07819fb3b3a1b96332919"
     },
     {
       "path": "provenance/ORIGINAL_MANIFEST.json",
@@ -1213,9 +1233,14 @@
       "sha256": "e5e4a0e7ecda178f1a6a9a9ac9174dc9beafe4f343df01e5613d6a560da865a6"
     },
     {
+      "path": "provenance/pareto_frontier_before_factorisation.json",
+      "bytes": 84406,
+      "sha256": "83ed854ac51761d5188fbfd03d6fb248b4d39edc717db99d3c910398c011a265"
+    },
+    {
       "path": "README.md",
-      "bytes": 7089,
-      "sha256": "17d2519a525694827f9d0239786378780cb6185c4d41c36574155ad2858dfa3f"
+      "bytes": 8004,
+      "sha256": "a079c114ec46341c7e5dbd772a76975142cf0fd9226e2f9b97f85732cf1cb369"
     },
     {
       "path": "requirements.txt",
@@ -1531,6 +1556,11 @@
       "path": "theory/low_dimensional_protocol_blocks.md",
       "bytes": 4118,
       "sha256": "f881e40defa5f184c2586dda011d6d0bbc2f4cba95208ca5afdabbf489da9e76"
+    },
+    {
+      "path": "theory/output_factorisation.md",
+      "bytes": 4038,
+      "sha256": "b8129fd1565b3692be158277f1b861a385d93d9390feafb6ac48455789a53c96"
     },
     {
       "path": "theory/output_profile_pruning.md",
