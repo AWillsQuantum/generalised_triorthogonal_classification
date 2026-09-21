@@ -18,17 +18,17 @@ certificate for the entire length-54 classification.
 
 For distance at least three, distinct full columns have distinct
 stabiliser syndromes: otherwise a weight-two vector would have zero
-stabiliser syndrome and nonzero logical syndrome. Thus an r-dimensional
-stabiliser has at most 2^r columns. At n >= 49 this gives r >= 6.
+stabiliser syndrome and nonzero logical syndrome. Thus an h-dimensional
+stabiliser has at most 2^h columns. At n >= 49 this gives h >= 6.
 
 For each of the 22 intrinsic outputs on at most four qubits, the release
-contains a distance-three protocol with n < 49 and N <= k+6. Consequently,
-every new exact-distance-three candidate with k <= 4 is Pareto dominated.
+contains a distance-three protocol with n < 49 and S <= q+6. Consequently,
+every new exact-distance-three candidate with q <= 4 is Pareto dominated.
 `verify_low_q_pruning.py` checks both the complete set of these outputs
 and their incumbents. This reduction does not exclude a higher exact
 distance: those candidates are enumerated with distance floor four.
 
-Logical branches with k >= 5 use distance floor three. Every intrinsic
+Logical branches with q >= 5 use distance floor three. Every intrinsic
 candidate contributing a finite Pareto point has its exact distance and
 leading error coefficient evaluated, not merely a lower bound on distance.
 
@@ -55,8 +55,8 @@ by affine dimension m are:
 
 The complete origin-reduced domain has 82,266,913 pointed supports of
 protocol lengths 49 and 50. Each block records the full distance-three
-and distance-four quotient histograms. The branches are k=1,...,4 with
-distance floor four and k=5,...,8 with distance floor three. A shared
+and distance-four quotient histograms. The branches are q=1,...,4 with
+distance floor four and q=5,...,8 with distance floor three. A shared
 distance-filtered quotient is used without changing the enumerated
 mathematical domain.
 
@@ -65,14 +65,14 @@ space catalogue and calculates all eight raw common-isotropic censuses.
 `verify_source_block_sector.py` verifies the interval cover, eligibility
 counts, exact subspace and radical masses, all finite witness parameters,
 and the union with the preceding frontier. A complete zero common-isotropic
-k=8 census excludes every larger logical dimension by subspace containment.
+q=8 census excludes every larger logical dimension by subspace containment.
 The complete cumulative finite metrics are required to equal the 53
 released frontier points of length at most 50.
 
 All 309 blocks have passed a fresh complete replay. The aggregate
 verification in `certificates/through50_protocol_sector.json` confirms
 82,266,913 pointed supports, all exact census totals, the absence of
-common-isotropic k=8 subspaces, 19 independently checked local witnesses,
+common-isotropic q=8 subspaces, 19 independently checked local witnesses,
 and exact agreement with those 53 cumulative frontier points.
 
 ## Parent length 52
@@ -95,7 +95,7 @@ The main intervals divide into:
   `certificates/length52_selected_cubic_origins.json`.
 
 The first part contains 4,163,769,607 pointed supports and 69,741 finite
-branch or theoretical-exclusion records. Its complete raw k=5 census for
+branch or theoretical-exclusion records. Its complete raw q=5 census for
 quotient dimensions 5 through 14 contains 315,663,582,926 isotropic
 subspaces, including 365,738 intrinsic ones. Every one of its 5,114
 positive supports is bound to the complete output profile in
@@ -140,14 +140,14 @@ of that volume form by a vector, which lies in its radical. Thus none of
 these three logical dimensions has an intrinsic output.
 
 Dimension three is different: its nonzero alternating tensor is CCZ.
-The complete direct k=3 subspace censuses are supplied in
+The complete direct q=3 subspace censuses are supplied in
 `certificates/length52_cubic_blocks/`. Their intrinsic candidates all have
-n=52, N=11 and exact distance four. They are dominated by the released
-n=48, N=10, distance-four CCZ protocol. This is a Pareto exclusion, not
+n=52, S=11 and exact distance four. They are dominated by the released
+n=48, S=10, distance-four CCZ protocol. This is a Pareto exclusion, not
 a claim that the intrinsic subspaces are absent.
 
 `verify_cubic_distance_four.py` checks the constant-row premise, the
-complete quotient distributions, the raw k=3 censuses, and the exact-distance
+complete quotient distributions, the raw q=3 censuses, and the exact-distance
 dominators. It also independently enumerates the 16 alternating tensors in
 dimension four. `verify_length52_small_blocks.py` includes this check in
 its finite source-block verification.
@@ -163,21 +163,21 @@ censuses with exact orbit weights, not counts of all raw isotropic subspaces.
 
 Independent linear calculations give a nonzero distance-four quotient
 only on 175 constant-stabiliser supports. Every distance-five quotient is
-zero. The alternating-tensor argument above therefore closes k=1,2,4,
-and every possible k=3 distance-four metric is dominated by the shorter
-CCZ incumbent. Each positive k=5 or k=6 output profile belongs to a support
+zero. The alternating-tensor argument above therefore closes q=1,2,4,
+and every possible q=3 distance-four metric is dominated by the shorter
+CCZ incumbent. Each positive q=5 or q=6 output profile belongs to a support
 whose distance-four quotient is zero, so its exact distance is three.
 Its complete output keys then determine all possible metrics: n is the
-support length and N=r+k.
+support length and S=h+q.
 
 Every normalised support is explicitly bound to the primitive-target
-domain. Its two primitive k=5 targets are absent. The complete k=6
+domain. Its two primitive q=5 targets are absent. The complete q=6
 profiles are contained in the five profiles covered by the finite
 seven-dimensional anchored exclusion. The primitive restriction theorem
-and descent through intrinsic hyperplanes exclude every k>=7.
+and descent through intrinsic hyperplanes exclude every q>=7.
 `verify_selected_cubic_sector.py` checks these implications, the complete
 profile-to-input correspondence and every metric comparison. A fresh
-positive-case k=5 chain replay is also supplied. The verifier does not
+positive-case q=5 chain replay is also supplied. The verifier does not
 describe the retained complete profiles as a fresh full-domain replay.
 
 ## Larger quotients
@@ -188,23 +188,23 @@ reduce them to 441 stabiliser geometries. All 5,068 canonicalisations have
 been independently repeated, and their per-block cardinalities agree with
 the complete quotient histograms of the small-block cover.
 
-There are 179 positive k=5 profiles and 654,868 weighted intrinsic
+There are 179 positive q=5 profiles and 654,868 weighted intrinsic
 subspaces. For every positive profile, the distance-four quotient has
 dimension less than five. This is enough to establish exact distance
-three for every k=5 candidate; the quotient need not be zero. In particular,
-case 385 has a one-dimensional distance-four quotient and a positive k=5
+three for every q=5 candidate; the quotient need not be zero. In particular,
+case 385 has a one-dimensional distance-four quotient and a positive q=5
 profile. A fresh chain replay reproduces its four marked orbits and
 2,048 weighted intrinsic subspaces.
 
 The primitive-target zero censuses cover all 441 geometries: 393 use the
 shared primitive domain and 48 have separate complete target results.
-Only profiles 61 and 109 pass the k=6 necessary-profile test. Both have
-fresh complete k=6 censuses, explicitly bound to these same stabiliser
-geometries. Their profiles satisfy the anchored k=7 exclusion; the
-primitive restriction theorem closes every larger dimension. All k=5
-and k=6 metrics are covered by the released frontier. The k<=4
+Only profiles 61 and 109 pass the q=6 necessary-profile test. Both have
+fresh complete q=6 censuses, explicitly bound to these same stabiliser
+geometries. Their profiles satisfy the anchored q=7 exclusion; the
+primitive restriction theorem closes every larger dimension. All q=5
+and q=6 metrics are covered by the released frontier. The q<=4
 higher-distance cases belong to the already bound full source-block
-censuses, without imposing the k=5 small-quotient cutoff on them.
+censuses, without imposing the q=5 small-quotient cutoff on them.
 
 `verify_length52_large_quotients.py` verifies this composition. Its
 reproduction companion, `replay_length52_large_quotient.py`, handles
@@ -215,22 +215,22 @@ on any one of the 441 explicit inputs.
 
 The m=7 parent classes with indices 186 and 187 have a combined 362 raw
 pointings at protocol lengths 51 and 52. Their finite domain contains
-58 nonzero-syndrome r=7 representatives and two r=8 affine-hyperplane
+58 nonzero-syndrome h=7 representatives and two h=8 affine-hyperplane
 representatives. Exact canonicalisation of every raw pointing, after
 zero-column deletion, proves that these 60 inputs cover the full domain.
 
-The r=7 cases have zero distance-four quotient. Their complete raw k=5
+The h=7 cases have zero distance-four quotient. Their complete raw q=5
 censuses contain 90,201,752 isotropic subspaces and 26,928 intrinsic ones;
-51 of the 58 profiles are positive. One profile passes the k=6 test. Its
-fresh k=6 census is the case on parent 186 with origin 104, and it is bound
+51 of the 58 profiles are positive. One profile passes the q=6 test. Its
+fresh q=6 census is the case on parent 186 with origin 104, and it is bound
 by exact support equivalence. The same tensor-profile and primitive
-restriction arguments exclude all k>=7.
+restriction arguments exclude all q>=7.
 
-Both r=8 inputs have equal distance-three and distance-four label spaces,
+Both h=8 inputs have equal distance-three and distance-four label spaces,
 a constant stabiliser row, and zero distance-five quotient. For parent
-186, the complete k=3 census contains 497,739 isotropic subspaces, 252 of
-which are intrinsic CCZ outputs. Their n=52, N=11, distance-four metric
-is dominated. Its k=5 census has 3,439 subspaces, all with zero tensor.
+186, the complete q=3 census contains 497,739 isotropic subspaces, 252 of
+which are intrinsic CCZ outputs. Their n=52, S=11, distance-four metric
+is dominated. Its q=5 census has 3,439 subspaces, all with zero tensor.
 For parent 187, all 1,327,299 isotropic three-spaces have zero tensor;
 an alternating tensor on any larger isotropic subspace is consequently
 zero as well. All three higher-distance censuses have been freshly
@@ -239,7 +239,7 @@ repeated. These two parents add no Pareto metrics.
 The data are in `length52_separate_cubic_censuses.json`; the full input,
 distance, output and successor checks are reproduced by
 `verify_cubic_parent_sector.py`. Its `--replay-case` option also repeats
-a chosen retained k=5 raw census.
+a chosen retained q=5 raw census.
 
 ## Reproduction interfaces
 
@@ -257,7 +257,7 @@ python code/verify_cubic_parent_sector.py --native build/utsp-native --work-dire
 
 The length-52 reproduction interface constructs raw origins for affine
 dimension at most ten and affine-automorphism orbit representatives above
-that. It shares the two distance-filtered label spaces. The k=5 default
+that. It shares the two distance-filtered label spaces. The q=5 default
 quotient cutoff is 14; increasing the cutoff is an explicit change to the
 finite domain, not part of the small-quotient completeness claim.
 

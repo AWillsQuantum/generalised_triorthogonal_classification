@@ -14,6 +14,8 @@ EXTRAS = ("README.md", "CITATION.cff", "LICENSE_DATA.md", ".gitignore", ".gitatt
           "code/delivery.py", "delivery_tests/test_delivery.py",
           "code/output_factorisation.py", "code/verify_output_factorisation.py",
           "delivery_tests/test_output_factorisation.py", "theory/output_factorisation.md",
+          "NOTATION.md", "NOTATION_UPDATE.json", "code/notation.py",
+          "delivery_tests/test_notation.py",
           "packaging/figshare_README.md", "packaging/figshare_DATA_FORMAT.md")
 
 
@@ -91,6 +93,26 @@ def build(source, destination, templates):
         (root / "delivery_layout.json").write_bytes(layout_raw)
     for name in EXTRAS:
         copy_file(templates / name, github / name)
+    if (templates / "NOTATION_UPDATE.json").exists():
+        for name in ("NOTATION.md", "NOTATION_UPDATE.json"):
+            copy_file(templates / name, data / name)
+        name = "pareto_frontier_before_notation.json"
+        copy_file(templates / "provenance" / name, github / "provenance" / name)
+        copy_file(templates / "provenance" / name, data / name)
+        template_layout = json.loads((templates / "delivery_layout.json").read_bytes())
+        for row in template_layout["files"]:
+            built = next((r for r in rows if r["path"] == row["path"]), None)
+            if built is None:
+                continue
+            historical = next((c for c in row["copies"] if c["delivery"] == "github"
+                               and c["path"].startswith("provenance/original_notation/")), None)
+            if historical:
+                copy_file(templates / historical["path"], github / historical["path"])
+                copy_file(templates / row["path"], github / row["path"])
+                built["copies"] = row["copies"]
+        layout["files"] = rows
+        for root in (github, data):
+            (root / "delivery_layout.json").write_text(json.dumps(layout, indent=2)+"\n", encoding="ascii")
     copy_file(Path(__file__), github / "packaging/build_deliveries.py")
     for name in ("README", "DATA_FORMAT"):
         copy_file(templates / f"packaging/figshare_{name}.md", data / f"{name}.md")

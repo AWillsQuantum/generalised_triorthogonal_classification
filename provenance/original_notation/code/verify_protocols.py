@@ -6,14 +6,13 @@ import hashlib
 from itertools import combinations
 import json
 from pathlib import Path
-from notation import legacy_catalogue
 
 from protocol_checks import (LogicalTensor, check_matrix, exact_distance_and_coefficient,
                              find_equivalence_basis, gate_tensor, verify_basis)
 
 
 def verify(path):
-    data = legacy_catalogue(json.loads(path.read_bytes()))
+    data = json.loads(path.read_bytes())
     if data["schema"] != "triorthogonal-protocol-witnesses-v1":
         raise ValueError("Unsupported witness format")
     if (data["maximum_protocol_length"] != 54 or data["minimum_distance"] != 3

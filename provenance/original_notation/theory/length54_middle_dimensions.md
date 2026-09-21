@@ -7,7 +7,7 @@ are partitioned by their nonzero differences. Some direction therefore
 has at most `floor(1431/(2^m-1))` complete fibres. This gives precisely
 the following complete source cover.
 
-| Target m | Complete fibres nu | Core length | Core dimension | Core classes |
+| Target m | Complete fibres N | Core length | Core dimension | Core classes |
 |---:|---:|---:|---:|---:|
 |9|0|54|8|17,777,766|
 |9|1|52|8|1,321,156|
@@ -17,13 +17,13 @@ the following complete source cover.
 |11|0|54|10|15,617,101|
 |12|0|54|11|552,230|
 
-All these cores have full affine rank. For nu=0 this follows from
+All these cores have full affine rank. For N=0 this follows from
 injectivity of projection on the support. More generally, suppose an
 affine function vanishes on the singleton fibres. On the full fibres,
 its values form an even word. A word of weight two would force the two
 selected fibre points to be equal by the coordinate moment equations.
 Thus any nonzero such word has weight at least four, which is impossible
-for nu<=2. No proper-span source family is omitted here.
+for N<=2. No proper-span source family is omitted here.
 
 These source classes are read from the final compact catalogues. Their
 completeness is an inductive premise, separate from the lift census.
@@ -41,20 +41,20 @@ ell(C) = |C| - rank(E_2(C)) - m.
 For each exterior point y, reduce its quadratic evaluation vector modulo
 the span of the evaluation vectors of C. A full-fibre set is compatible
 exactly when its reduced labels sum to zero. If e_N(C) is the number of
-compatible sets of size nu, the number of full-rank marked lifts is
+compatible sets of size N, the number of full-rank marked lifts is
 
 ```text
-nu=0: 2^ell(C)-1,
-nu>0: e_N(C) * 2^ell(C).
+N=0: 2^ell(C)-1,
+N>0: e_N(C) * 2^ell(C).
 ```
 
 The subtracted zero coset is exactly the affine graph of insufficient
-rank. Positive complete fibres supply the new affine direction. For nu=1,
-e_1 counts zero labels; for nu=2 it counts pairs of equal labels. These
+rank. Positive complete fibres supply the new affine direction. For N=1,
+e_1 counts zero labels; for N=2 it counts pairs of equal labels. These
 formulas compute the complete lift count before constructing any child.
 
 In dimensions eleven and twelve all directions chosen by the bound have
-nu=0. Fresh complete source-profile checks are supplied, with each parent
+N=0. Fresh complete source-profile checks are supplied, with each parent
 read from the compressed catalogue and validated by the native kernel.
 The independent Python reference checks quadratic ranks on a stratified
 sample. The input preparation streams records rather than retaining the
@@ -85,10 +85,10 @@ witnesses and negative exact comparisons are independently checked.
 
 ## Remaining finite quotients
 
-The m=10 census uses the complete nu=0,1 lift domain without a
+The m=10 census uses the complete N=0,1 lift domain without a
 minimum-direction filter. Its 3,138,829,689 marked lifts yield 15,617,101
 affine classes. There are 531 contiguous parent-profile intervals. The
-nu=1 rank histogram alone does not determine the lift total: the compatible
+N=1 rank histogram alone does not determine the lift total: the compatible
 fibre count and lift dimension must be evaluated together for each source.
 
 | Target m | Contributing cores | Graph lifts | Exact affine classes |

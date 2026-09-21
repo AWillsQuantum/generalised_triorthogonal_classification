@@ -2,7 +2,7 @@
 
 The cover concerns full-projective matrices, exact distance at least three,
 arbitrary intrinsic logical dimension and CNOT+S output equivalence.
-At each fixed output and exact distance, the frontier minimises `(n,N)`.
+At each fixed output and exact distance, the frontier minimises `(n,S)`.
 Distance is part of the key, not a quantity on which dominance is applied.
 
 The terminal finite sectors give the following cumulative frontier sizes.

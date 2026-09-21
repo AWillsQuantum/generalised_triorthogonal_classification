@@ -1,5 +1,10 @@
 # Classification data through length 54
 
+Current resource notation is `N = k + r`: `N` matrix rows, `k` logical rows,
+and `r` stabiliser rows. See [NOTATION.md](NOTATION.md) for the exact mapping
+to preserved historical evidence and legacy interfaces. Current public
+witnesses use schema `triorthogonal-protocol-witnesses-v2`.
+
 This is the **data and evidence delivery** for the classification of binary
 generalised triorthogonal magic-state distillation protocols. Its companion
 GitHub repository contains all theory, source code, tests and independent
@@ -58,8 +63,8 @@ leaves the large mathematical streams compressed.
 Protocols have `n <= 54`, exact `d_Z >= 3`, full row rank and pairwise distinct
 complete columns. One zero column is permitted in the enumerated scope.
 The frontier is partitioned by nonzero intrinsic output and **exact distance**;
-within each partition it minimises length `n` and total matrix rows `S`.
-Every logical row counts towards `S`. Compressed footprint is not considered.
+within each partition it minimises length `n` and total matrix rows `N`.
+Every logical row counts towards `N`. Compressed footprint is not considered.
 Output equivalence is **CNOT+S**, not full Clifford equivalence. Logical
 dimension is unrestricted, and the reductions include non-completable matrices.
 

@@ -37,14 +37,14 @@ translation period.
 For every block, the complete histograms of distance-three and
 distance-four logical-label quotient dimensions sum to the pointing
 count. There are 172,729,013,588 pointed supports in these finite domains.
-The k=1 through k=4 branches enumerate every common isotropic logical space
+The q1 through q4 branches enumerate every common isotropic logical space
 in the distance-four quotient. Quotient dimensions above the raw threshold
 are handled by the exact marked-code quotient; its orbit counts are not
 misrepresented as counts of all raw subspaces.
 
-The k=5 branch enumerates the distance-three quotient dimensions five
+The q5 branch enumerates the distance-three quotient dimensions five
 through fourteen using raw subspaces. Dimensions below five cannot contain
-a k=5 logical space. There are exactly 47,848 pointed supports of quotient
+a q5 logical space. There are exactly 47,848 pointed supports of quotient
 dimension at least fifteen, which form a separate finite enumeration
 obligation. They are not included in the small-quotient completeness claim.
 
@@ -52,13 +52,13 @@ obligation. They are not included in the small-quotient completeness claim.
 
 `verify_low_dimensional_blocks.py` checks the source intervals, pointing
 counts, both quotient histograms, every logical branch domain, and its
-binding to the complete k=5 output profiles. It independently checks all
+binding to the complete q5 output profiles. It independently checks all
 7,859 recorded finite-block Pareto witnesses, including their output
 equivalences, exact distances, error coefficients and frontier dominators.
-Every comparison fixes exact distance. The k=1 through k=4 exact-distance-
+Every comparison fixes exact distance. The q1 through q4 exact-distance-
 three omissions are separately justified by `verify_low_q_pruning.py`.
 
-The k=5 output profiles feed the necessary-profile and refinement tests in
+The q5 output profiles feed the necessary-profile and refinement tests in
 `output_profile_pruning.md`. Those tests cover successors within the
 small-quotient domain. The larger-quotient sector and the complete shorter-
 length classification are independent obligations in the global proof.

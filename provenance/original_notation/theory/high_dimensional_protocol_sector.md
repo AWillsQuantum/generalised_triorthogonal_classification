@@ -4,9 +4,9 @@ For protocol lengths 53 and 54 the even support correspondence uses only
 unital supports of lengths 52 and 54. Separate the source spaces by their
 affine dimension `m`. This note concerns the complete sector `m>=11`,
 which contains 620,475 source classes. It is a source-dimension condition,
-not a condition on the protocol's logical dimension `k`.
+not a condition on the protocol's logical dimension `q`.
 
-The stabiliser dimension is `r=m` or `m+1`, according to the pointing case.
+The stabiliser dimension is `h=m` or `m+1`, according to the pointing case.
 All five cases are included. The 627 blocks in
 `data/protocol_sectors/length54_high_dimensional.json` partition the source
 indices without overlap or gaps. Each source interval is bound to the
@@ -15,21 +15,21 @@ chosen spelling of a representative matrix.
 
 For each pointed support, let `W_d` be the logical-label quotient with all
 zero-syndrome errors of weight less than `d` annihilated. The data record
-the dimension distributions of `W_3` and `W_4`. A `k`-dimensional logical
+the dimension distributions of `W_3` and `W_4`. A `q`-dimensional logical
 space is enumerated precisely when it is common totally isotropic for the
 mixed-overlap forms on `W_d`.
 
-The finite census uses `d=4` for `k=1,...,4` and `d=3` for `k=5,...,8`.
+The finite census uses `d=4` for `q=1,...,4` and `d=3` for `q=5,...,8`.
 These thresholds suffice for the new protocol lengths: all exact-distance-
-three candidates with `k<=4` are strictly dominated, as established in
+three candidates with `q<=4` are strictly dominated, as established in
 `output_profile_pruning.md`. Candidates with larger exact distance are not
 discarded by that comparison.
 
-The census has no nondegenerate outputs for `k=2,...,6` at the stated
+The census has no nondegenerate outputs for `q=2,...,6` at the stated
 thresholds. In fact there is no common isotropic subspace of dimension
 seven, even with degenerate output. Since every higher-dimensional common
 isotropic space contains a seven-dimensional one, this excludes every
-`k>=7` directly; no assumption about eligible nondegenerate parents is
+`q>=7` directly; no assumption about eligible nondegenerate parents is
 required for this sector.
 
 The one-dimensional branches produce 464 finite-block Pareto witnesses.

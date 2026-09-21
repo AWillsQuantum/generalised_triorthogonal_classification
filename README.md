@@ -1,5 +1,10 @@
 # Generalised triorthogonal protocols through length 54
 
+Current resource notation is `N = k + r`: `N` matrix rows, `k` logical rows,
+and `r` stabiliser rows. See [NOTATION.md](NOTATION.md) for the exact mapping
+to preserved historical evidence and legacy interfaces. Current public
+witnesses use schema `triorthogonal-protocol-witnesses-v2`.
+
 This is the **code and theory delivery** of the classification. The companion
 Figshare data delivery supplies the compressed space catalogues, finite censuses and
 certificates. Neither delivery needs the original development repository.
@@ -35,8 +40,8 @@ one zero column is permitted in the enumerated domain. The classification covers
 `n <= 54` and exact distance `d_Z >= 3`, including non-completable matrices.
 Outputs are identified under **CNOT+S equivalence**, not full Clifford equivalence.
 Logical dimension is unrestricted; only nonzero intrinsic magic outputs are
-keys. At fixed output and **exact distance**, the frontier minimises `(n,S)`,
-where `S` is the total number of matrix rows, including every logical row.
+keys. At fixed output and **exact distance**, the frontier minimises `(n,N)`,
+where `N` is the total number of matrix rows, including every logical row.
 Compressed footprint is not an objective.
 
 There are **74 Pareto points for 62 output classes**: 67 at distance three,

@@ -7,7 +7,7 @@
       "copies": [
         {
           "delivery": "github",
-          "path": "AUDIT_GUIDE.md"
+          "path": "provenance/original_notation/AUDIT_GUIDE.md"
         }
       ]
     },
@@ -14708,7 +14708,7 @@
       "copies": [
         {
           "delivery": "github",
-          "path": "code/verify_protocols.py"
+          "path": "provenance/original_notation/code/verify_protocols.py"
         }
       ]
     },
@@ -41802,7 +41802,7 @@
       "copies": [
         {
           "delivery": "github",
-          "path": "theory/alternative_contraction_cover.md"
+          "path": "provenance/original_notation/theory/alternative_contraction_cover.md"
         }
       ]
     },
@@ -41811,7 +41811,7 @@
       "copies": [
         {
           "delivery": "github",
-          "path": "theory/canonical_augmentation.md"
+          "path": "provenance/original_notation/theory/canonical_augmentation.md"
         }
       ]
     },
@@ -41820,7 +41820,7 @@
       "copies": [
         {
           "delivery": "github",
-          "path": "theory/compact_supports.md"
+          "path": "provenance/original_notation/theory/compact_supports.md"
         }
       ]
     },
@@ -41829,7 +41829,7 @@
       "copies": [
         {
           "delivery": "github",
-          "path": "theory/cubic_seed_completeness.md"
+          "path": "provenance/original_notation/theory/cubic_seed_completeness.md"
         }
       ]
     },
@@ -41838,7 +41838,7 @@
       "copies": [
         {
           "delivery": "github",
-          "path": "theory/finite_contraction_censuses.md"
+          "path": "provenance/original_notation/theory/finite_contraction_censuses.md"
         }
       ]
     },
@@ -41847,7 +41847,7 @@
       "copies": [
         {
           "delivery": "github",
-          "path": "theory/high_dimensional_protocol_sector.md"
+          "path": "provenance/original_notation/theory/high_dimensional_protocol_sector.md"
         }
       ]
     },
@@ -41856,7 +41856,7 @@
       "copies": [
         {
           "delivery": "github",
-          "path": "theory/larger_quotient_protocol_sector.md"
+          "path": "provenance/original_notation/theory/larger_quotient_protocol_sector.md"
         }
       ]
     },
@@ -41865,7 +41865,7 @@
       "copies": [
         {
           "delivery": "github",
-          "path": "theory/length48_marked_contractions.md"
+          "path": "provenance/original_notation/theory/length48_marked_contractions.md"
         }
       ]
     },
@@ -41874,7 +41874,7 @@
       "copies": [
         {
           "delivery": "github",
-          "path": "theory/length50_length52_censuses.md"
+          "path": "provenance/original_notation/theory/length50_length52_censuses.md"
         }
       ]
     },
@@ -41883,7 +41883,7 @@
       "copies": [
         {
           "delivery": "github",
-          "path": "theory/length54_m08_census.md"
+          "path": "provenance/original_notation/theory/length54_m08_census.md"
         }
       ]
     },
@@ -41892,7 +41892,7 @@
       "copies": [
         {
           "delivery": "github",
-          "path": "theory/length54_middle_dimensions.md"
+          "path": "provenance/original_notation/theory/length54_middle_dimensions.md"
         }
       ]
     },
@@ -41901,7 +41901,7 @@
       "copies": [
         {
           "delivery": "github",
-          "path": "theory/logical_dimension_closure.md"
+          "path": "provenance/original_notation/theory/logical_dimension_closure.md"
         }
       ]
     },
@@ -41910,7 +41910,7 @@
       "copies": [
         {
           "delivery": "github",
-          "path": "theory/low_dimensional_protocol_blocks.md"
+          "path": "provenance/original_notation/theory/low_dimensional_protocol_blocks.md"
         }
       ]
     },
@@ -41919,7 +41919,7 @@
       "copies": [
         {
           "delivery": "github",
-          "path": "theory/output_profile_pruning.md"
+          "path": "provenance/original_notation/theory/output_profile_pruning.md"
         }
       ]
     },
@@ -41928,7 +41928,7 @@
       "copies": [
         {
           "delivery": "github",
-          "path": "theory/protocol_cover_composition.md"
+          "path": "provenance/original_notation/theory/protocol_cover_composition.md"
         }
       ]
     },
@@ -41937,7 +41937,7 @@
       "copies": [
         {
           "delivery": "github",
-          "path": "theory/protocols_lengths49_to52.md"
+          "path": "provenance/original_notation/theory/protocols_lengths49_to52.md"
         }
       ]
     },
@@ -41946,7 +41946,7 @@
       "copies": [
         {
           "delivery": "github",
-          "path": "theory/protocols_through48.md"
+          "path": "provenance/original_notation/theory/protocols_through48.md"
         }
       ]
     },
@@ -41955,7 +41955,7 @@
       "copies": [
         {
           "delivery": "github",
-          "path": "theory/space_audit_composition.md"
+          "path": "provenance/original_notation/theory/space_audit_composition.md"
         }
       ]
     },
@@ -41964,7 +41964,7 @@
       "copies": [
         {
           "delivery": "github",
-          "path": "theory/space_classification.md"
+          "path": "provenance/original_notation/theory/space_classification.md"
         }
       ]
     },
@@ -41973,7 +41973,7 @@
       "copies": [
         {
           "delivery": "github",
-          "path": "theory/support_correspondence.md"
+          "path": "provenance/original_notation/theory/support_correspondence.md"
         }
       ]
     },
@@ -41982,7 +41982,7 @@
       "copies": [
         {
           "delivery": "github",
-          "path": "theory/witness_verification.md"
+          "path": "provenance/original_notation/theory/witness_verification.md"
         }
       ]
     },
@@ -41991,7 +41991,7 @@
       "copies": [
         {
           "delivery": "github",
-          "path": "theory/zero_fibre_space_certificates.md"
+          "path": "provenance/original_notation/theory/zero_fibre_space_certificates.md"
         }
       ]
     },

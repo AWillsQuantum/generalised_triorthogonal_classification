@@ -1,8 +1,8 @@
 # Protocol witnesses and output equivalence
 
-Write a binary matrix as `G = [G_1; G_0]`, with `k` logical rows and `r`
+Write a binary matrix as `G = [G_1; G_0]`, with `q` logical rows and `h`
 stabiliser rows. Its length is its number `n` of columns and its ordinary
-space footprint is `N=k+r`. All logical rows are counted throughout.
+space footprint is `S=q+h`. All logical rows are counted throughout.
 
 The matrix must have full row rank and distinct complete columns. Every
 overlap of one, two or three rows containing a stabiliser row is even.
@@ -25,8 +25,8 @@ at `s xor g` plus one; equal weights add counts. The two subsets classes
 (excluding or including this column) are disjoint. Induction on the number
 of columns proves both the weights and counts exactly.
 
-In the coordinate convention used here, the lowest `k` syndrome bits are
-logical. At the end take the minimum over `1 <= s < 2^k` and sum the counts
+In the coordinate convention used here, the lowest `q` syndrome bits are
+logical. At the end take the minimum over `1 <= s < 2^q` and sum the counts
 attaining it. Thus no weight cutoff or heuristic enters the witness distance
 calculation. The reference implementation has a memory guard at 22 rows;
 all distributed witnesses lie below that guard.
@@ -40,7 +40,7 @@ for every nonzero `u`; it must have nonzero rank.
 Degenerate logical outputs with nonzero intrinsic quotient do not produce
 additional Pareto points. `support_correspondence.md` proves that an
 appropriate complement to their radical preserves the exact distance and
-output, keeps the same length, and strictly decreases `N`.
+output, keeps the same length, and strictly decreases `S`.
 
 Two outputs are identified when an invertible binary change of logical basis
 relates their tensors. The remaining differences are diagonal Clifford

@@ -6,16 +6,16 @@ each length or affine dimension. Its configured native kernels use the
 same affine invariants and exact basis-image search throughout.
 
 For a target `(c,m)`, the domain consists of every singleton core of length
-`c-2N`, where `0<=nu<=floor(binomial(c,2)/(2^m-1))`. All intrinsic core
+`c-2N`, where `0<=N<=floor(binomial(c,2)/(2^m-1))`. All intrinsic core
 dimensions allowed by the global dimension bound are included. There is
-one useful exact reduction: when `nu<=3`, a full-rank target must have a
-full-rank quotient core. For `nu=0` this follows from injectivity of the
+one useful exact reduction: when `N<=3`, a full-rank target must have a
+full-rank quotient core. For `N=0` this follows from injectivity of the
 projection. Otherwise an affine function vanishing on the core gives an
-even binary word on the nu complete fibres. A nonzero such word would
+even binary word on the N complete fibres. A nonzero such word would
 have weight two, and the linear-coordinate moments would force its two
 distinct fibre points to coincide. Thus the affine function is zero.
 
-For larger nu the code retains proper-span cores and checks the affine
+For larger N the code retains proper-span cores and checks the affine
 rank of each reconstructed candidate. A fixed embedding of each intrinsic
 core is sufficient because all of its embeddings into the quotient
 ambient space lie in one affine orbit. The full complement of that
@@ -26,7 +26,7 @@ the syndrome of every external point, and a basis of lift functions
 modulo affine shears. Two independent fixed-cardinality procedures count
 and enumerate the zero-XOR fibre subsets. Each compatible subset is
 combined with every lift-basis coefficient. The zero coefficient is
-discarded only for nu=0, where it is exactly the rank-deficient affine
+discarded only for N=0, where it is exactly the rank-deficient affine
 graph. No marked-orbit reduction or minimum-direction filter is needed
 for these finite domains.
 

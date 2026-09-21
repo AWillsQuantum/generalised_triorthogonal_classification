@@ -292,6 +292,9 @@ PRESENTATION_FIELDS = ("factorised_representative_gate", "factorised_representat
 
 def verify_presentation_update(original, updated):
     """Bind changed labels to the unchanged, hash-certified scientific catalogue."""
+    from notation import legacy_catalogue, CURRENT_SCHEMA
+    if updated.get("schema") == CURRENT_SCHEMA:
+        updated = legacy_catalogue(updated)
     stripped = deepcopy(updated)
     metadata = stripped.pop("output_representative_presentation")
     if metadata["method"] != "primitive-centroid-idempotents-v1":

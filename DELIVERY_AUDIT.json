@@ -3021,9 +3021,9 @@
   "new_licence_selected": true,
   "uploaded": false,
   "packaging_sources_sha256": {
-    "code/delivery.py": "1d9e7061f2266c0588522ec1ecc92154781fb780a25fc8fcf0b1da5c0fb3d96e",
+    "code/delivery.py": "d6691f8d97e53cab4ac2441a6ad566e0f4614bb123e13bdddf21e8c8cb1c181d",
     "delivery_tests/test_delivery.py": "770954152cf90f20d7cdcd3195ada708a11b41413030a1968a6646afd099ac61",
-    "packaging/build_deliveries.py": "2b07783a4c328cb524ebafe8fd84d1c96ba5ba678501f53ed05ad257ca43fa9a"
+    "packaging/build_deliveries.py": "a3009605fdb12976a8b71eaff0c4f54e597c7a3782b639d16a7dff12f3ea3d13"
   },
   "archives": {
     "classification_evidence.zip": {
@@ -3086,12 +3086,12 @@
     "date": "2026-09-15",
     "status": "pass",
     "historical_audit_fields_retained": true,
-    "current_catalogue_sha256": "5f60bbd546769a71dbadbe97992b091fabc77b8c20b1697d869dc0c1484d7e95",
-    "update_certificate_sha256": "1f6f86f943af29dd422aca21ae32e1cc797bc20ce0f28647f9906c1a9d1b9876",
+    "current_catalogue_sha256": "2a6855bc82ff67c5c7f5d9730abf9d32ea1a28ee1f126a627e5d85d0bafa670f",
+    "update_certificate_sha256": "a29da1fe14eb8989f88418916a0cc9cee511772ed6e49827a5fa66420fcebb10",
     "witness_verification": {
       "schema": "triorthogonal-witness-verification-v1",
       "status": "pass",
-      "catalogue_sha256": "5f60bbd546769a71dbadbe97992b091fabc77b8c20b1697d869dc0c1484d7e95",
+      "catalogue_sha256": "2a6855bc82ff67c5c7f5d9730abf9d32ea1a28ee1f126a627e5d85d0bafa670f",
       "protocols": 74,
       "outputs": 62,
       "output_inequivalence_pairs_checked": 518,
@@ -3131,7 +3131,7 @@
       }
     },
     "tests": {
-      "tests": 24,
+      "tests": 31,
       "failures": 0,
       "errors": 0,
       "skipped": 0,
@@ -3140,5 +3140,20 @@
     "original_catalogue_preserved": true,
     "large_archives_unchanged": true,
     "publication_performed": false
+  },
+  "resource_notation_update": {
+    "date": "2026-09-20",
+    "status": "pass",
+    "certificate": "NOTATION_UPDATE.json",
+    "certificate_sha256": "42d335426fe026f8882f3c7fc8d976cbd62c33880e0aaf570f266849e9efc9f4",
+    "tests": {
+      "tests": 31,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "status": "pass"
+    },
+    "original_evidence_preserved": true,
+    "current_catalogue_sha256": "2a6855bc82ff67c5c7f5d9730abf9d32ea1a28ee1f126a627e5d85d0bafa670f"
   }
 }

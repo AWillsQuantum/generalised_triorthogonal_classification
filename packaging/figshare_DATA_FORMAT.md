@@ -1,11 +1,16 @@
 # Data formats and a worked example
 
+Current resource notation is `N = k + r`: `N` matrix rows, `k` logical rows,
+and `r` stabiliser rows. See [NOTATION.md](NOTATION.md) for the exact mapping
+to preserved historical evidence and legacy interfaces. Current public
+witnesses use schema `triorthogonal-protocol-witnesses-v2`.
+
 ## Protocol catalogue
 
-`pareto_frontier.json` has schema `triorthogonal-protocol-witnesses-v1`.
+`pareto_frontier.json` has schema `triorthogonal-protocol-witnesses-v2`.
 Its `protocols` array contains the 74 frontier witnesses, with `output_id`,
-`q`, `d_Z`, `n`, `S`, `generator_matrix_rows` and `error_coefficient`.
-Each matrix row is a binary string of length `n`; the first `q` rows are
+`k`, `r`, `d_Z`, `n`, `N`, `generator_matrix_rows` and `error_coefficient`.
+Each matrix row is a binary string of length `n`; the first `k` rows are
 logical and the remaining rows are stabilisers. The `outputs` array resolves
 each `output_id` to a representative gate and tensor/basis certificate.
 The identifier alone is not the human-readable gate. Gate simplification
@@ -25,8 +30,8 @@ previous displayed gate and its full-phase diagonal Clifford correction.
 
 The exact Z distance is the minimum Hamming weight of a vector `v` with
 `G_0 v = 0` but `G_1 v != 0`, over the binary field. The error coefficient
-counts such vectors at the minimum weight. `S` counts every matrix row.
-Outputs and exact distances are separate Pareto comparisons in `(n,S)`.
+counts such vectors at the minimum weight. `N` counts every matrix row.
+Outputs and exact distances are separate Pareto comparisons in `(n,N)`.
 
 ## Space catalogue
 

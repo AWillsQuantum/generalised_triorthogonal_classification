@@ -55,6 +55,9 @@ def stream_digest(stream):
 
 def catalogue_summary(raw):
     data = json.loads(raw)
+    if data.get("schema") == "triorthogonal-protocol-witnesses-v2":
+        from notation import legacy_catalogue
+        data = legacy_catalogue(data)
     if (data.get("maximum_protocol_length") != 54 or data.get("minimum_distance") != 3
             or data.get("equivalence") != "CNOT+S"
             or data.get("intrinsic_outputs_only") is not True
@@ -181,7 +184,23 @@ class Delivery:
         if first != second:
             raise ValueError("The protocol catalogues differ")
         presentation = None
+        notation = None
         current = json.loads(first)
+        if current.get("schema") == "triorthogonal-protocol-witnesses-v2":
+            from notation import legacy_catalogue
+            previous = local_file(self.roots["github"], "provenance/pareto_frontier_before_notation.json").read_bytes()
+            if previous != local_file(self.roots["data"], "pareto_frontier_before_notation.json").read_bytes():
+                raise ValueError("Pre-notation catalogues differ")
+            if legacy_catalogue(current) != json.loads(previous):
+                raise ValueError("Notation update changed scientific data")
+            certificate = local_file(self.roots["github"], "NOTATION_UPDATE.json").read_bytes()
+            if certificate != local_file(self.roots["data"], "NOTATION_UPDATE.json").read_bytes():
+                raise ValueError("Notation certificates differ")
+            notation = json.loads(certificate)
+            if (notation.get("status") != "pass"
+                    or notation.get("previous_catalogue_sha256") != hashlib.sha256(previous).hexdigest()
+                    or notation.get("current_catalogue_sha256") != hashlib.sha256(first).hexdigest()):
+                raise ValueError("Incorrect notation certificate hashes")
         if "output_representative_presentation" in current:
             from output_factorisation import verify_presentation_update
             if hashlib.sha256(original_frontier).hexdigest() != current[
@@ -197,7 +216,7 @@ class Delivery:
             every_original_file_preserved=True, all_original_code_in_github=True,
             inner_compressed_streams_unchanged=True, catalogue=catalogue_summary(first),
             packages=package_checks, output_presentation_verification=presentation,
-            classification_recomputed=False)
+            resource_notation_verification=notation, classification_recomputed=False)
 
     def assemble(self, destination):
         destination = Path(destination).absolute()

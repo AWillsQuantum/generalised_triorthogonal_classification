@@ -29,8 +29,8 @@ base. The total counts are 304,611 and 7,519,688 respectively.
 ## Domain and exact quotient
 
 At m=8, pair averaging and the complete base leave core lengths 44 and
-48 for target 50, and 44,48,52 for target 52. The nu<=3 full-span lemma
-excludes proper-span cores on those routes. For nu>=4 the only potential
+48 for target 50, and 44,48,52 for target 52. The N<=3 full-span lemma
+excludes proper-span cores on those routes. For N>=4 the only potential
 proper-span core lengths are 42 and 44, and the complete base has no such
 core of dimension below seven.
 
@@ -42,12 +42,12 @@ including alternative families, are 446,234,624 and 9,332,425,028.
 The stabiliser action quotients the label/fibre choices; a subsequent
 full affine quotient forgets the marked direction.
 
-At m=9, all nu=0,1,2 sources are included. For length 52 only lifts whose
+At m=9, all N=0,1,2 sources are included. For length 52 only lifts whose
 chosen direction attains the minimum pair multiplicity are retained.
 Every support has such a direction, so this does not remove an affine
 class. The complete full-rank domain before this filter has 1,882,307,772
 lifts. At length 50 there is no minimum-direction filter. At m=10 both
-nu=0,1 routes are retained. For m>=11 the pair bound forces nu=0, reducing
+N=0,1 routes are retained. For m>=11 the pair bound forces N=0, reducing
 the problem to all nonaffine solutions of the graph-lift equations.
 
 Signatures only partition the candidate domain; equal signatures are

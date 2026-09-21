@@ -1,12 +1,12 @@
 # Primitive tensors and closure in logical dimension
 
-Let `T` be a symmetric trilinear form on `V=F_2^k` satisfying
+Let `T` be a symmetric trilinear form on `V=F_2^q` satisfying
 `T(x,x,y)=T(x,y,y)`, as every binary-column logical tensor does. Define
 `B(x,y)=T(x,x,y)`. This is a symmetric bilinear form. A tensor is
 nondegenerate if `rad(T)=0`, and primitive if it is nondegenerate but all its
 hyperplane restrictions are degenerate.
 
-For `k>=3`, there are precisely two primitive types in odd dimension and
+For `q>=3`, there are precisely two primitive types in odd dimension and
 none in even dimension. The types are
 
 ```text
@@ -35,16 +35,16 @@ For `x` in `rad(B)`, the form `A_x` is alternating. Its vanishing on
 `H x H` bounds its rank by two; rank zero is excluded by nondegeneracy of
 `T`. A rank-two alternating form vanishes on precisely three hyperplanes,
 the inverse images of the three lines of its two-dimensional quotient.
-Thus these vectors account for at most `3(2^(k-s)-1)` hyperplanes.
+Thus these vectors account for at most `3(2^(q-s)-1)` hyperplanes.
 
-For `2<=s<=k-1`, the difference between all `2^k-1` hyperplanes and this
-upper bound is `(2^s-3)(2^(k-s)-1)>0`. Such a tensor is not primitive.
+For `2<=s<=q-1`, the difference between all `2^q-1` hyperplanes and this
+upper bound is `(2^s-3)(2^(q-s)-1)>0`. Such a tensor is not primitive.
 If `B` is nonsingular and nonalternating, choose `x` with `B(x,x)=1`.
 A radical vector of `T` restricted to `x^perp` would lie in both `x^perp`
 and its orthogonal complement `<x>`, and so would be zero. This also
 excludes primitivity.
 
-The remaining sectors have `rank(B)<=1`, or have even `k` and nonsingular
+The remaining sectors have `rank(B)<=1`, or have even `q` and nonsingular
 alternating `B`.
 
 ## 2. Nonsingular alternating B
@@ -58,14 +58,14 @@ triple coefficients of `T` to vanish.
 For two symplectic pairs `(a_1,b_1),(a_2,b_2)`, however, take
 `x=a_1+a_2`, `y=a_1`, `z=b_1+b_2`. Both `y,z` lie in `x^perp`, but the
 remaining repeated-index coefficients give `T(x,y,z)=1`. Hence this
-sector has no primitive tensor for any even `k>=4`.
+sector has no primitive tensor for any even `q>=4`.
 
 ## 3. Zero repeated-index form
 
 When `B=0`, `T` is alternating. The nondegenerate-hyperplane theorem of
 Khoruzhii, Gelss and Pokutta identifies exactly one primitive alternating
 orbit in each odd dimension, represented by `ell wedge omega`, and none
-in even dimension. For `k>3` this is Lemma 4 in their appendix; dimension
+in even dimension. For `q>3` this is Lemma 4 in their appendix; dimension
 three is the nonzero volume form directly. See
 [Theorem 1 and Section 7.1](https://arxiv.org/html/2607.02365v1#S7.SS1).
 
@@ -83,16 +83,16 @@ the restriction of `T`. On another hyperplane `H`, any nonzero vector `x`
 in `rad(T|H)` satisfies `0=T(x,y,y)=p(x)p(y)` for all `y` in `H`, so
 `p(x)=0` and `x` is also in `rad(A|H)`.
 
-For `k>3`, the alternating theorem therefore gives odd dimension and
+For `q>3`, the alternating theorem therefore gives odd dimension and
 `A=ell wedge omega`. Put `W=ker(ell)`. For any nonzero `x` in `W`, choose
 `e` with `ell(e)=1` in the chosen complement and let
 `H=<e> + x^perp`, with perpendicular taken inside `W` using `omega`.
-Since `k>=5`, the radical of `A|H` is exactly `<x>`. A radical vector
+Since `q>=5`, the radical of `A|H` is exactly `<x>`. A radical vector
 of `T|H` must lie in this line and be killed by `p`, by the same diagonal
 argument (also immediately if `p|H=0`). Thus `p(x)=0`. This holds for
 all `x` in `W`, so `p=ell`.
 
-For `k=3`, instead note that `A` is a volume form and its stabiliser
+For `q=3`, instead note that `A` is a volume form and its stabiliser
 `GL(3,2)` is transitive on nonzero functionals `p`. Thus this case also
 gives one orbit, represented by `A+ell^3`. The one-dimensional-radical
 argument in the preceding paragraph is not needed in dimension three.
@@ -105,7 +105,7 @@ hyperplane of the symplectic space, whose restricted bilinear form has a
 radical line; that line is radical for the restricted tensor. This proves
 primitivity, including the three-dimensional case directly.
 
-For every odd `k>=9`, restrict `ker(ell)` to a six-dimensional symplectic
+For every odd `q>=9`, restrict `ker(ell)` to a six-dimensional symplectic
 subspace and adjoin a vector with `ell=1`. The restriction is one of the
 two primitive seven-dimensional types.
 
@@ -114,8 +114,8 @@ two primitive seven-dimensional types.
 Restricting logical rows to a subspace preserves the overlap conditions
 and cannot reduce distance: the set of errors with nonzero action on the
 restricted logical space is a subset of the original set. Thus, once
-primitive `k=7` protocols and all nondegenerate `k=8` protocols are
-excluded on every support in scope, no `k>=8` protocol remains. A higher
+primitive `q=7` protocols and all nondegenerate `q=8` protocols are
+excluded on every support in scope, no `q>=8` protocol remains. A higher
 primitive tensor would contain a primitive seven-dimensional restriction;
 a higher nonprimitive tensor descends through nondegenerate hyperplanes
 until one of the excluded cases is reached.

@@ -117,7 +117,7 @@ For full regeneration, cover every specified input interval without gaps
 or overlaps. Merge exact output/distance/length/footprint results across
 all intervals, together with the preceding frontier. Necessary-profile
 tests must use complete profiles and include the primitive exceptions.
-In particular, the 11,543 k=5 chain inputs, their 73 k=6 successors and the
+In particular, the 11,543 q5 chain inputs, their 73 q6 successors and the
 17,993 primitive target inputs are different obligations. None alone is
 the complete larger-quotient classification.
 

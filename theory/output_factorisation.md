@@ -8,13 +8,13 @@ product of smaller distillation protocols.
 
 ## Exact decomposition
 
-Let tau be the full symmetric trilinear form on V = F_2^q defining the output,
+Let tau be the full symmetric trilinear form on V = F_2^k defining the output,
 including its repeated-index values. Its radical is zero for intrinsic outputs.
 The centroid consists of linear maps A satisfying
 
     tau(Ax,y,z) = tau(x,Ay,z) = tau(x,y,Az)
 
-for every x,y,z. These are linear equations in the q^2 entries of A. A centroid
+for every x,y,z. These are linear equations in the k^2 entries of A. A centroid
 element P with P^2=P splits V as im(P) + ker(P); mixed tensor values vanish.
 Conversely, every independent splitting yields such a projector.
 
@@ -53,7 +53,7 @@ factorisation-first notation minimises the global number of gate factors.
 
 Each updated output stores the invertible change of basis from its previous
 gate and the composed change from its unchanged protocol-tensor coordinates.
-Checking all 2^q phases gives
+Checking all 2^k phases gives
 
     phase_previous(Bx) = phase_factored(x) + phase_Clifford(x) mod 8.
 

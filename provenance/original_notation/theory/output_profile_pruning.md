@@ -7,9 +7,9 @@ logical tensor must occur among the outputs on that same support and at
 that same distance floor. This concerns the complete output profile, not
 only the output of a Pareto-optimal intermediate protocol.
 
-For a tensor `T` of dimension `k`, write `P(T)` for the set of intrinsic
+For a tensor `T` of dimension `q`, write `P(T)` for the set of intrinsic
 output keys of its nondegenerate hyperplane restrictions. If `A` is the
-complete output profile in dimension `k-1`, a necessary condition for
+complete output profile in dimension `q-1`, a necessary condition for
 realising `T` is `P(T) subset A`.
 
 ## Six-Dimensional Necessary Profiles
@@ -42,7 +42,7 @@ hyperplane whose output key is `K`. Fix that hyperplane to the canonical
 six-dimensional tensor representing `K`. The tensor coordinate count is
 
 ```text
-D(k) = k + binomial(k,2) + binomial(k,3),
+D(q) = q + binomial(q,2) + binomial(q,3),
 D(7)-D(6) = 22.
 ```
 
@@ -106,15 +106,15 @@ on any one support.
 20,915 are excluded at the union level; the remaining 162 contain 33,758 positive
 five-dimensional support profiles, of which 197 pass the six-dimensional
 necessary test. Exact pointed-support canonicalisation identifies these
-with the 175 cases in the finite k=6 census. Their pointing origins and every
+with the 175 cases in the finite q6 census. Their pointing origins and every
 support point are independently recovered from the compact space catalogue
 by `verify_pointed_sources.py`.
 
 `verify_primitive_restrictions.py` exhibits primitive five-dimensional
 restrictions of both primitive seven-dimensional tensors. Absence of both
-required keys from a complete k=5 profile excludes these exceptional k=7
+required keys from a complete q5 profile excludes these exceptional q7
 branches. `verify_finite_sector_closure.py` combines this with the anchored
-k=7 gate, complete k=6 censuses, the distance-four label equations and explicit
+q7 gate, complete q6 censuses, the distance-four label equations and explicit
 catalogue dominators. It checks 178 finite supports, including three
 larger-quotient cases at shorter lengths. Every dominance comparison fixes
 exact distance three; the zero distance-four quotient excludes a missed
@@ -136,9 +136,9 @@ Adding zero directions preserves and reflects tensor equivalence, so this
 procedure is complete and introduces no additional identifications.
 
 Every projective protocol of distance at least three has distinct
-stabiliser syndromes, hence `n<=2^r`. At lengths 49 through 54 this gives
-`r>=6` and therefore `N=k+r>=k+6`. For each of the 22 outputs the distributed
-frontier contains a distance-three protocol with `n<49` and `N<=k+6`.
+stabiliser syndromes, hence `n<=2^h`. At lengths 49 through 54 this gives
+`h>=6` and therefore `S=q+h>=q+6`. For each of the 22 outputs the distributed
+frontier contains a distance-three protocol with `n<49` and `S<=q+6`.
 These witnesses strictly dominate every exact-distance-three candidate in
 that length interval. This does not exclude candidates of larger exact
 distance, which require the corresponding filtered enumeration.

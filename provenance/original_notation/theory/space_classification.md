@@ -104,19 +104,19 @@ proves that the recursion terminates in lower cases.
 
 ## 4. The inverse-contraction acceleration
 
-For a nonzero direction a, let nu_a count pairs `{y,y+a}` contained in Y.
+For a nonzero direction a, let N_a count pairs `{y,y+a}` contained in Y.
 Each unordered pair has one difference, so
 
 ```text
-sum_(a!=0) nu_a = binomial(c,2).
+sum_(a!=0) N_a = binomial(c,2).
 ```
 
 There is therefore a direction with
-`nu_a<=floor(binomial(c,2)/(2^m-1))`. Project along it. Write C for the
+`N_a<=floor(binomial(c,2)/(2^m-1))`. Project along it. Write C for the
 singleton fibres and F for the complete fibres; these sets are disjoint,
-`|C|=c-2N_a`, and `|F|=nu_a`. The support C inherits all moments of degree
+`|C|=c-2N_a`, and `|F|=N_a`. The support C inherits all moments of degree
 at most three, since complete fibres contribute twice. It is a shorter
-unital support, or a same-length one in lower dimension when nu_a=0.
+unital support, or a same-length one in lower dimension when N_a=0.
 
 After choosing the last coordinate along a, every lift has the form
 
@@ -139,7 +139,7 @@ elimination. The admissible F are a fixed-cardinality zero-sum problem in
 the quotient of the feature space by the span of `phi_2(C)`, allowing
 dynamic programming or meet-in-the-middle enumeration.
 
-Do not assume that C spans the whole quotient ambient space when nu_a>0:
+Do not assume that C spans the whole quotient ambient space when N_a>0:
 complete fibres may supply additional affine directions. A full-rank
 check on each lift, or a proved deletion-kernel bound, is required.
 
@@ -152,7 +152,7 @@ At c=54 the complete direction cover is particularly small:
 |10|0,1|54,52|
 |11 through17|0|54|
 
-For m=8, RM(3,7) weight divisibility by four forces nu_a to be odd.
+For m=8, RM(3,7) weight divisibility by four forces N_a to be odd.
 The low-dimensional source counts are188,98 and35, respectively, for
 lengths52,48 and44 in affine dimension seven.
 
@@ -163,7 +163,7 @@ vanishing on the singleton fibres. Its values on the three full fibres
 would be an even binary word; a word of weight two contradicts the
 linear-coordinate moment equations, since the two fibres are distinct.
 Thus no such function exists. More generally this argument rules out
-rank loss for nu<=3. Once a core spans seven dimensions and nu>0, every
+rank loss for N<=3. Once a core spans seven dimensions and N>0, every
 lift has full affine dimension eight: an affine equation on the lift
 vanishes in the last coordinate because a full fibre contains both values,
 and then vanishes identically because the core spans the quotient.

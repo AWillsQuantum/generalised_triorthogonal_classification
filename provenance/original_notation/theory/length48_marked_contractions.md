@@ -4,10 +4,10 @@ Let Y be a 48-point unital support of affine dimension eight. Pair averaging
 gives a direction with at most four complete fibres, since
 `binomial(48,2)/(2^8-1)=1128/255<5`. Its singleton core has length
 `48-2N`. The complete low-dimensional Reed-Muller census excludes lengths
-42 and 46 in the seven-dimensional quotient, so only `nu=0,2,4` remain.
+42 and 46 in the seven-dimensional quotient, so only `N=0,2,4` remain.
 
-For nu at most three the core spans the quotient, by the deletion-kernel
-argument in `space_classification.md`. For nu=4 the length-40 core can have
+For N at most three the core spans the quotient, by the deletion-kernel
+argument in `space_classification.md`. For N=4 the length-40 core can have
 intrinsic affine dimension six or seven. Both possibilities must be included.
 The full source domain is therefore:
 
@@ -48,14 +48,14 @@ would be lost if one used only its intrinsic automorphisms.
 A marked support with a proper-span core need not span all eight dimensions.
 The emitted representatives are therefore filtered by their exact affine
 rank. This is legitimate after the marked quotient because rank is invariant
-under every affine map used in that quotient. For a spanning core and nu>0,
-the full fibre already ensures the eighth direction. For nu=0, exactly the
+under every affine map used in that quotient. For a spanning core and N>0,
+the full fibre already ensures the eighth direction. For N=0, exactly the
 zero affine-label coset is removed.
 
 ## Finite domain
 
 The complete source profiles give 422,425,662 label/fibre pairs after
-removing the affine nu=0 graphs. Of these, 43,524,096 have insufficient affine
+removing the affine N=0 graphs. Of these, 43,524,096 have insufficient affine
 rank; all lie in the proper-span core family. The remaining 378,901,566
 pairs reduce to 856,098 full-rank marked representatives. The proper-span
 family itself has 140 marked orbits, of which 42 have full rank.

@@ -43,7 +43,7 @@ family gives 24,701 inputs and 17,993 distinct nonzero supports. This
 combined set is specified by
 `data/protocol_sectors/primitive_support_union.json`:
 
-| Length n | Stabiliser dimension r | Support classes |
+| Length n | Stabiliser dimension h | Support classes |
 |---:|---:|---:|
 | 51 | 7 | 2,653 |
 | 52 | 7 | 3,572 |
@@ -99,7 +99,7 @@ replay and does not label a sample as a complete replay.
 `data/protocol_sectors/nonprimitive_marked_subsector.json` gives 43
 nonzero supports with 431 marked orbits of nonprimitive five-dimensional
 logical subspaces. Every orbit has its exact canonical key, orbit size,
-quotient representative and protocol matrix. The k=3 chain cover generates
+quotient representative and protocol matrix. The q3 chain cover generates
 these orbits; the separate primitive target check supplies its two
 exceptions. Together these are a complete five-dimensional census on the
 43 supports.
@@ -109,7 +109,7 @@ profiles fail every necessary six-dimensional profile, and the primitive
 seven-dimensional restriction is absent. The hyperplane and primitive
 restriction theorems then exclude all logical dimensions at least six
 on these 43 supports. Their matrices are covered by the released frontier
-at the same output and exact distance, with no larger n or N.
+at the same output and exact distance, with no larger n or S.
 
 ```text
 python -B code/verify_large_quotient_domain.py --native build/utsp-native --work-directory work/large_domain --workers 4 --output work/large_domain.json
@@ -127,17 +127,17 @@ The remaining finite domain is partitioned explicitly in
 - 4,051 length-53 supports contain zero and are dominated at every logical
   dimension by the corresponding length-52 supports.
 - The 43-support nonprimitive census is the finite subsector above.
-- 11,543 supports form the remaining k=3-chain domain. The aggregate census
+- 11,543 supports form the remaining q3-chain domain. The aggregate census
   has 4,717 positive inputs and 6,826 zero inputs. Its 5,632 output
   candidates reduce to ten sector-frontier witnesses.
 
 The successor tests retain 73 six-dimensional obligations. Their complete
 aggregate has 177 marked orbits, representing 12,906 nondegenerate logical
 subspaces, and one output key, `0x400a08a400`. Its sector frontier has one
-point. All eleven k=5 and k=6 frontier witnesses are independently checked
+point. All eleven q5 and q6 frontier witnesses are independently checked
 and covered by the released Pareto frontier at their exact distance.
-The k=6 output profile excludes nonprimitive k=7 extensions; the separate
-primitive target census excludes primitive k=7. The restriction theorem
+The q6 output profile excludes nonprimitive q7 extensions; the separate
+primitive target census excludes primitive q7. The restriction theorem
 then closes the higher logical dimensions on this finite domain.
 
 A constant stabiliser row gives a useful additional exclusion. Its overlap
@@ -146,7 +146,7 @@ with two logical rows forces every logical pair overlap even. Thus the
 logical tensor is alternating. The complete five-dimensional tensor census
 has just one nondegenerate alternating orbit, the primitive type
 `ell wedge omega`. On a support where that primitive type is absent, the
-constant row therefore excludes all intrinsic k=5 outputs without a
+constant row therefore excludes all intrinsic q5 outputs without a
 nonprimitive enumeration. The verifier records an explicit coefficient
 vector for every such constant row in the chain domain.
 
@@ -166,7 +166,7 @@ python -B code/replay_chain_sector.py --q 6 --start 0 --count 1 --native build/u
 
 The full index ranges are `[0,11543)` and `[0,73)`, respectively. Complete
 reproduction must cover them without gaps and aggregate their exact
-output, distance and footprint results. The primitive k=5 target census
-is a separate part of the complete k=5 result. None of the input-cover,
+output, distance and footprint results. The primitive q5 target census
+is a separate part of the complete q5 result. None of the input-cover,
 primitive-only, finite-subsector or aggregate-consistency certificates
 alone is a global classification certificate.

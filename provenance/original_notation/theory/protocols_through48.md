@@ -69,7 +69,7 @@ The data retain exact raw counts where available and explicitly distinguish
 them from marked-orbit counts. They also contain 125 local frontier
 witnesses. Independent checks of every witness's overlap conditions,
 rank, projectivity, exact distance, leading error coefficient and output
-equivalence agree. Merging their `(n,N)` metrics at fixed output and exact
+equivalence agree. Merging their `(n,S)` metrics at fixed output and exact
 distance gives precisely the 52 released frontier points with `n<=48`.
 
 All dimension-seven outputs in the smaller-quotient sector are absent.
@@ -85,19 +85,19 @@ validity alone.
 
 For each of the two separately listed sources, every origin is considered
 directly. There are 177 distinct pointed supports of protocol length at
-most 48 per source. Exact distance-three outputs with `k<=4` are strictly
+most 48 per source. Exact distance-three outputs with `q<=4` are strictly
 dominated: every such intrinsic output has a witness with `n<=47` and
-`N<=k+6`, while these source supports have `n>=47` and `N>=k+7`.
+`S<=q+6`, while these source supports have `n>=47` and `S>=q+7`.
 The complete small-output orbit authority supplies all 22 intrinsic
 classes, not merely the classes observed on these two sources.
 
-Fresh direct `k=5`, distance-three censuses contain respectively 204,713
+Fresh direct `q=5`, distance-three censuses contain respectively 204,713
 and 18,384 common-isotropic subspaces, all with degenerate logical tensor.
-Thus no intrinsic `k=5` output occurs. Every higher-dimensional
+Thus no intrinsic `q=5` output occurs. Every higher-dimensional
 nondegenerate tensor either descends through a nondegenerate hyperplane
 or is an odd-dimensional primitive tensor. The latter contains a primitive
 five-dimensional restriction when its dimension exceeds five. Hence all
-intrinsic `k>=5` outputs are excluded.
+intrinsic `q>=5` outputs are excluded.
 
 At distance at least four, all filtered quotients vanish except on the
 single affine-hyperplane embedding of each source. These embeddings
